@@ -53,3 +53,10 @@
     }
     
 }
+@media (max-width:500px){
+    .cookies{
+        width: 380px;
+        left: 5px;
+        top: 600px;
+    }
+}

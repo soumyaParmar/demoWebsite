@@ -39,8 +39,7 @@
     transition: 0.2s !important;
 }
 .btn1:hover{
-    box-shadow: 4px 4px 1px white !important;
-    margin-top:-4px !important;
+    background-color: #1e7456 !important;
 }
 .btn2{
     background-color: transparent !important;
@@ -180,7 +179,7 @@
         position: absolute;
         top:70%;  
         height: 200px; 
-        width: 400px;
+        width: 350px;
     }
     .teams{
         padding: 20px 0 0 0;
@@ -213,6 +212,21 @@
         position: absolute;
         top:70%;  
         height: 200px; 
-        width: 400px;
+        width: 350px;
+    }
+}
+
+@media (max-width:500px) {
+    .detail p{
+        @apply text-sm
+    }
+    .heading{
+        @apply text-3xl
+    }
+    .btns{
+        @apply mt-6
+    }
+    .ai_link{
+        @apply p-3
     }
 }

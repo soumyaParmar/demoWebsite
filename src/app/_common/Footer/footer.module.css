@@ -28,8 +28,13 @@
     height: 20px;
     width: 20px;
 }
+.image{
+    height: 50px !important;
+    width: 144px !important;
+    margin-left: -15px
+}
 .pages{
-    @apply w-2/5 flex flex-col items-end;
+    @apply w-2/5 flex justify-between;
 }
 .company{
     @apply w-1/5 flex flex-col items-end;
@@ -40,7 +45,7 @@
         @apply flex-col
     }
     .pages{
-        @apply items-start
+        @apply block w-full
     }
     .company{
         @apply w-2/5;

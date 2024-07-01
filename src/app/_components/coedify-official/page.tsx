@@ -17,6 +17,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Cookies from "../Cookies/Cookies";
 import Forms from "@/app/_common/Forms/Forms";
+import Buttons from "@/app/_common/Button/Buttons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,7 +52,7 @@ const Coedify: React.FC = () => {
       scrollTrigger: {
         trigger: "#greenpart",
         scroller: "body",
-        start: "top 20%",
+        start: "top 50%",
       },
     });
   });
@@ -76,7 +77,7 @@ const Coedify: React.FC = () => {
         <div className={style.content} ref={divRef}>
           <div className={style.ai_link}>
             <div
-              className="flex text-[15px] justify-between gap-3 bg-[#151c24] p-1 pl-4  rounded-full max-[600px]:p-2"
+              className="flex text-[15px] justify-between gap-3 bg-[#151c24] p-1 pl-4  rounded-full max-[600px]:p-2 cursor-pointer"
               id="landingHeading0"
             >
               <p>Read Our Case Studies</p>
@@ -99,7 +100,7 @@ const Coedify: React.FC = () => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Button className={style.btn1}>Schedule Meeting</Button>
+            <Buttons label="Schedule Meeting"/>
             <Button className={style.btn2}>
               Learn More <KeyboardArrowDownIcon />
             </Button>
