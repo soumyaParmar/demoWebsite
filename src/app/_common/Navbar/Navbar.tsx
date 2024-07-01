@@ -9,12 +9,25 @@ import Link from "next/link";
 import logo from "../../_assets/background/logo.png";
 import Image from "next/image";
 import Buttons from "../Button/Buttons";
+import { useMotionValueEvent, useScroll } from "framer-motion"
 
 const Navbar: React.FC = () => {
   const devref = useRef<HTMLDivElement>(null);
   const devref1 = useRef<HTMLDivElement>(null);
   const devref2 = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState<boolean>(false);
+  const [nav,setNav] = useState<boolean>(false);
+
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if(latest > 100){
+      setNav(true);
+    }else{
+      setNav(false);
+    }
+  })
+
   const items: MenuProps["items"] = [
     {
       key: "1",
@@ -83,7 +96,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className={styles.nav_outer} ref={devref}>
+      <div className={nav ? styles.nav_outer2 : styles.nav_outer} ref={devref}>
         <div className={styles.small}>
           <div className={styles.logo}>
             <Image src={logo} alt="coedify" />

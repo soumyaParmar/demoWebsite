@@ -26,6 +26,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.4.0",
     "antd": "^5.18.3",
+    "framer-motion": "^11.2.12",
     "gsap": "^3.12.5",
     "js-cookie": "^3.0.5",
     "locomotive-scroll": "^5.0.0-beta.13",

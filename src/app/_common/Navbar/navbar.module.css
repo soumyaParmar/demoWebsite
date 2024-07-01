@@ -1,4 +1,7 @@
 .nav_outer{
+    @apply flex justify-around h-[60px] items-center fixed w-screen z-10 text-[13px] bg-transparent;
+ }
+ .nav_outer2{
     @apply flex justify-around h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
  }
 .nav_innerOne{
@@ -73,6 +76,12 @@
 }
 @media (max-width:826px) {
     .nav_outer{
+        @apply w-screen bg-transparent block p-4 fixed;
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+    }
+    .nav_outer2{
         @apply w-screen bg-black block p-4 fixed;
         display: flex;
         justify-content: space-between;
