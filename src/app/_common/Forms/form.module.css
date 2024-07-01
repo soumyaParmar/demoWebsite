@@ -3,7 +3,7 @@
     background: rgba(0, 0, 0, 0.8); 
 }
 .inner_form{
-    @apply h-[750px] w-[500px] bg-white rounded-lg flex flex-col gap-4;
+    @apply h-[700px] w-[500px] bg-white rounded-lg flex flex-col gap-2;
     padding: 10px 20px
 }
 .close{
