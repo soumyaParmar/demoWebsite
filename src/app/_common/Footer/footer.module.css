@@ -1,0 +1,48 @@
+.footer{
+    @apply flex h-[50vh] justify-center items-center pt-14; 
+}
+.innerLayer{
+    @apply w-[70%] h-full flex flex-col justify-between;
+}
+.navigation{
+    @apply flex gap-8;
+}
+.navigation h1{
+    @apply text-lg font-semibold;
+}
+.navigation ul{
+    @apply flex flex-col gap-2 pt-2;
+}
+.navigation li{
+    @apply text-sm font-normal text-[#768190];
+}
+.navigation p{
+    @apply text-sm font-normal pt-2 text-[#768190];
+}
+.copywrite{
+    @apply text-[#94a3b8];
+    height: 50px;
+    border-top: 0.1px solid #94a3b8;
+}
+.copywrite img{
+    height: 20px;
+    width: 20px;
+}
+.pages{
+    @apply w-2/5 flex flex-col items-end;
+}
+.company{
+    @apply w-1/5 flex flex-col items-end;
+}
+
+@media (max-width:700px) {
+    .navigation{
+        @apply flex-col
+    }
+    .pages{
+        @apply items-start
+    }
+    .company{
+        @apply w-2/5;
+    }
+}

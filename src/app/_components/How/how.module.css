@@ -1,0 +1,69 @@
+.how{
+    @apply flex justify-center flex-col text-center pt-16
+}
+.heading{
+    @apply flex flex-col gap-6
+}
+.heading h1{
+    @apply text-lg font-medium;
+}
+.heading h2{
+    @apply text-5xl;
+    padding: 0 300px; 
+}
+.heading h3{
+   @apply text-xl text-[#5b617a];
+   padding: 0 300px; 
+}
+.left {
+    @apply text-left;
+    display: flex !important; 
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 40px 200px 30px 200px;
+}
+.right{
+    @apply flex text-left flex-row-reverse justify-between;
+    display: flex !important; 
+    flex-direction: row-reverse !important;
+    justify-content: space-between !important;
+    padding: 40px 200px 30px 200px;
+}
+.left h1,.right h1{
+    @apply text-xl font-semibold pb-2
+}
+.left p,.right p{
+    @apply text-sm text-[#5b617a];
+    line-height: 1.5;
+} 
+.btn1{
+    background-color: #2aba88 !important;
+    color: white !important;
+    padding: 20px 20px 20px 20px  !important;
+    font-size: 15px !important;
+    border: 0 !important;
+    transition: 0.2s !important;
+    margin-top: 10px !important;
+}
+.btn1:hover{
+    box-shadow: 4px 4px 1px rgb(8, 8, 8) !important;
+}
+
+@media (max-width:826px) {
+    .heading h2{
+        @apply text-4xl;
+        padding: 0 10px;
+    }
+    .heading h3{
+        @apply text-xl;
+        padding: 0 30px;
+    }
+    .left{
+        display: block !important;
+        padding: 0 50px !important;
+    }
+    .right{
+        display: block !important;
+        padding:  0 50px !important;
+    }
+}

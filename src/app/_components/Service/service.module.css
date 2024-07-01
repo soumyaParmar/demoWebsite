@@ -1,0 +1,198 @@
+.service {
+  @apply h-auto flex justify-center items-center;
+  padding: 100px 0;
+}
+.innerService {
+  @apply w-[70%] flex justify-center items-center flex-col;
+}
+.heading {
+  @apply text-center w-[70%] flex flex-col gap-3;
+}
+.heading h1 {
+  @apply text-sm font-semibold;
+}
+.heading h2 {
+  @apply text-4xl font-semibold;
+}
+.heading h3 {
+  @apply text-sm font-light;
+}
+.topics {
+  @apply flex w-[90%];
+  padding: 40px 0 0 0;
+}
+.left {
+  @apply w-1/2 flex flex-col gap-5 justify-center;
+}
+.left h1 {
+  @apply font-semibold;
+  padding: 0 0 0 30px;
+  border-left: 2px solid #4ade80;
+}
+.left p {
+  @apply w-[250px] text-[12px] text-[#7f8498];
+}
+.right {
+  @apply w-1/2;
+}
+.fast h1 {
+  padding: 0;
+  border-left: 0;
+}
+.fast {
+  padding: 0 0 0 30px;
+  border-left: 3px solid #4ade80;
+}
+.right {
+  height: 300px;
+  width: 500px;
+  background: url("../../_assets/service/side.jpg") no-repeat center center/cover;
+  border-radius: 10px;
+}
+.smallDetail {
+  @apply flex pt-[40px] justify-between;
+  width: 90%;
+}
+.leftDetail {
+  @apply w-[400px];
+}
+.leftDetail h1 {
+  @apply font-semibold text-sm pb-3;
+}
+.leftDetail p {
+  @apply text-3xl font-bold;
+}
+.rightDetail {
+  @apply flex items-center justify-center w-[400px];
+}
+.rightDetail p {
+  @apply w-[400px] text-sm text-[#7f8498];
+}
+.grid {
+  width: 90%;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+.item1 {
+  grid-column: 1/3;
+  background-image: linear-gradient(265deg, rgba(255,255,255,0.0016457266500350398) 0%, rgba(40,36,36,0.8335784997592788) 53%),url("../../_assets/service/how-we-work.jpg");
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 300px;
+  transition: 0.3s;
+}
+.item1 div {
+  width: 90%;
+}
+.item1 h1 {
+  @apply text-3xl font-bold;
+}
+.item1 p {
+  @apply text-sm font-extralight;
+}
+.item1 button {
+  @apply bg-green-500 rounded-md;
+  padding: 10px 20px 10px 20px;
+  width: 150px;
+}
+.box {
+  height: 70px;
+  width: 70px;
+  background: #f6f6f8;
+  border-radius: 10px;
+}
+.otherItem {
+  @apply h-[300px] flex justify-center items-center rounded-md;
+  box-shadow: 1px 1px 10px 10px #f6f6f8;
+  transition: 0.3s
+}
+.innerItem {
+  @apply flex flex-col gap-3;
+  width: 80%;
+}
+.innerItem h1 {
+  @apply font-semibold text-xl;
+}
+.innerItem p {
+  @apply text-[10px] text-[#7f8498];
+}
+
+.fast {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.fast p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.fast:hover p {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.btn1{
+  background-color: #2aba88 !important;
+  color: white !important;
+  padding: 20px 20px 20px 20px  !important;
+  font-size: 15px !important;
+  border: 0 !important;
+  transition: 0.2s !important;
+}
+.btn1:hover{
+  box-shadow: 4px 4px 1px white !important;
+  margin-top:-4px !important;
+}
+
+.item1:hover{
+  margin-top: -10px;
+}
+.otherItem:hover{
+  margin-top: -10px;
+}
+
+@media (max-width: 700px) {
+  .service {
+    padding: 20px 0 10px 0;
+  }
+  .innerService {
+    @apply w-[90%] overflow-hidden;
+  }
+  .topics {
+    @apply block;
+  }
+  .left {
+    @apply w-full;
+  }
+  .smallDetail {
+    @apply block;
+  }
+  .grid {
+    @apply block pt-[10px];
+  }
+  .item1 {
+    padding: 20px 0;
+    margin: 20px 0;
+  }
+  .otherItem {
+    margin: 20px 0;
+  }
+  .heading {
+    @apply w-full;
+  }
+  .leftDetail p {
+    @apply text-2xl w-[70%];
+  }
+}

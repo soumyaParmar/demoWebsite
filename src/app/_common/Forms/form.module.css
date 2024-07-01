@@ -1,0 +1,36 @@
+.form{
+    @apply fixed h-screen w-screen top-0 left-0 flex justify-center items-center z-20;
+    background: rgba(0, 0, 0, 0.8); 
+}
+.inner_form{
+    @apply h-[750px] w-[500px] bg-white rounded-lg flex flex-col gap-4;
+    padding: 10px 20px
+}
+.close{
+    @apply flex w-full justify-end;
+}
+.heading{
+    @apply flex w-full justify-center text-2xl font-semibold text-green-500;
+}
+.inner_form label{
+    @apply text-xs font-semibold;
+}
+.inputs{
+    @apply flex flex-col gap-2
+}
+.btn{
+    padding-top: 20px;
+}
+.btn button {
+    width: 100% !important;
+    background-color: #71717a !important;
+    color: white !important;
+    font-weight: 400 !important;
+}
+
+@media (max-width:700px) {
+    .inner_form{
+        @apply h-[800px] w-[400px] 
+        
+    }
+}

@@ -1,0 +1,100 @@
+.nav_outer{
+    @apply flex justify-around h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black
+ }
+.nav_innerOne{
+    @apply flex gap-6 text-white;
+}
+.nav_innerTwo{
+    @apply flex gap-6 text-white
+}
+.nav_innerOne > p, .nav_innerTwo > p {
+    @apply flex items-center 
+}
+.drop{
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+.what{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.what h1{
+    @apply font-semibold
+}
+.what p{
+    @apply text-[12px] text-[#afadad]
+}
+.box{
+    height: 40px;
+    width: 80px;
+    background-color: cadetblue;
+}
+.customDropdown{
+    width: 280px;
+    border: 1px solid #000 !important; 
+    background-color: rgb(0, 0, 0) !important;
+}
+.customDropdown ul{
+    color: white !important;
+    background-color: rgb(65, 62, 62) !important;
+}
+.customDropdown li{
+    color: white !important;
+    padding: 2px 2px !important;
+}
+
+.btn{
+    background-color: #2aba88 !important;
+    color: white !important;
+    border: 0 !important;
+    padding: 20px !important;
+    font-size: 13px !important;
+    transition: 0.5s;
+}
+.btn:hover{
+    box-shadow: 4px 4px 1px white !important;
+}
+.menu{
+    display: none;
+    color: white;
+}
+@media (max-width:826px) {
+    .nav_outer{
+        @apply w-screen bg-black block p-4 fixed;
+
+    }
+    .nav_innerOne,.nav_innerTwo{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        width: 90vw;
+        justify-content: flex-end;
+    }
+    .drop{
+        font-size: 20px;
+        margin: 10px 0 0 0;
+    }
+    .nav_innerOne p{
+        font-size: 20px;
+        margin: 10px 0 0 0; 
+    }
+    .nav_innerTwo p{
+        font-size: 20px;
+        margin: 10px 0 10px 0; 
+    }
+    .btn{
+        background-color: black !important;
+        color: white !important;
+        border: 0 !important;
+        padding: 0px !important;
+        font-size: 20px !important;
+    }
+}

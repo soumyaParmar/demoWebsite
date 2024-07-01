@@ -1,0 +1,64 @@
+.domain{
+    @apply bg-black text-white flex justify-center items-center;
+    padding: 80px 0
+}
+.layer{
+    @apply h-[80%] w-[70%] ;
+}
+.heading{
+    @apply flex flex-col gap-5;
+}
+.heading h1{
+    @apply text-base;
+}
+.heading h2{
+    @apply text-3xl w-[40%] font-semibold;
+}
+.heading h3{
+    @apply text-sm w-[70%] font-extralight;
+}
+.allDomains{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px 0 0 0 ;
+    gap:40px
+}
+.allDomains h{
+    @apply text-[20px]
+}
+.allDomains p{
+    @apply text-[13px] font-medium text-[#878ea7]
+}
+.allDomains span{
+    @apply text-[13px] font-light
+}
+.allDomains img{
+    background-color: white;
+    border-radius: 5px;
+}
+.allDomains svg{
+    height: 10px;
+}
+
+@media (max-width:826px) {
+    .domain{
+        @apply text-black;
+        background: white;
+    }
+    .layer{
+        @apply w-[80%];
+    }
+    .heading h2{
+        @apply text-3xl w-[80%];
+    }
+    .heading h3{
+        @apply text-sm w-[90%];
+    }
+    .allDomains{
+        display: grid;
+        grid-template-columns: 300px;
+    }
+    .allDomains p{
+        @apply text-[#6e758d] font-light
+    }
+}

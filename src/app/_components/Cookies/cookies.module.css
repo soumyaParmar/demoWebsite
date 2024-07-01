@@ -1,0 +1,55 @@
+.cookies{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    height: 220px;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    z-index: 999;
+    border-radius: 5px
+}
+.inner_cook{
+    @apply text-white bg-black h-[100%] w-[100%] rounded-md flex flex-col justify-between
+}
+.head{
+    @apply flex justify-between p-4
+}
+.btns{
+    @apply flex  justify-between p-4;
+    transition: 0.2s;
+}
+.btn1, .btn2{ 
+    color: white !important;
+    transition: 0.2s;
+    border: 0 !important; 
+    text-decoration: none !important;
+    padding: 10px 70px !important;
+    font-size: 15px !important;
+}
+.btn1:hover,.btn2:hover{
+    box-shadow: 4px 4px 1px white !important;
+    margin-top:-4px !important;
+}
+.btn1{
+    background-color: #2aba88 !important;
+}
+.btn2{
+    background-color: transparent !important;
+    border: 1px solid white !important;
+}
+
+@media (max-width:700px) {
+    .cookies{
+        width: 400px;
+        left: 20px;
+        top: 700px;
+    }
+    .btn1, .btn2{
+        padding: 5px 40px !important;
+    }
+    
+}
