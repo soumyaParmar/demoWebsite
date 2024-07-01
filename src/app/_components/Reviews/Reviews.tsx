@@ -13,7 +13,7 @@ const Reviews = () => {
           <h1>CUSTOMER REVIEW</h1>
           <h2>Grow your business with the Fieldguide AI Platform</h2>
         </div>
-        <Carousel autoplay className={style.carousel} dots={false}>
+        <Carousel autoplay className={style.carousel} dots>
           {review.map((item: reviewType, index: number) => (
             <div key={index} className={style.reviewerLayer}>
               <div className={style.image}>

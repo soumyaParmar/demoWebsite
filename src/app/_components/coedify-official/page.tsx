@@ -45,16 +45,16 @@ const Coedify: React.FC = () => {
         start: "top 50%",
       },
     });
-    gsap.from("#greenpart", {
-      y: -200,
-      opacity: -5,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#greenpart",
-        scroller: "body",
-        start: "top 50%",
-      },
-    });
+    // gsap.from("#greenpart", {
+    //   y: -200,
+    //   opacity: -5,
+    //   duration: 1,
+    //   scrollTrigger: {
+    //     trigger: "#greenpart",
+    //     scroller: "body",
+    //     start: "top 50%",
+    //   },
+    // });
   });
 
   const handleMouseEnter = () => {

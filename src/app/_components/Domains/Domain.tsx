@@ -18,7 +18,7 @@ const Domain: React.FC = () => {
       opacity: -5,
       scrollTrigger: {
         trigger: "#domain",
-        start: "top 35%",
+        start: "top 20%",
       },
     });
   });

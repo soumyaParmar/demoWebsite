@@ -10,26 +10,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Service: React.FC = () => {
   useGSAP(() => {
-    gsap.from("#heading_service", {
-      x: -1000,
-      duration: 1,
-      opacity: -5,
-      scrollTrigger: {
-        trigger: "#heading_service",
-        scroller: "body",
-        start: "top 70%",
-      },
-    });
-    gsap.from("#topics", {
-      x: -1000,
-      duration: 1,
-      opacity: -5,
-      scrollTrigger: {
-        trigger: "#topics",
-        scroller: "body",
-        start: "top 70%",
-      },
-    });
+    // gsap.from("#heading_service", {
+    //   x: -1000,
+    //   duration: 1,
+    //   opacity: -5,
+    //   scrollTrigger: {
+    //     trigger: "#heading_service",
+    //     scroller: "body",
+    //     start: "top 70%",
+    //   },
+    // });
+    // gsap.from("#topics", {
+    //   x: -1000,
+    //   duration: 1,
+    //   opacity: -5,
+    //   scrollTrigger: {
+    //     trigger: "#topics",
+    //     scroller: "body",
+    //     start: "top 70%",
+    //   },
+    // });
     gsap.from("#smallDetail", {
       x: -1000,
       duration: 1,
