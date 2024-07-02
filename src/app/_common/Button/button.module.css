@@ -10,6 +10,18 @@
     background-color: #1e7456 !important;
 }
 
+.btn2{
+    background-color: #000000 !important;
+    color: white !important;
+    padding: 20px 20px 20px 20px  !important;
+    font-size: 15px !important;
+    border: 1px solid white !important;
+    transition: 0.2s !important
+}
+.btn2:hover{
+    background-color: #626765 !important;
+}
+
 @media (max-width:826px) {
     .btn1{
         font-size: 12px !important;

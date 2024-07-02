@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Button } from "antd";
+import Buttons from "@/app/_common/Button/Buttons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,7 +122,7 @@ const Service: React.FC = () => {
                 Accelerate your customer success, internal productivity, market
                 share, and more with GenAI technology.
               </p>
-              <Button className={style.btn1}>Learn more</Button>
+              <Buttons label="Learn more" varient="fill"/>
             </div>
           </div>
           <div className={style.otherItem}>

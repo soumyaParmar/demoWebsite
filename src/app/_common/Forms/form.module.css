@@ -30,7 +30,7 @@
 
 @media (max-width:700px) {
     .inner_form{
-        @apply h-[800px] w-[400px] 
+        @apply h-[720px] w-[350px] 
         
     }
 }

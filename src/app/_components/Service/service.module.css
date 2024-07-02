@@ -87,7 +87,7 @@
   justify-content: center;
   align-items: center;
   padding: 50px;
-  height: 300px;
+  height: 330px;
   transition: 0.3s;
 }
 .item1 div {
@@ -111,19 +111,19 @@
   border-radius: 10px;
 }
 .otherItem {
-  @apply h-[300px] flex justify-center items-center rounded-md;
+  @apply h-[330px] w-[300px] flex rounded-md;
   box-shadow: 1px 1px 10px 10px #f6f6f8;
   transition: 0.3s
 }
 .innerItem {
   @apply flex flex-col gap-3;
-  width: 80%;
+  padding: 10px
 }
 .innerItem h1 {
   @apply font-semibold text-xl;
 }
 .innerItem p {
-  @apply text-[10px] text-[#7f8498];
+  @apply text-[12px] text-[#7f8498];
 }
 
 .fast {

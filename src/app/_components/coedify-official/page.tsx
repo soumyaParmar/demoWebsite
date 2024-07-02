@@ -100,7 +100,7 @@ const Coedify: React.FC = () => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Buttons label="Schedule Meeting"/>
+            <Buttons label="Schedule Meeting" varient="fill"/>
             <Button className={style.btn2}>
               Learn More <KeyboardArrowDownIcon />
             </Button>

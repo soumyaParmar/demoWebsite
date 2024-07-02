@@ -9,6 +9,7 @@ import style from "../../../_components/coedify-official/landing.module.css";
 import Teams from "@/app/_components/Teams/Teams";
 import { Button } from "antd";
 import Reviews from "@/app/_components/Reviews/Reviews";
+import Buttons from "@/app/_common/Button/Buttons";
 
 const What = ({ params }: { params: { slug: string } }) => {
   const [tab, setTab] = useState<number>(1);
@@ -45,7 +46,7 @@ const What = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Button className={style.btn1}>Schedule Meeting</Button>
+            <Buttons label="Schedule Meeting" varient="fill"/>
             <Button className={style.btn2}>Learn More</Button>
           </div>
         </div>
@@ -86,7 +87,7 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <button className={styles.btn}>Learn more</button>
+                    <Buttons label="Learn more" varient="fill"/>
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -102,7 +103,7 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <button className={styles.btn}>Learn more</button>
+                    <Buttons label="Learn more" varient="fill"/>
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -118,7 +119,7 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <button className={styles.btn}>Learn more</button>
+                    <Buttons label="Learn more" varient="fill"/>
                   </div>
                   <div className={styles.box}></div>
                 </div>

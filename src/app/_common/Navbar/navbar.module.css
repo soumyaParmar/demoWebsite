@@ -11,7 +11,7 @@
     @apply flex gap-6 text-white
 }
 .nav_innerOne > p, .nav_innerTwo > p {
-    @apply flex items-center;
+    @apply flex items-center text-nowrap;
 }
 .drop{
     background-color: #000000;
@@ -47,7 +47,7 @@
 }
 .customDropdown ul{
     color: white !important;
-    background-color: rgb(65, 62, 62) !important;
+    background-color: #161616 !important;
 }
 .customDropdown li{
     color: white !important;
@@ -70,7 +70,7 @@
     color: white;
 }
 .logo{
-    @apply w-[170px] flex justify-center
+    @apply w-[170px] flex justify-center cursor-pointer;
 }
 .logo img{
     filter: invert(1);

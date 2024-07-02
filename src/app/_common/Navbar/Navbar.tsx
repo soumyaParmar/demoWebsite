@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     {
       key: "1",
       label: (
-        <Link href="/What-we-do/Cloud_Computing">
+        <Link href="/whatwedo/Cloud_Computing">
           <div className={styles.what}>
             <div className={styles.box}></div>
             <div>
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
     {
       key: "2",
       label: (
-        <Link href="/What-we-do/AI_ML">
+        <Link href="/whatwedo/AI_ML">
           <div className={styles.what}>
             <div className={styles.box}></div>
             <div>
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
     {
       key: "3",
       label: (
-        <Link href="/What-we-do/Hire_Professional">
+        <Link href="/whatwedo/Hire_Professional">
           <div className={styles.what}>
             <div className={styles.box}></div>
             <div>
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
       <div className={nav ? styles.nav_outer2 : styles.nav_outer} ref={devref}>
         <div className={styles.small}>
           <div className={styles.logo}>
-            <Image src={logo} alt="coedify" />
+            <Link href="/"><Image src={logo} alt="coedify" /></Link>
           </div>
           <div className={styles.menu} onClick={handleMenu}>
             <MenuIcon fontSize="large" />
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
             className={styles.drop}
             overlayClassName={styles.customDropdown}
           >
-            <Space>
+            <Space className="text-nowrap">
               What we do
               <CaretDownOutlined />
             </Space>
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className={styles.nav_innerTwo} ref={devref2}>
           <p>Call Us</p>
-          <Buttons label="Schedule Meeting"/>
+          <Buttons label="Schedule Meeting" varient="fill"/>
         </div>
       </div>
     </>

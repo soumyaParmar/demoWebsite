@@ -30,9 +30,11 @@
     padding: 10px 70px !important;
     font-size: 15px !important;
 }
-.btn1:hover,.btn2:hover{
-    box-shadow: 4px 4px 1px white !important;
-    margin-top:-4px !important;
+.btn2:hover{
+    background-color: rgb(214, 120, 120) !important;
+}
+.btn1:hover{
+    background-color: #1e7456 !important;
 }
 .btn1{
     background-color: #2aba88 !important;

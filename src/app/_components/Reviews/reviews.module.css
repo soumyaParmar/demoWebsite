@@ -19,6 +19,10 @@
 .carousel{
     @apply pt-7
 }
+.carousel ul {
+    filter: invert(1) !important;
+    margin-bottom: -30px !important;
+}
 .image{
   @apply w-1/2 flex justify-center items-center ;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import style from "./domain.module.css";
 import { domain } from "../../utils/domains";
 import { domainType } from "@/app/Interfaces/domain";
@@ -11,20 +11,22 @@ import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const Domain: React.FC = () => {
+  const divref = useRef<HTMLDivElement>(null)
+
   useGSAP(() => {
-    gsap.from("#domain", {
+    gsap.from(divref.current, {
       y: -200,
       duration: 1,
       opacity: -5,
       scrollTrigger: {
-        trigger: "#domain",
+        trigger: divref.current,
         start: "top 20%",
       },
     });
   });
 
   return (
-    <div className={style.domain} id="domain">
+    <div className={style.domain} ref={divref}>
       <div className={style.layer}>
         <div className={style.heading}>
           <h1>DOMAINS</h1>

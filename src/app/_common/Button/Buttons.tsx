@@ -4,11 +4,12 @@ import { Button } from "antd";
 
 interface propsComponent {
   label:string;
+  varient:string;
 }
 
-const Buttons:React.FC<propsComponent> = ({label}) => {
+const Buttons:React.FC<propsComponent> = ({label,varient}) => {
   return (
-    <Button className={style.btn1}>
+    <Button className={varient=='fill' ? style.btn1 : style.btn2}>
       {label}
     </Button> 
   )
