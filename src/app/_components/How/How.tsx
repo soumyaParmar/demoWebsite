@@ -47,7 +47,7 @@ const How: React.FC = () => {
               excels in optimization. We've successfully achieved it.
             </p>
 
-            <Buttons label="Learn more"/>
+            <Buttons label="Learn more" varient="fill"/>
           </div>
           <Image src={img1} alt="" height={300} width={400} id="image" />
         </div>
