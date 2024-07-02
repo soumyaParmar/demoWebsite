@@ -11,7 +11,7 @@
     @apply flex gap-6 text-white
 }
 .nav_innerOne > p, .nav_innerTwo > p {
-    @apply flex items-center 
+    @apply flex items-center;
 }
 .drop{
     background-color: #000000;
@@ -20,6 +20,7 @@
     padding: 8px;
     border-radius: 10px;
     font-size: 13px;
+    width: 100%;
 }
 .what{
     display: flex;
@@ -76,7 +77,7 @@
 }
 @media (max-width:826px) {
     .nav_outer{
-        @apply w-screen bg-transparent block p-4 fixed;
+        @apply w-screen bg-black block p-4 fixed;
         display: flex;
         justify-content: space-between;
         height: 80px;
@@ -103,10 +104,12 @@
     .nav_innerOne p{
         font-size: 20px;
         margin: 10px 0 0 0; 
+        padding-left: 8px;
     }
     .nav_innerTwo p{
         font-size: 20px;
         margin: 10px 0 10px 0; 
+        padding-left: 8px;
     }
     .btn{
         background-color: black !important;

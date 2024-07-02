@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className={styles.nav_innerTwo} ref={devref2}>
           <p>Call Us</p>
-          <Buttons label="Schedule Meeting" />
+          <Buttons label="Schedule Meeting"/>
         </div>
       </div>
     </>
