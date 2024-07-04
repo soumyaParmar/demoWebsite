@@ -48,6 +48,6 @@
         @apply block w-full
     }
     .company{
-        @apply w-2/5;
+        @apply w-[60%] items-start;
     }
 }

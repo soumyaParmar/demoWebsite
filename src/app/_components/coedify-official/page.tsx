@@ -3,29 +3,23 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import style from "./landing.module.css";
-import EastIcon from "@mui/icons-material/East";
 import { Button } from "antd";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Teams from "@/app/_components/Teams/Teams";
 import How from "@/app/_components/How/How";
 import Domain from "@/app/_components/Domains/Domain";
 import Reviews from "@/app/_components/Reviews/Reviews";
 import Service from "@/app/_components/Service/Service";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Cookies from "../Cookies/Cookies";
 import Forms from "@/app/_common/Forms/Forms";
-import Buttons from "@/app/_common/Button/Buttons";
+import Particle from "@/app/_common/Particle/Particle";
+import Hero from "../Hero/Hero";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Coedify: React.FC = () => {
-  const [showVideo, setShowVideo] = useState<boolean>(false);
-  const [isloading, setIsLoading] = useState<boolean>(false);
   const [openPopupform,setOpenPopuform] = useState<boolean>(false);
-  const divRef = useRef(null);
 
   useEffect(() => {
     (async () => {
@@ -36,13 +30,13 @@ const Coedify: React.FC = () => {
 
   useGSAP(() => {
     gsap.from("#enterprise", {
-      y: -300,
-      opacity: -5,
+      y: -100,
+      opacity: 0,
       duration: 1,
       scrollTrigger: {
         trigger: "#enterprise",
         scroller: "body",
-        start: "top 50%",
+        start: "top 30%",
       },
     });
     // gsap.from("#greenpart", {
@@ -57,78 +51,14 @@ const Coedify: React.FC = () => {
     // });
   });
 
-  const handleMouseEnter = () => {
-    setShowVideo(true);
-    setIsLoading(true);
-  };
-
-  const handleIframeLoad = () => {
-    setIsLoading(false);
-  };
-
   const handleClick = () =>{
     setOpenPopuform(true);
   }
 
   return (
     <>
-      <div className={style.landing}>
-        <Cookies />
-        <div className={style.content} ref={divRef}>
-          <div className={style.ai_link}>
-            <div
-              className="flex text-[15px] justify-between gap-3 bg-[#151c24] p-1 pl-4  rounded-full max-[600px]:p-2 cursor-pointer"
-              id="landingHeading0"
-            >
-              <p>Read Our Case Studies</p>
-              <span>
-                <EastIcon />
-              </span>
-            </div>
-          </div>
-          <div className={style.heading} id="landingHeading1">
-            <h1>Engineering the Future Together</h1>
-          </div>
-          <div className={style.detail} id="landingHeading2">
-            <p>
-              Discover CoEdify, we're driven by the art of solving engineering
-              challenges. Our B2B focus is your gateway to streamlined
-              development, cost reduction, and cutting-edge technology
-              solutions. From digital transformation and legacy code refinement
-              to seamless AI integration, we're your trusted partner in
-              technological innovation.
-            </p>
-          </div>
-          <div className={style.btns} id="landingHeading3">
-            <Buttons label="Schedule Meeting" varient="fill"/>
-            <Button className={style.btn2}>
-              Learn More <KeyboardArrowDownIcon />
-            </Button>
-          </div>
-        </div>
-        {!showVideo ? (
-          <div onClick={handleMouseEnter} className={style.tempImage}>
-            <PlayCircleIcon />
-          </div>
-        ) : (
-          <>
-            {isloading && (
-              <div className={style.tempImage}>
-                <PlayCircleIcon />
-              </div>
-            )}
-            <iframe
-              id="landingHeading"
-              className={style.image}
-              src="https://www.youtube.com/embed/tIJQkR-ofFo?autohide=1&autoplay=1&loop=1&playlist=tIJQkR-ofFo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Embedded YouTube Video"
-              onLoad={handleIframeLoad}
-            ></iframe>
-          </>
-        )}
-      </div>
+    <Particle/>
+     <Hero/>
       <div className={style.teams}>
         <p>Loved by next-generation teams</p>
         <Teams />

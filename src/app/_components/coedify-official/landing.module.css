@@ -54,6 +54,7 @@
     height: 60%;
     width: 75%;  
     border-radius: 10px; 
+    z-index: 2;
 }
 .tempImage{
     background: url("../../_assets/background/bg.jpg");
@@ -67,7 +68,8 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    z-index: 2;
 }
 .tempImage svg{
     font-size: 80px;

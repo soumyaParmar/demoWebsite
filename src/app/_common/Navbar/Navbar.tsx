@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
             <div>
               <h1>AI/ML</h1>
               <p>
-                Powerful options to security authenticate and manage your users
+              Powerful options to security authenticate and manage your users
               </p>
             </div>
           </div>
@@ -78,6 +78,105 @@ const Navbar: React.FC = () => {
       ),
     },
   ];
+
+  const item2 : MenuProps['items'] = [
+    {
+      key: "1",
+      label: (
+        <Link href="/expertise/cloud_cost_optimization">
+          <div className={styles.what}>
+            <div className={styles.box}></div>
+            <div>
+              <h1>Cloud Cost Optimization</h1>
+              <p>
+                Powerful options to security authenticate and manage your users
+              </p>
+            </div>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Link href="/expertise/dedicated_experienced_developers">
+          <div className={styles.what}>
+            <div className={styles.box}></div>
+            <div>
+              <h1>Dedicated Experienced Developers</h1>
+              <p>
+                Powerful options to security authenticate and manage your users
+              </p>
+            </div>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Link href="/expertise/system_design_and_development">
+          <div className={styles.what}>
+            <div className={styles.box}></div>
+            <div>
+              <h1>System Design and Development</h1>
+              <p>
+                Powerful options to security authenticate and manage your users
+              </p>
+            </div>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Link href="/expertise/AI_intergration">
+          <div className={styles.what}>
+            <div className={styles.box}></div>
+            <div>
+              <h1>AI Intergration</h1>
+              <p>
+                Powerful options to security authenticate and manage your users
+              </p>
+            </div>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Link href="/expertise/redesign_and_performance_enhancement">
+          <div className={styles.what}>
+            <div className={styles.box}></div>
+            <div>
+              <h1>Redesign & Performance Enhancement</h1>
+              <p>
+                Powerful options to security authenticate and manage your users
+              </p>
+            </div>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "6",
+      label: (
+        <Link href="/expertise/comprehensive_system_audit">
+          <div className={styles.what}>
+            <div className={styles.box}></div>
+            <div>
+              <h1>Comprehensive System Audit</h1>
+              <p>
+                Powerful options to security authenticate and manage your users
+              </p>
+            </div>
+          </div>
+        </Link>
+      ),
+    },
+  ]
 
   const handleMenu = () => {
     if (!open && devref.current && devref1.current && devref2.current) {
@@ -117,9 +216,9 @@ const Navbar: React.FC = () => {
             </Space>
           </Dropdown>
           <Dropdown
-            menu={{ items }}
+            menu={{ items:item2 }}
             className={styles.drop}
-            overlayClassName={styles.customDropdown}
+            overlayClassName={styles.customDropdown2}
           >
             <Space>
               Expertise

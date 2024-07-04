@@ -32,9 +32,9 @@ const Service: React.FC = () => {
     //   },
     // });
     gsap.from("#smallDetail", {
-      x: -1000,
+      x: 100,
       duration: 1,
-      opacity: -5,
+      opacity: 0,
       scrollTrigger: {
         trigger: "#smallDetail",
         scroller: "body",
@@ -42,7 +42,7 @@ const Service: React.FC = () => {
       },
     });
     gsap.from("#otherItem", {
-      x: -300,
+      x: -100,
       duration: 1,
       opacity: 0,
       scrollTrigger: {

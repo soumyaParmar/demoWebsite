@@ -15,12 +15,13 @@ const Domain: React.FC = () => {
 
   useGSAP(() => {
     gsap.from(divref.current, {
-      y: -200,
+      y: -100,
       duration: 1,
-      opacity: -5,
+      opacity: 0,
       scrollTrigger: {
         trigger: divref.current,
-        start: "top 20%",
+        start: "top 40%",
+        markers:true
       },
     });
   });

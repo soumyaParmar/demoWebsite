@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import Footer from "@/app/_common/Footer/Footer";
-import Navbar from "@/app/_common/Navbar/Navbar";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./what.module.css";
 import style from "../../../_components/coedify-official/landing.module.css";
@@ -32,7 +30,6 @@ const What = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <Navbar />
       <div className={styles.landing}>
         <div className={styles.content} id="landingPage">
           <div className={style.ai_link}></div>
@@ -203,12 +200,11 @@ const What = ({ params }: { params: { slug: string } }) => {
           </div>
           <div>
             <span>
-              <Button className={style.btn1}>Schedule Meeting </Button>
+            <Buttons label="Schedule Meeting" varient="fill"/>
             </span>
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
