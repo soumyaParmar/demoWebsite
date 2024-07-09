@@ -1,0 +1,172 @@
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0 4rem;
+  margin-top: 4rem;
+}
+
+.heading {
+  color: #495057;
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+}
+.navbar {
+  width: 100%;
+  height: 7.7vh;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: #495057;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.navbar h4 {
+  cursor: pointer;
+}
+.navbar h4:hover {
+  transition: all ease 0.3s;
+  color: #0ca07d;
+}
+
+.navbar h4.active {
+  color: #0ca07d;
+}
+
+.navbar h4.active:hover {
+  color: #495057;
+  transition: all ease 0.3s;
+}
+
+.cardContainer {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow: hidden;
+  gap: 2rem;
+  padding-bottom: 0.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns: repeat(auto-fill, minmax(1fr));
+  grid-template-rows: repeat(auto-fill, minmax(1fr));
+}
+
+.pagination {
+  width: 100%;
+  height: 4%;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  text-decoration: none;
+}
+
+.loadMoreButton button {
+  font-size: 1.3rem;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  background-color: #0ca07d;
+  color: white;
+  border: none;
+  width: 15%;
+  height: 10%;
+  margin-top: 1rem;
+}
+
+.loadMoreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1080px) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .loadMoreButton button {
+    font-size: 1rem;
+    width: 25%;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heading {
+    text-align: center;
+  }
+  .navbar {
+    justify-content: center;
+  }
+
+  .loadMoreButton button {
+    font-size: 1rem;
+    width: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0rem 1rem;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    margin-bottom: 1.2rem;
+  }
+
+  .navbar {
+    font-size: 0.85rem;
+  }
+
+  .loadMoreButton button {
+    font-size: 0.8rem;
+    width: 25%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    font-size: 0.85rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+  }
+  .navbar h4 {
+    white-space: no-wrap;
+    text-align: center;
+    margin: 0;
+  }
+  .loadMoreButton button {
+    font-size: 0.6rem;
+    width: 30%;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 250px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}

@@ -1,234 +1,241 @@
-.landing{
-    @apply h-screen flex justify-center pt-[150px] relative;
-    background: url("../../_assets/background/bgs.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.landing {
+  @apply h-screen flex justify-center pt-[120px];
+  background: url("../../_assets/background/bgs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.content{
-    @apply h-2/3 w-[50%];
+.content {
+  @apply h-2/3 w-[50%];
 }
-.ai_link{
-    @apply flex justify-center p-5 text-white;
+.ai_link {
+  @apply flex justify-center p-5 text-white;
 }
-.ai_link p{
-    @apply flex justify-center items-center text-[13px]
+.ai_link p {
+  @apply flex justify-center items-center text-[13px];
 }
-.ai_link span{  
-    padding: 0px 15px 0px 15px;
-    color: #d4d4d8;
-    background: #21282f;
-    border-radius: 15px;
-    border: 1px solid #31373e;
+.ai_link span {
+  padding: 0px 15px 0px 15px;
+  color: #d4d4d8;
+  background: #21282f;
+  border-radius: 15px;
+  border: 1px solid #31373e;
 }
-.heading{
-    @apply flex justify-center text-white text-[40px] text-center font-semibold
+.heading {
+  @apply flex justify-center text-white text-[40px] text-center font-semibold;
 }
-.detail{
-    @apply flex text-center justify-center text-gray-300
+.detail {
+  @apply flex text-center justify-center text-gray-300;
 }
-.btns{
-    @apply flex justify-center mt-11 gap-6
+.btns {
+  @apply flex justify-center mt-11 gap-6;
 }
-.btn1{
-    background-color: #2aba88 !important;
-    color: white !important;
-    padding: 20px 20px 20px 20px  !important;
-    font-size: 15px !important;
-    border: 0 !important;
-    transition: 0.2s !important;
+.btn1 {
+  background-color: #2aba88 !important;
+  color: white !important;
+  padding: 20px 20px 20px 20px !important;
+  font-size: 15px !important;
+  border: 0 !important;
+  transition: 0.2s !important;
 }
-.btn1:hover{
-    background-color: #1e7456 !important;
+.btn1:hover {
+  background-color: #1e7456 !important;
 }
-.btn2{
-    background-color: transparent !important;
-    color: white !important;
-    padding: 20px 20px 20px 20px !important;
-    font-size: 15px !important;
-    border: 0 !important;
+.btn2 {
+  background-color: transparent !important;
+  color: white !important;
+  padding: 20px 20px 20px 20px !important;
+  font-size: 15px !important;
+  border: 0 !important;
 }
-.image{
-    position: absolute;
-    top:70%;
-    height: 60%;
-    width: 75%;  
-    border-radius: 10px; 
-    z-index: 2;
+.image {
+  position: absolute;
+  top: 70%;
+  height: 60%;
+  width: 75%;
+  border-radius: 10px;
+  z-index: 2;
 }
-.tempImage{
-    background: url("../../_assets/background/bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top:70%;
-    height: 60%;
-    width: 75%; 
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
+.tempImage {
+  background: url("../../_assets/background/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 70%;
+  height: 60%;
+  width: 75%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
-.tempImage svg{
-    font-size: 80px;
-    filter: invert(1);
-    transition: 0.2s;
+.tempImage svg {
+  font-size: 80px;
+  filter: invert(1);
+  transition: 0.2s;
 }
-.tempImage svg:hover{
-    font-size: 120px;
-}
-
-.teams{
-    @apply flex items-center justify-center flex-col;
-    padding: 300px 0 0 0;
-}
-.teams p{
-    @apply pb-8 text-[#5b617a]
-}
-.greenPart{
-    @apply h-[60vh] flex justify-center items-center;
+.tempImage svg:hover {
+  font-size: 120px;
 }
 
-.innerGreen{
-    @apply h-[70%] w-[70%] rounded-lg flex flex-col justify-evenly items-center text-white;
-    background: url("../../_assets/image/Rectangle\ 24.png") no-repeat center center/cover;
+.teams {
+  @apply flex items-center justify-center flex-col;
+  padding: 300px 0 0 0;
 }
-.innerGreen h1{
-    @apply text-5xl font-semibold text-center;
-    padding: 20px 200px;
+.teams p {
+  @apply pb-8 text-[#5b617a];
 }
-.innerGreen p{
-    @apply text-center font-extralight;
+.greenPart {
+  @apply h-[60vh] flex justify-center items-center;
 }
-.enterprise{
-    @apply text-white font-extralight mt-[40px];
-    height: 70vh;
-    background-image: linear-gradient(265deg, rgba(255,255,255,0.0016457266500350398) 0%, rgba(40,36,36,0.8335784997592788) 53%),url("../../_assets/Enterprise/team-sm.jpg");
-    background-repeat: no-repeat; 
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.innerGreen {
+  @apply h-[70%] w-[70%] rounded-lg flex flex-col justify-evenly items-center text-white;
+  background: url("../../_assets/image/Rectangle\ 24.png") no-repeat center
+    center/cover;
 }
-.enterprise h1{
-    @apply font-normal text-xs
+.innerGreen h1 {
+  @apply text-5xl font-semibold text-center;
+  padding: 20px 200px;
 }
-.enterprise h2{
-    @apply font-semibold text-3xl w-[350px]
+.innerGreen p {
+  @apply text-center font-extralight;
 }
-.enterprise h3{
-    @apply w-[450px] font-light text-sm
+.enterprise {
+  @apply text-white font-extralight mt-[40px];
+  height: 70vh;
+  background-image: linear-gradient(
+      265deg,
+      rgba(255, 255, 255, 0.0016457266500350398) 0%,
+      rgba(40, 36, 36, 0.8335784997592788) 53%
+    ),
+    url("../../_assets/Enterprise/team-sm.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.innerEnter{
-    @apply h-[80%] w-[70%];
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
+.enterprise h1 {
+  @apply font-normal text-xs;
 }
-.enterprise button{
-    width: 200px;
-    background: #2aba88;
-    padding: 15px 15px 15px 15px;
-    border-radius: 5px;
-    font-weight: bold
+.enterprise h2 {
+  @apply font-semibold text-3xl w-[350px];
 }
-.individual{
-    @apply flex gap-11;
+.enterprise h3 {
+  @apply w-[450px] font-light text-sm;
 }
-.individual div{
-    @apply w-[400px] flex flex-col gap-2;
+.innerEnter {
+  @apply h-[80%] w-[70%];
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 }
-.individual h1{
-    @apply font-medium text-lg
+.enterprise button {
+  width: 200px;
+  background: #2aba88;
+  padding: 15px 15px 15px 15px;
+  border-radius: 5px;
+  font-weight: bold;
 }
-.individual p{
+.individual {
+  @apply flex gap-11;
+}
+.individual div {
+  @apply w-[400px] flex flex-col gap-2;
+}
+.individual h1 {
+  @apply font-medium text-lg;
+}
+.individual p {
+  @apply text-sm;
+}
+.ai_link div {
+  transition: 0.2s;
+}
+.ai_link div:hover {
+  box-shadow: 1px 0px 10px 0px white;
+}
+
+@media (max-width: 826px) {
+  .landing {
+    @apply flex items-start pt-[100px] h-[90vh];
+    background-position: top;
+    background-size: 120vh;
+  }
+  .content {
+    @apply flex flex-col w-4/5 gap-3;
+  }
+  .ai_link p {
+    @apply flex justify-center items-center text-[10px];
+  }
+  .ai_link span {
+    padding: 0px 2px 0px 2px;
+  }
+  .heading {
+    @apply text-4xl;
+  }
+  .btn1,
+  .btn2 {
+    font-size: 12px !important;
+    padding: 15px !important;
+  }
+  .image {
+    position: absolute;
+    top: 70%;
+    height: 200px;
+    width: 350px;
+  }
+  .teams {
+    padding: 20px 0 0 0;
+  }
+  .greenPart {
+    @apply h-[30vh];
+  }
+  .innerGreen {
+    @apply h-[80%] w-[80%];
+  }
+  .innerGreen h1 {
+    @apply text-xl;
+    padding: 10px 20px;
+  }
+  .innerGreen span {
+  }
+  .enterprise {
+    height: 75vh;
+  }
+  .enterprise h3 {
+    @apply w-[300px];
+  }
+  .individual div {
+    @apply w-[200px] gap-1;
+  }
+  .innerEnter {
+    @apply h-[70%] w-[80%];
+  }
+  .tempImage {
+    position: absolute;
+    top: 70%;
+    height: 200px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .detail p {
     @apply text-sm;
-}
-.ai_link div{
-    transition: 0.2s;
-}
-.ai_link div:hover{
-    box-shadow: 1px 0px 10px 0px white;
-}
-
-@media (max-width:826px) {
-    .landing{
-        @apply flex items-start pt-[100px] h-[90vh];
-        background-position: top;
-        background-size:120vh;   
-    }
-    .content{
-       @apply flex flex-col w-4/5 gap-3
-    }
-    .ai_link p{
-        @apply flex justify-center items-center text-[10px]
-    }
-    .ai_link span{  
-        padding: 0px 2px 0px 2px;
-    }
-    .heading{
-        @apply text-4xl
-    }
-    .btn1,.btn2{
-        font-size: 12px !important;
-        padding: 15px !important;
-    }
-    .image{
-        position: absolute;
-        top:70%;  
-        height: 200px; 
-        width: 350px;
-    }
-    .teams{
-        padding: 20px 0 0 0;
-    }
-    .greenPart{
-        @apply h-[30vh];
-    }
-    .innerGreen{
-        @apply h-[80%] w-[80%];
-    }
-    .innerGreen h1{
-        @apply text-xl;
-        padding: 10px 20px;
-    }
-    .innerGreen span{
-    }
-    .enterprise{
-        height: 75vh;
-    }
-    .enterprise h3{
-        @apply w-[300px]
-    }
-    .individual div{
-        @apply w-[200px] gap-1;
-    }
-    .innerEnter{
-        @apply h-[70%] w-[80%];
-    }
-    .tempImage{
-        position: absolute;
-        top:70%;  
-        height: 200px; 
-        width: 350px;
-    }
-}
-
-@media (max-width:500px) {
-    .detail p{
-        @apply text-sm
-    }
-    .heading{
-        @apply text-3xl
-    }
-    .btns{
-        @apply mt-6
-    }
-    .ai_link{
-        @apply p-3
-    }
+  }
+  .heading {
+    @apply text-3xl;
+  }
+  .btns {
+    @apply mt-6;
+  }
+  .ai_link {
+    @apply p-3;
+  }
 }

@@ -1,0 +1,36 @@
+/* global css for the blog post*/
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #0ca07d;
+  color: white; /* Text color of the selected text */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}

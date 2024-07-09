@@ -21,7 +21,6 @@ const Domain: React.FC = () => {
       scrollTrigger: {
         trigger: divref.current,
         start: "top 40%",
-        markers:true
       },
     });
   });
