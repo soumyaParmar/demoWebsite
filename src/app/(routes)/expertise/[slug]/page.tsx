@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-'use client'
+"use client";
 
 import React, { useEffect, useState } from "react";
 import styles from "./expertise.module.css";
@@ -10,40 +10,40 @@ import Teams from "@/app/_components/Teams/Teams";
 import Reviews from "@/app/_components/Reviews/Reviews";
 
 const Expertise = ({ params }: { params: { slug: string } }) => {
-  const [title,setTitle] = useState<string>('');
+  const [title, setTitle] = useState<string>("");
 
-  useEffect(()=>{
-    switch(params.slug){
-      case 'cloud_cost_optimization': {
-        setTitle('Cloud Cost Optimization');
+  useEffect(() => {
+    switch (params.slug) {
+      case "cloud_cost_optimization": {
+        setTitle("Cloud Cost Optimization");
         break;
       }
-      case 'dedicated_experienced_developers': {
-        setTitle('Dedicated Experienced Developers');
+      case "dedicated_experienced_developers": {
+        setTitle("Dedicated Experienced Developers");
         break;
       }
-      case 'system_design_and_development': {
-        setTitle('System Design and Development');
+      case "system_design_and_development": {
+        setTitle("System Design and Development");
         break;
       }
-      case 'AI_intergration': {
-        setTitle('AI Intergration');
+      case "AI_intergration": {
+        setTitle("AI Intergration");
         break;
       }
-      case 'redesign_and_performance_enhancement': {
-        setTitle('Redesign & Performance Enhancement');
+      case "redesign_and_performance_enhancement": {
+        setTitle("Redesign & Performance Enhancement");
         break;
       }
-      case 'comprehensive_system_audit': {
-        setTitle('Comprehensive System Audit');
+      case "comprehensive_system_audit": {
+        setTitle("Comprehensive System Audit");
         break;
       }
-      default :{
-        setTitle('');
+      default: {
+        setTitle("");
         break;
       }
     }
-  },[])
+  }, [params.slug]);
 
   return (
     <div>

@@ -3,7 +3,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 
-const ShareButton = ({ URL }: string) => {
+interface propComp {
+  URL: string;
+}
+
+const ShareButton: React.FC<propComp> = ({ URL }) => {
   const handleShareClick = () => {
     navigator.clipboard
       .writeText(URL)

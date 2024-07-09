@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 import LatestPostCard from "./LatestPostCard";
@@ -39,8 +38,12 @@ const LatestPostSection: React.FC<paginationPropsData> = () => {
     <div className={styles.right}>
       <h1 className={`${inter700.className}`}>Latest Post</h1>
       <div className={styles.latestPost}>
-        {recentPosts.map((post) => (
-          <Link href={`/blogs/insights/${post.slug}`} className={styles.link}>
+        {recentPosts.map((post, index) => (
+          <Link
+            href={`/blogs/insights/${post.slug}`}
+            className={styles.link}
+            key={index}
+          >
             <LatestPostCard
               category={post.category}
               title={post.title}

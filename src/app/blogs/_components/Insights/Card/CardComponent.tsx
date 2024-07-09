@@ -35,8 +35,8 @@ const CardComponent: React.FC<insightsCardData> = (props) => {
             </h3>
 
             <div className={`${inter400.className} ${styles.category}`}>
-              {props.category.split(" ").map((tag: string) => (
-                <span>{tag}</span>
+              {props.category.split(" ").map((tag: string, index: number) => (
+                <span key={index}>{tag}</span>
               ))}
             </div>
 

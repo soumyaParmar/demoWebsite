@@ -22,8 +22,8 @@ let postData: any = undefined;
 
 // Function to show the data
 const showData = (visibleInsights: visibleInsights) => {
-  postData = visibleInsights.map((post) => (
-    <Link href={`/blogs/insights/${post.slug}`} className={styles.link}>
+  postData = visibleInsights.map((post, i) => (
+    <Link href={`/blogs/insights/${post.slug}`} className={styles.link} key={i}>
       <CardComponent
         category={post.category}
         title={post.title}
@@ -46,8 +46,12 @@ const showData = (visibleInsights: visibleInsights) => {
 const showData1 = (insightsData: insightsCardData[], visibleCards: number) => {
   let postData = insightsData
     .slice(0, visibleCards)
-    .map((post: insightsCardData) => (
-      <Link href={`/blogs/insights/${post.slug}`} className={styles.link}>
+    .map((post: insightsCardData, index: number) => (
+      <Link
+        href={`/blogs/insights/${post.slug}`}
+        className={styles.link}
+        key={index}
+      >
         <CardComponent
           category={post.category}
           title={post.title}
@@ -95,22 +99,21 @@ const Insights: React.FC<paginationPropsData> = ({ insightsData }) => {
   const handleLoadMore = () => {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + 4);
   };
-  
+
   useEffect(() => {
     postData = showData1(insightsData, visibleCards);
   }, []);
 
   useEffect(() => {
-    if(category === "All")
-      postData = showData1(insightsData, visibleCards);
-    else postData =  postData = showData1(filterItem, visibleCards);
-  }, [filterItem, category])
+    if (category === "All") postData = showData1(insightsData, visibleCards);
+    else postData = postData = showData1(filterItem, visibleCards);
+  }, [filterItem, category]);
 
   // function to get the catefories of the insights blogs
   const getCategory = (): string[] => {
     let Categories = insightsData.map((post) => post.category);
 
-    Categories = ["All", ...new Set(Categories)];
+    Categories = ["All", ...Array.from(new Set(Categories))];
     return Categories;
   };
   const Categories: string[] = getCategory();
@@ -162,13 +165,19 @@ const Insights: React.FC<paginationPropsData> = ({ insightsData }) => {
         </h1>
         <nav className={`${styles.navbar}`}>
           {Categories.map((item, index) => (
-            <h4 onClick={() => filteredValue(item)}>{item}</h4>
+            <h4 onClick={() => filteredValue(item)} key={index}>
+              {item}
+            </h4>
           ))}
         </nav>
-        
+
         <div className={styles.cardContainer}>
-          {insightsData.slice(0, visibleCards).map((post) => (
-            <Link href={`/blogs/insights/${post.slug}`} className={styles.link}>
+          {insightsData.slice(0, visibleCards).map((post, index) => (
+            <Link
+              href={`/blogs/insights/${post.slug}`}
+              className={styles.link}
+              key={index}
+            >
               <CardComponent
                 category={post.category}
                 title={post.title}

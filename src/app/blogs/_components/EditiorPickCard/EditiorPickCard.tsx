@@ -2,8 +2,6 @@ import styles from "./EditiorPickCard.module.css";
 import { inter700 } from "../../_customFonts/inter";
 import { EditiorPick } from "../../Interfaces/editiorsPick";
 
-
-
 const EditiorPickCard: React.FC<EditiorPick> = ({
   category,
   title,
@@ -13,9 +11,9 @@ const EditiorPickCard: React.FC<EditiorPick> = ({
     <>
       <div className={styles.container}>
         <div className={styles.containerText}>
-          <div className= {`${styles.category} ${inter700.className}`}>
-            {category.split(" ").map((tag: string) => (
-              <span>{tag}</span>
+          <div className={`${styles.category} ${inter700.className}`}>
+            {category.split(" ").map((tag: string, index: number) => (
+              <span key={index}>{tag}</span>
             ))}
           </div>
           <h2 className={`${styles.heading} ${inter700.className}`}>{title}</h2>

@@ -18,8 +18,12 @@ let postData: any = undefined;
 const showData = (insightsData: insightsCardData[], visibleCards: number) => {
   let postData = insightsData
     .slice(0, visibleCards)
-    .map((post: insightsCardData) => (
-      <Link href={`/blogs/insights/${post.slug}`} className={styles.link}>
+    .map((post: insightsCardData, index: number) => (
+      <Link
+        href={`/blogs/insights/${post.slug}`}
+        className={styles.link}
+        key={index}
+      >
         <CardComponent
           category={post.category}
           title={post.title}
@@ -48,7 +52,7 @@ const Insights: React.FC<paginationPropsData> = ({ insightsData }) => {
   const getCategory = (): string[] => {
     let Categories = insightsData.map((post) => post.category);
 
-    Categories = ["All", ...new Set(Categories)];
+    Categories = ["All", ...Array.from(new Set(Categories))];
     return Categories;
   };
 
@@ -88,10 +92,11 @@ const Insights: React.FC<paginationPropsData> = ({ insightsData }) => {
         </h1>
 
         <nav className={`${styles.navbar} ${inter700.className}`}>
-          {Categories.map((item: string, index: number) => (
+          {Categories.map((item: string, i: number) => (
             <h4
               className={selectedCategory === item ? `${styles.active}` : ""}
               onClick={() => filteredValue(item)}
+              key={i}
             >
               {item}
             </h4>
