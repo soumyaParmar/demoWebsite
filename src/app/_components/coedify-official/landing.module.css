@@ -6,7 +6,7 @@
   background-size: cover; */
 }
 .content {
-  @apply h-2/3 w-[50%];
+  @apply h-2/3 w-[80%];
 }
 .ai_link {
   @apply flex justify-center p-5 text-white relative;
@@ -22,10 +22,10 @@
   border: 1px solid #31373e;
 }
 .heading {
-  @apply flex justify-center text-white text-[40px] text-center font-semibold relative;
+  @apply flex justify-center text-white text-[70px] text-center font-bold relative;
 }
 .detail {
-  @apply flex text-center justify-center text-gray-300;
+  @apply flex text-center justify-center text-gray-300 text-2xl;
 }
 .btns {
   @apply flex justify-center mt-11 gap-6;
