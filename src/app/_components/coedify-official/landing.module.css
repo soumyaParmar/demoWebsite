@@ -1,9 +1,9 @@
 .landing {
-  @apply h-screen flex justify-center pt-[120px];
-  background: url("../../_assets/background/bgs.png");
+  @apply h-screen flex justify-center pt-[120px] bg-slate-500;
+  /* background: url("../../_assets/background/bgs.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .content {
   @apply h-2/3 w-[50%];

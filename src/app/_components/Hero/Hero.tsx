@@ -26,6 +26,7 @@ const Hero = () => {
 
   return (
     <div>
+      <RetroGrid />
       <div className={style.landing}>
         <Cookies />
         <div className={style.content}>
