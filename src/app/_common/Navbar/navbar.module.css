@@ -141,4 +141,12 @@
   .small {
     @apply flex w-full;
   }
+  .customDropdown2 ul {
+    color: white !important;
+    background-color: #161616 !important;
+    display: block !important;
+  }
+  .customDropdown2 {
+    width: 300px;
+  }
 }

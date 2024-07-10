@@ -238,4 +238,7 @@
   .ai_link {
     @apply p-3;
   }
+  .tempImage {
+    top: 65%;
+  }
 }
