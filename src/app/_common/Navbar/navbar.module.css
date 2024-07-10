@@ -28,7 +28,6 @@
 .what {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   padding: 10px;
 }
@@ -39,9 +38,11 @@
   @apply text-[12px] text-[#afadad];
 }
 .box {
-  height: 40px;
+  @apply flex justify-center;
+  height: 50px;
   width: 80px;
-  background-color: cadetblue;
+  background-color: #151c24;
+  margin-top: 5px;
 }
 .customDropdown {
   width: 280px;

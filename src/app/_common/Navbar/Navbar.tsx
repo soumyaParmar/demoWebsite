@@ -10,6 +10,9 @@ import logo from "../../_assets/background/logo.png";
 import Image from "next/image";
 import Buttons from "../Button/Buttons";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import img1 from "../../_assets/what/Cloud.svg";
+import img2 from "../../_assets/what/AI.svg";
+import img3 from "../../_assets/what/Hire.svg";
 
 const Navbar: React.FC = () => {
   const devref = useRef<HTMLDivElement>(null);
@@ -34,7 +37,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/whatwedo/Cloud_Computing">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img1} alt="" />
+            </div>
             <div>
               <h1>Cloud Computing</h1>
               <p>
@@ -50,7 +55,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/whatwedo/AI_ML">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img2} alt="" />
+            </div>
             <div>
               <h1>AI/ML</h1>
               <p>
@@ -66,7 +73,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/whatwedo/Hire_Professional">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img3} alt="" />
+            </div>
             <div>
               <h1>Hire Professional</h1>
               <p>
