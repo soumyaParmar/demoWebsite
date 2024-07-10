@@ -9,7 +9,7 @@ export default function RetroGrid({ className }: { className?: string }) {
       )}
     >
       {/* Grid */}
-      <div className="absolute inset-0 [transform:rotateX(15deg)]">
+      <div className="absolute inset-0 [transform:rotateX(190deg)]">
         <div
           className={cn(
             "animate-grid",

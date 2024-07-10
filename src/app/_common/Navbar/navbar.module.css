@@ -17,7 +17,7 @@
   @apply flex items-center text-nowrap;
 }
 .drop {
-  background-color: #000000;
+  background-color: transparent;
   color: white;
   cursor: pointer;
   padding: 8px;
