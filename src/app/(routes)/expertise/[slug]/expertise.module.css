@@ -1,175 +1,175 @@
-.landing{
-    @apply h-screen flex flex-col pt-[150px] relative items-center;
-    background: url("../../../_assets/background/bgs.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.landing {
+  @apply h-screen flex flex-col pt-[100px] relative items-center;
+  background: url("../../../_assets/background/bgs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.content{
-    @apply h-2/3 w-[50%];
+.content {
+  @apply h-2/3 w-[80%];
 }
-.teams{
-    @apply flex text-white flex-col justify-center items-center gap-[30px] w-full
+.teams {
+  @apply flex text-white flex-col justify-center items-center gap-[30px] w-full;
 }
-.teams p{
-    margin-left: -50px;
+.teams p {
+  margin-left: -50px;
 }
-.outer_service{
-    @apply flex justify-center items-center;
-    padding: 80px 0;
+.outer_service {
+  @apply flex justify-center items-center;
+  padding: 80px 0;
 }
-.inner_service{
-    @apply flex w-[80%] h-[80%] flex-col gap-[100px]
+.inner_service {
+  @apply flex w-[80%] h-[80%] flex-col gap-[100px];
 }
-.service1{
-    @apply flex h-1/2 gap-[50px]
+.service1 {
+  @apply flex h-1/2 gap-[50px];
 }
-.service2{
-    @apply flex h-[300px] gap-[50px]
+.service2 {
+  @apply flex h-[300px] gap-[50px];
 }
-.left{
-    @apply w-1/2 flex flex-col justify-center gap-[10px]
+.left {
+  @apply w-1/2 flex flex-col justify-center gap-[10px];
 }
-.left h1{
-    @apply text-sm font-semibold
+.left h1 {
+  @apply text-sm font-semibold;
 }
-.left h2{
-    @apply text-3xl font-medium
+.left h2 {
+  @apply text-3xl font-medium;
 }
-.left p{
-    @apply text-sm text-[#5b617a] w-[70%];
-    line-height: 25px
+.left p {
+  @apply text-sm text-[#5b617a] w-[70%];
+  line-height: 25px;
 }
 .right {
-    @apply w-1/2 flex flex-col  gap-[10px];
+  @apply w-1/2 flex flex-col  gap-[10px];
 }
-.right h2{
-    @apply text-3xl font-medium w-[80%]
+.right h2 {
+  @apply text-3xl font-medium w-[80%];
 }
-.right p{
-    @apply text-sm text-[#5b617a] w-[80%];
-    line-height: 25px; 
+.right p {
+  @apply text-sm text-[#5b617a] w-[80%];
+  line-height: 25px;
 }
-.box{
-    @apply h-auto w-1/2 bg-black rounded-md;
+.box {
+  @apply h-auto w-1/2 bg-black rounded-md;
 }
-.service3{
-    @apply flex justify-evenly;
+.service3 {
+  @apply flex justify-evenly;
 }
-.service3 h1{
-    @apply text-3xl font-bold text-[#a4a8b8]
+.service3 h1 {
+  @apply text-3xl font-bold text-[#a4a8b8];
 }
-.service3 h2{
-    @apply text-xl font-semibold w-[70%];
-    padding: 10px 0;
+.service3 h2 {
+  @apply text-xl font-semibold w-[70%];
+  padding: 10px 0;
 }
-.service3 p{
-    @apply text-sm text-[#5b617a] w-[90%]
+.service3 p {
+  @apply text-sm text-[#5b617a] w-[90%];
 }
-.service_black{
-    @apply bg-black h-screen w-screen flex justify-center items-center;
+.service_black {
+  @apply bg-black h-screen w-screen flex justify-center items-center;
 }
-.inner_black{
-    @apply w-[80%] h-[90%] flex items-center flex-col justify-evenly;
+.inner_black {
+  @apply w-[80%] h-[90%] flex items-center flex-col justify-evenly;
 }
-.black_head{
-    @apply text-center text-white w-[70%] flex flex-col gap-[10px];
+.black_head {
+  @apply text-center text-white w-[70%] flex flex-col gap-[10px];
 }
-.black_head h1{
-    @apply text-sm font-semibold;
+.black_head h1 {
+  @apply text-sm font-semibold;
 }
-.black_head h2{
-    @apply text-3xl font-medium;
-    padding: 0 60px
+.black_head h2 {
+  @apply text-3xl font-medium;
+  padding: 0 60px;
 }
-.black_head p{
-    @apply text-sm;
-    padding: 0 60px
+.black_head p {
+  @apply text-sm;
+  padding: 0 60px;
 }
-.grid_box{
-    @apply bg-[#0f0e10] p-[15px] rounded-lg
+.grid_box {
+  @apply bg-[#0f0e10] p-[15px] rounded-lg;
 }
-.lil_box{
-    height: 40px;
-    width: 40px;
-    background-color: white;
-    border-radius: 5px
+.lil_box {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 5px;
 }
-.grid_box h1{
-    @apply text-white text-[18px] font-medium;
-    padding: 8px 0;
+.grid_box h1 {
+  @apply text-white text-[18px] font-medium;
+  padding: 8px 0;
 }
-.grid_box p{
-    @apply text-white text-[13px]
+.grid_box p {
+  @apply text-white text-[13px];
 }
-@media (max-width:700px) {
-    .landing{
-        height: 85vh;
-    }
-    .content{
-        @apply w-[90%] h-[60%];
-    }
-    .teams p{
-        margin-left: 0px;
-    }
-    .inner_service{
-        gap: 50px;
-    }
-    .service_black{
-        padding: 60px 0;
-    }
-    .service1{
-        @apply block
-    }
-    .left{
-        @apply w-full
-    }
-    .left h2{
-        @apply text-2xl
-    }
-    .left p{
-        @apply w-full
-    }
-    .box{
-        margin-top: 20px;
-        height: 250px;
-        width: 100%;
-    }
-    .service2{
-        @apply flex-col-reverse h-auto gap-[10px]
-    }
-    .right{
-        @apply w-full
-    }
-    .right h2{
-        @apply w-full text-2xl
-    } 
-    .right p{
-        @apply w-full
-    }
-    .service3{
-        @apply flex-col gap-[30px]
-    }
-    .service3 h2{
-        @apply w-[90%]
-    }
-    .service3 p{
-        @apply w-full
-    }
-    .black_head{
-        @apply w-full
-    }
-    .black_head h2{
-        @apply text-2xl;
-        padding: 0;
-    }
-    .black_head p{
-        padding: 0;
-    }
-    .service_black{
-        @apply h-auto;
-    }
-    .grid_box{
-        @apply mb-[15px]
-    }
+@media (max-width: 700px) {
+  .landing {
+    height: 85vh;
+  }
+  .content {
+    @apply w-[90%] h-[60%];
+  }
+  .teams p {
+    margin-left: 0px;
+  }
+  .inner_service {
+    gap: 50px;
+  }
+  .service_black {
+    padding: 60px 0;
+  }
+  .service1 {
+    @apply block;
+  }
+  .left {
+    @apply w-full;
+  }
+  .left h2 {
+    @apply text-2xl;
+  }
+  .left p {
+    @apply w-full;
+  }
+  .box {
+    margin-top: 20px;
+    height: 250px;
+    width: 100%;
+  }
+  .service2 {
+    @apply flex-col-reverse h-auto gap-[10px];
+  }
+  .right {
+    @apply w-full;
+  }
+  .right h2 {
+    @apply w-full text-2xl;
+  }
+  .right p {
+    @apply w-full;
+  }
+  .service3 {
+    @apply flex-col gap-[30px];
+  }
+  .service3 h2 {
+    @apply w-[90%];
+  }
+  .service3 p {
+    @apply w-full;
+  }
+  .black_head {
+    @apply w-full;
+  }
+  .black_head h2 {
+    @apply text-2xl;
+    padding: 0;
+  }
+  .black_head p {
+    padding: 0;
+  }
+  .service_black {
+    @apply h-auto;
+  }
+  .grid_box {
+    @apply mb-[15px];
+  }
 }

@@ -14,7 +14,7 @@ const Buttons: React.FC<propsComponent> = ({ label, varient, size }) => {
       className={varient == "fill" ? style.btn1 : style.btn2}
       style={
         size === "big"
-          ? { fontSize: "25px !important", padding: "35px !important" }
+          ? { fontSize: "18px !important", padding: "25px 20px !important" }
           : {}
       }
     >

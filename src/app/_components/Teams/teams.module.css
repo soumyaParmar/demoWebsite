@@ -1,8 +1,8 @@
-.h1{
-    @apply text-2xl font-bold;
-    padding: 0 20px 0 20px;
+.h1 {
+  @apply text-2xl font-bold;
+  padding: 0 20px 0 20px;
 }
-.outer{
-    @apply w-[60%] max-[826px]:w-full;
-    padding: 0px 2px;
+.outer {
+  @apply w-[75%] max-[826px]:w-full;
+  padding: 0px 2px;
 }

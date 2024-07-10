@@ -1,10 +1,10 @@
 .nav_outer {
   @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-transparent;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .nav_outer2 {
   @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .nav_innerOne {
   @apply flex gap-6 text-white;
