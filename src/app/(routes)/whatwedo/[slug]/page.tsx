@@ -54,7 +54,7 @@ const What = ({ params }: { params: { slug: string } }) => {
           <Teams />
         </div>
       </div>
-      
+
       <div className={styles.service}>
         <div className={styles.serv_inner}>
           <div className={styles.title}>
@@ -131,9 +131,9 @@ const What = ({ params }: { params: { slug: string } }) => {
       </div>
       <div className={styles.it_works}>
         <DotPattern
-          className={cn(
-            "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
-          )}
+        // className={cn(
+        //   "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+        // )}
         />
         <div className={styles.innerWorks}>
           <div className={styles.leftInner}>

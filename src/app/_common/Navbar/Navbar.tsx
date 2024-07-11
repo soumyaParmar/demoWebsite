@@ -13,6 +13,12 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import img1 from "../../_assets/what/Cloud.svg";
 import img2 from "../../_assets/what/AI.svg";
 import img3 from "../../_assets/what/Hire.svg";
+import img4 from "../../_assets/expertise/1.svg";
+import img5 from "../../_assets/expertise/2.svg";
+import img6 from "../../_assets/expertise/3.svg";
+import img7 from "../../_assets/expertise/4.svg";
+import img8 from "../../_assets/expertise/5.svg";
+import img9 from "../../_assets/expertise/6.svg";
 import { useRouter } from "next/navigation";
 
 const Navbar: React.FC = () => {
@@ -96,7 +102,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/expertise/cloud_cost_optimization">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img4} alt="" />
+            </div>
             <div>
               <h1>Cloud Cost Optimization</h1>
               <p>
@@ -112,7 +120,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/expertise/dedicated_experienced_developers">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img5} alt="" />
+            </div>
             <div>
               <h1>Dedicated Experienced Developers</h1>
               <p>
@@ -128,7 +138,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/expertise/system_design_and_development">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img6} alt="" />
+            </div>
             <div>
               <h1>System Design and Development</h1>
               <p>
@@ -144,7 +156,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/expertise/AI_intergration">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img7} alt="" />
+            </div>
             <div>
               <h1>AI Intergration</h1>
               <p>
@@ -160,7 +174,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/expertise/redesign_and_performance_enhancement">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img8} alt="" />
+            </div>
             <div>
               <h1>Redesign & Performance Enhancement</h1>
               <p>
@@ -176,7 +192,9 @@ const Navbar: React.FC = () => {
       label: (
         <Link href="/expertise/comprehensive_system_audit">
           <div className={stylex.what}>
-            <div className={stylex.box}></div>
+            <div className={stylex.box}>
+              <Image src={img9} alt="" />
+            </div>
             <div>
               <h1>Comprehensive System Audit</h1>
               <p>
