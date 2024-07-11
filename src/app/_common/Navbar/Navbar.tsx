@@ -13,6 +13,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import img1 from "../../_assets/what/Cloud.svg";
 import img2 from "../../_assets/what/AI.svg";
 import img3 from "../../_assets/what/Hire.svg";
+import { useRouter } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const devref = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ const Navbar: React.FC = () => {
   const devref2 = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState<boolean>(false);
   const [nav, setNav] = useState<boolean>(false);
+  const router = useRouter();
 
   const { scrollY } = useScroll();
 
@@ -202,6 +204,10 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const handleRoute = () => {
+    router.push("/AboutUs#form");
+  };
+
   return (
     <>
       <div className={nav ? stylex.nav_outer2 : stylex.nav_outer} ref={devref}>
@@ -244,7 +250,11 @@ const Navbar: React.FC = () => {
           </p>
         </div>
         <div className={stylex.nav_innerTwo} ref={devref2}>
-          <Buttons label="Schedule Meeting" varient="fill" />
+          <Buttons
+            label="Schedule Meeting"
+            varient="fill"
+            onClick={handleRoute}
+          />
         </div>
       </div>
     </>
