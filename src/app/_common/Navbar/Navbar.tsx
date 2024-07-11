@@ -237,10 +237,13 @@ const Navbar: React.FC = () => {
             </Space>
           </Dropdown>
           <p>Case Studies</p>
-          <p>About Us</p>
+
+          <p>
+            {" "}
+            <Link href="/AboutUs">About Us</Link>
+          </p>
         </div>
         <div className={stylex.nav_innerTwo} ref={devref2}>
-          <p>Call Us</p>
           <Buttons label="Schedule Meeting" varient="fill" />
         </div>
       </div>

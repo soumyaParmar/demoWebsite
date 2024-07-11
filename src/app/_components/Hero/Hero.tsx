@@ -1,19 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
+
 import React, { useRef, useState } from "react";
 import Cookies from "../Cookies/Cookies";
 import style from "../coedify-official/landing.module.css";
 import Buttons from "@/app/_common/Button/Buttons";
-import { Button } from "antd";
 import EastIcon from "@mui/icons-material/East";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import RetroGrid from "@/app/_common/Retrogrid/RetroGrid";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState<boolean>(false);
   const [isloading, setIsLoading] = useState<boolean>(false);
   const divRef = useRef(null);
+  const router = useRouter();
 
   const handleMouseEnter = () => {
     setShowVideo(true);
@@ -22,6 +24,10 @@ const Hero = () => {
 
   const handleIframeLoad = () => {
     setIsLoading(false);
+  };
+
+  const handleClick = () => {
+    router.push("/AboutUs#form");
   };
 
   return (
@@ -57,10 +63,12 @@ const Hero = () => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Buttons label="Schedule Meeting" varient="fill" size='big'/>
-            <Button className={style.btn2}>
-              Learn More <KeyboardArrowDownIcon />
-            </Button>
+            <Buttons
+              label="Schedule Meeting"
+              varient="fill"
+              size="big"
+              onClick={handleClick}
+            />
           </div>
         </div>
         {!showVideo ? (

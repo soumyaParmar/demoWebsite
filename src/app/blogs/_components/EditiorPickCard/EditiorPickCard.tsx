@@ -20,6 +20,7 @@ const EditiorPickCard: React.FC<EditiorPick> = ({
           <span className={`${styles.para} ${inter700.className}`}>
             {description}
           </span>
+          <div style={{color: "#2aba88"}}>Read Article...</div>
         </div>
       </div>
     </>

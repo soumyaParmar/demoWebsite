@@ -31,9 +31,17 @@ export const getEditiorsPostContent = (slug: string): any => {
   const folder = "content/editiorPickBlogs/";
   const file = `${folder}${slug}mdx`;
   const content = fs.readFileSync(file, "utf8");
-  return content;
+  const matterResult = matter(content);
+  const obj = {
+    title: matterResult.data.title,
+    description: matterResult.data.summary,
+    category: matterResult.data.category,
+    author: matterResult.data.author,
+    date: matterResult.data.publishedAt,
+    image: matterResult.data.image,
+  };
+  return { obj, content };
 };
-
 
 // to get the metadata from the insights blog
 export const getInsightsBlogData = () => {
@@ -67,30 +75,57 @@ export const getInsightsPostContent = (slug: string) => {
   const folder = "content/insights/";
   const file = `${folder}${slug}mdx`;
   const content = fs.readFileSync(file, "utf8");
+  const matterResult = matter(content);
+  const obj = {
+    title: matterResult.data.title,
+    description: matterResult.data.summary,
+    category: matterResult.data.category,
+    author: matterResult.data.author,
+    date: matterResult.data.publishedAt,
+    image: matterResult.data.image,
+  };
 
-  return content;
+  return { obj, content };
 };
 
 // function to get the data from the markdown file and shown it on the trending blogs
 export const getTrendingBlogData = () => {
-    const folder = "content/trendingBlogs/";
-    const files = fs.readdirSync(folder);
-    const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
-  
-    const posts = markdownPosts.map((filename) => {
-      const fileContents = fs.readFileSync(
-        `content/trendingBlogs/${filename}`,
-        "utf8"
-      );
-      const matterResult = matter(fileContents);
-  
-      return {
-        title: matterResult.data.title,
-        description: matterResult.data.summary,
-        slug: filename.replace("mdx", ""),
-        folderName: "trendingBlogs",
-      };
-    });
-  
-    return posts;
+  const folder = "content/trendingBlogs/";
+  const files = fs.readdirSync(folder);
+  const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
+
+  const posts = markdownPosts.map((filename) => {
+    const fileContents = fs.readFileSync(
+      `content/trendingBlogs/${filename}`,
+      "utf8"
+    );
+    const matterResult = matter(fileContents);
+
+    return {
+      title: matterResult.data.title,
+      description: matterResult.data.summary,
+      slug: filename.replace("mdx", ""),
+      folderName: "trendingBlogs",
+    };
+  });
+
+  return posts;
+};
+
+// Function to get the content of the trending mdx files
+export const getTrendingPostContent = (slug: string): any => {
+  const folder = "content/trendingBlogs/";
+  const file = `${folder}${slug}mdx`;
+  const content = fs.readFileSync(file, "utf8");
+  const matterResult = matter(content);
+
+  const obj = {
+    title: matterResult.data.title,
+    description: matterResult.data.summary,
+    category: matterResult.data.category,
+    author: matterResult.data.author,
+    date: matterResult.data.publishedAt,
+    image: matterResult.data.image,
   };
+  return { obj, content };
+};

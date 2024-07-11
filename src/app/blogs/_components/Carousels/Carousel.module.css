@@ -12,6 +12,7 @@
   background-color: #0ca07d;
   margin-bottom: 2.5rem;
   background-color: #0ca07d;
+  overflow: hidden;
 }
 .carouselSlide {
   color: white;

@@ -8,6 +8,8 @@ import Teams from "@/app/_components/Teams/Teams";
 import { Button } from "antd";
 import Reviews from "@/app/_components/Reviews/Reviews";
 import Buttons from "@/app/_common/Button/Buttons";
+import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
+import { cn } from "@/app/_lib/utils";
 
 const What = ({ params }: { params: { slug: string } }) => {
   const [tab, setTab] = useState<number>(1);
@@ -43,7 +45,7 @@ const What = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Buttons label="Schedule Meeting" varient="fill"/>
+            <Buttons label="Schedule Meeting" varient="fill" />
             <Button className={style.btn2}>Learn More</Button>
           </div>
         </div>
@@ -52,6 +54,7 @@ const What = ({ params }: { params: { slug: string } }) => {
           <Teams />
         </div>
       </div>
+      
       <div className={styles.service}>
         <div className={styles.serv_inner}>
           <div className={styles.title}>
@@ -84,7 +87,7 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <Buttons label="Learn more" varient="fill"/>
+                    <Buttons label="Learn more" varient="fill" />
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -100,7 +103,7 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <Buttons label="Learn more" varient="fill"/>
+                    <Buttons label="Learn more" varient="fill" />
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -116,7 +119,7 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <Buttons label="Learn more" varient="fill"/>
+                    <Buttons label="Learn more" varient="fill" />
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -127,6 +130,11 @@ const What = ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
       <div className={styles.it_works}>
+        <DotPattern
+          className={cn(
+            "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          )}
+        />
         <div className={styles.innerWorks}>
           <div className={styles.leftInner}>
             <h1>HOW IT WORKS</h1>
@@ -200,7 +208,7 @@ const What = ({ params }: { params: { slug: string } }) => {
           </div>
           <div>
             <span>
-            <Buttons label="Schedule Meeting" varient="fill"/>
+              <Buttons label="Schedule Meeting" varient="fill" />
             </span>
           </div>
         </div>

@@ -1,5 +1,3 @@
-// "use client"
-
 import Markdown from "markdown-to-jsx";
 
 // Components
@@ -11,24 +9,26 @@ import { inter700, inter500 } from "@/app/blogs/_customFonts/inter";
 import styles from "../../readingPage.module.css";
 
 import { getInsightsPostContent } from "@/app/blogs/_utils";
+import ReadingPageSection from "@/app/blogs/_components/ReadingPageSection";
 
 const ReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
-  const content = getInsightsPostContent(slug);
+  const objData = getInsightsPostContent(slug);
 
   return (
     <>
-      <div className={styles.nav}></div>
+      {/* <div className={styles.nav}></div> */}
       <div className={styles.container}>
         <div className={`${styles.left} ${inter500.className}`}>
-          {/* <ShareButton /> */}
+          <ReadingPageSection objData={objData} />
 
-          <Markdown className={styles.markdown}>{content}</Markdown>
+          <Markdown className={styles.markdown}>{objData.content}</Markdown>
         </div>
 
         {/* Latest Blog site */}
         <LatestPostSection insightsData={[]} />
       </div>
+
       <Subscribers />
     </>
   );

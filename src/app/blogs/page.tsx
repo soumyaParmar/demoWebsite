@@ -42,6 +42,7 @@ const BlogPage: React.FC = () => {
   return (
     <>
       {/* Hero Section Component */}
+      {/* <Navbar /> */}
       <HeroSection trendingData={TrendingData} />
 
       {/* Editiors pick container */}

@@ -5,13 +5,22 @@ export interface TrendingBlogs {
   folderName: string;
 }
 
-export interface TrendingDataItem {
-  title: string;
-  description: string;
-  slug: string;
-  folderName: string;
+export interface TrendingDataProps {
+  trendingData: TrendingBlogs[];
 }
 
-export interface TrendingDataProps {
-  trendingData: TrendingDataItem[];
+export interface TrendingData {
+  image: any;
+  title: string;
+  description: string;
+  category: string;
+  author: string;
+  date: string;
+}
+
+export interface objectData {
+  objData: {
+    obj: TrendingData;
+    content: any;
+  };
 }

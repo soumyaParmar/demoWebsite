@@ -76,7 +76,7 @@
   margin-top: -4px !important;
 }
 .it_works {
-  @apply bg-black h-screen text-white flex justify-center items-center;
+  @apply bg-black h-screen text-white flex justify-center items-center relative;
 }
 .innerWorks {
   @apply w-[80%] h-[85%] flex;

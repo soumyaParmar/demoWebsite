@@ -39,6 +39,7 @@
 .inputfield input {
   width: 70%;
   height: 100%;
+  height: auto;
   outline: none;
   color: #9b9b9b;
   padding: 10px 20px;

@@ -1,16 +1,21 @@
 /* global css for the blog post*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  /* margin: 0;
-  padding: 0; */
+
+*, *::before, *::after {
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
+
 
 html,
 body {
-  height: auto;
+  max-height: auto;
   max-width: 100%;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 ::selection {

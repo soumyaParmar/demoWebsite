@@ -24,6 +24,7 @@
   color: white;
   top: 7rem;
   padding: 0px 2rem;
+  /* border: 1px soli white; */
 }
 .category {
   display: flex;
@@ -32,7 +33,7 @@
   width: auto;
   gap: 1rem;
   background-color: transparent;
-  margin-bottom: -0.9rem;
+  margin-bottom: 1rem;
 }
 
 .category span {
@@ -57,11 +58,13 @@
 .para {
   width: 20rem;
   height: 5rem;
+
   color: #e5e5e5;
   line-height: 1rem;
   font-size: 0.7rem;
   font-weight: 400;
   text-align: left;
+  margin-bottom:-2rem ;
 }
 
 /* Media queries */
