@@ -1,5 +1,5 @@
 .domain {
-  @apply bg-black text-white flex justify-center items-center;
+  @apply bg-black text-white flex justify-center items-center relative;
   padding: 80px 0;
 }
 .layer {

@@ -7,6 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,7 @@ const Domain: React.FC = () => {
 
   return (
     <div className={style.domain} ref={divref}>
+      <DotPattern/>
       <div className={style.layer}>
         <div className={style.heading}>
           <h1>DOMAINS</h1>
