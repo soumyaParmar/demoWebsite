@@ -1,0 +1,112 @@
+.cardContainer {
+  width: 27vw;
+  height: 30vh;
+  background-color: #f3f4f6b2;
+  border-radius: 15px;
+  /* margin-left: 3rem; */
+  /* margin-bottom: 1.7rem; */
+  padding: 1.7rem;
+}
+
+.cardContainer .topSection {
+  width: 53px;
+  height: 53px;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+
+  margin: auto;
+}
+
+.cardContainer .bottomSection {
+  margin-top: 2rem;
+  width: auto;
+  height: auto;
+  /* border: 1px solid black; */
+}
+.cardContainer h2 {
+  color: #12141d;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardContainer p {
+  color: #5b617a;
+  font-size: 0.9rem;
+  word-spacing: 0.3 rem;
+}
+
+@media (max-width: 1200px) {
+  .cardContainer {
+    width: 25.5vw;
+    height: auto;
+  }
+  .cardContainer .topSection {
+    width: 43px;
+    height: 43px;
+  }
+  .cardContainer h2 {
+    font-size: 1.1rem;
+  }
+
+  .cardContainer p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .cardContainer {
+    width: 28vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .cardContainer {
+    width: 80%;
+    margin: auto;
+  }
+  .cardContainer .topSection {
+    width: 53px;
+    height: 53px;
+  }
+  .cardContainer h2 {
+    font-size: 1.3rem;
+  }
+
+  .cardContainer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardContainer {
+    width: 100%;
+  }
+  .cardContainer h2 {
+    font-size: 1.4rem;
+  }
+
+  .cardContainer p {
+    font-size: 0.9rem;
+  }
+  
+}
+
+
+@media (max-width: 380px) {
+  .cardContainer {
+    
+    padding: 1.3rem;
+  }
+  .cardContainer .topSection {
+    width: 43px;
+    height: 43px;
+    
+  }
+  .cardContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .cardContainer p {
+    font-size: 0.8rem;
+  }
+}

@@ -11,7 +11,7 @@ import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
 const Domain: React.FC = () => {
-  const divref = useRef<HTMLDivElement>(null)
+  const divref = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     gsap.from(divref.current, {
@@ -21,7 +21,6 @@ const Domain: React.FC = () => {
       scrollTrigger: {
         trigger: divref.current,
         start: "top 40%",
-        markers:true
       },
     });
   });

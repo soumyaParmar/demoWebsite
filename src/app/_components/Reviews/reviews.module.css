@@ -15,6 +15,7 @@
     display: flex !important;
     gap:30px;
     padding: 0 80px;
+    /* border: 1px solid black; */
 }
 .carousel{
     @apply pt-7

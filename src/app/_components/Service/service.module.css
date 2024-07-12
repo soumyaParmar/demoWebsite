@@ -12,10 +12,10 @@
   @apply text-sm font-semibold;
 }
 .heading h2 {
-  @apply text-4xl font-semibold;
+  @apply text-[32px] font-semibold;
 }
 .heading h3 {
-  @apply text-sm font-light;
+  @apply text-[16px] font-light;
 }
 .topics {
   @apply flex w-[90%];
@@ -25,12 +25,12 @@
   @apply w-1/2 flex flex-col gap-5 justify-center;
 }
 .left h1 {
-  @apply font-semibold;
+  @apply text-[20px];
   padding: 0 0 0 30px;
   border-left: 2px solid #4ade80;
 }
 .left p {
-  @apply w-[250px] text-[12px] text-[#7f8498];
+  @apply w-[250px] text-[14px] text-[#7f8498];
 }
 .right {
   @apply w-1/2;
@@ -60,13 +60,13 @@
   @apply font-semibold text-sm pb-3;
 }
 .leftDetail p {
-  @apply text-3xl font-bold;
+  @apply text-[32px] font-bold;
 }
 .rightDetail {
   @apply flex items-center justify-center w-[400px];
 }
 .rightDetail p {
-  @apply w-[400px] text-sm text-[#7f8498];
+  @apply w-[400px] text-[16px] text-[#7f8498];
 }
 .grid {
   width: 90%;

@@ -1,0 +1,121 @@
+.container {
+  width: 41.5rem;
+  width: 44vw;
+  height: 20rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  background: url("../../../../../public/editiorPickimage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: all ease 0.1s;
+  overflow: hidden;
+}
+
+.container:hover {
+  box-shadow: 10px 10px 13px 2px #c1bfbf;
+}
+
+.containerText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  top: 7rem;
+  padding: 0px 2rem;
+  /* border: 1px soli white; */
+}
+.category {
+  display: flex;
+  width: 2rem;
+  height: 1.5rem;
+  width: auto;
+  gap: 1rem;
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.category span {
+  text-align: right;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  font-size: 0.6rem;
+  padding: 5px 10px 5px 10px;
+  text-transform: uppercase;
+  border: 1px solid white;
+}
+
+.heading {
+  font-weight: 700;
+  line-height: 2rem;
+  width: 400px;
+  height: 3.6rem;
+  margin-bottom: 1.1rem;
+  font-size: 2rem;
+}
+
+.para {
+  width: 20rem;
+  height: 5rem;
+
+  color: #e5e5e5;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom:-2rem ;
+}
+
+/* Media queries */
+@media (max-width: 1050px) {
+  .container {
+    width: 42vw;
+  }
+
+  .heading {
+    width: 300px;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+
+  .heading {
+    width: 300px;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    height: 15rem;
+  }
+  .category {
+    margin-bottom: -0.2rem;
+  }
+  .containerText {
+    top: 4rem;
+    padding: 0px 1rem;
+  }
+  .heading {
+    width: 230px;
+    margin-bottom: 0.1rem;
+    font-size: 0.9rem;
+    line-height: 1.4em;
+  }
+
+  .para {
+    font-size: 0.6rem;
+
+    text-align: left;
+    width: 13rem;
+    height: 5rem;
+    line-height: 0.8rem;
+  }
+}

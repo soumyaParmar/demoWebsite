@@ -1,5 +1,5 @@
 .footer{
-    @apply flex h-[50vh] justify-center items-center pt-14; 
+    @apply flex h-[50vh] justify-center items-center pt-14 overflow-hidden; 
 }
 .innerLayer{
     @apply w-[70%] h-full flex flex-col justify-between;

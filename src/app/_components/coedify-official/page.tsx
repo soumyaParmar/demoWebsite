@@ -13,13 +13,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Forms from "@/app/_common/Forms/Forms";
-import Particle from "@/app/_common/Particle/Particle";
 import Hero from "../Hero/Hero";
+import Link from "next/link";
+import Buttons from "@/app/_common/Button/Buttons";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Coedify: React.FC = () => {
-  const [openPopupform,setOpenPopuform] = useState<boolean>(false);
+  const [openPopupform, setOpenPopuform] = useState<boolean>(false);
 
   useEffect(() => {
     (async () => {
@@ -51,14 +52,13 @@ const Coedify: React.FC = () => {
     // });
   });
 
-  const handleClick = () =>{
+  const handleClick = () => {
     setOpenPopuform(true);
-  }
+  };
 
   return (
     <>
-    <Particle/>
-     <Hero/>
+      <Hero />
       <div className={style.teams}>
         <p>Loved by next-generation teams</p>
         <Teams />
@@ -88,8 +88,10 @@ const Coedify: React.FC = () => {
               </p>
             </div>
           </div>
-          <button className={style.btn1} onClick={handleClick}>Hire Professional</button>
-          <p>2-week free trial available</p>
+          <button className={style.btn1} onClick={handleClick}>
+            Hire Professional
+          </button>
+          <p className="text-[14px]">2-week free trial available</p>
         </div>
       </div>
       <Service />
@@ -102,14 +104,12 @@ const Coedify: React.FC = () => {
           </div>
           <div>
             <span>
-              <Button className={style.btn1}>Schedule Meeting </Button>
+            <Link href='/AboutUs#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
             </span>
           </div>
         </div>
       </div>
-      {openPopupform && (
-        <Forms setOpenPopuform={setOpenPopuform}/>
-      )}
+      {openPopupform && <Forms setOpenPopuform={setOpenPopuform} />}
     </>
   );
 };

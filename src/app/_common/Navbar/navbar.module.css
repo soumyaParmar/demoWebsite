@@ -1,140 +1,153 @@
-.nav_outer{
-    @apply flex justify-around h-[60px] items-center fixed w-screen z-10 text-[13px] bg-transparent;
- }
- .nav_outer2{
-    @apply flex justify-around h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
- }
-.nav_innerOne{
-    @apply flex gap-6 text-white;
+.nav_outer {
+  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-transparent;
+  padding: 0 30px;
 }
-.nav_innerTwo{
-    @apply flex gap-6 text-white
+.nav_outer2 {
+  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
+  padding: 0 30px;
 }
-.nav_innerOne > p, .nav_innerTwo > p {
-    @apply flex items-center text-nowrap;
+.nav_innerOne {
+  @apply flex gap-6 text-white;
 }
-.drop{
-    background-color: #000000;
-    color: white;
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 13px;
-    width: 100%;
+.nav_innerTwo {
+  @apply flex gap-6 text-white;
 }
-.what{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
+.nav_innerOne > p,
+.nav_innerTwo > p {
+  @apply flex items-center text-nowrap;
 }
-.what h1{
-    @apply font-semibold
+.drop {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 100%;
 }
-.what p{
-    @apply text-[12px] text-[#afadad]
+.what {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
 }
-.box{
-    height: 40px;
-    width: 80px;
-    background-color: cadetblue;
+.what h1 {
+  @apply font-semibold;
 }
-.customDropdown{
-    width: 280px;
-    border: 1px solid #000 !important; 
-    background-color: rgb(0, 0, 0) !important;
+.what p {
+  @apply text-[12px] text-[#afadad];
 }
-.customDropdown2{
-    width: 500px;
-    height: 300px !important;
-    border: 1px solid #000 !important; 
-    background-color: rgb(0, 0, 0) !important;
+.box {
+  @apply flex justify-center;
+  height: 50px;
+  width: 80px;
+  background-color: #151c24;
+  margin-top: 5px;
 }
-.customDropdown ul{
-    color: white !important;
-    background-color: #161616 !important;
+.customDropdown {
+  width: 280px;
+  border: 1px solid #000 !important;
+  background-color: rgb(0, 0, 0) !important;
 }
-.customDropdown2 ul{
-    color: white !important;
-    background-color: #161616 !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr  !important;
+.customDropdown2 {
+  width: 500px;
+  height: 300px !important;
+  border: 1px solid #000 !important;
+  background-color: rgb(0, 0, 0) !important;
 }
-.customDropdown li{
-    color: white !important;
-    padding: 2px 2px !important;
+.customDropdown ul {
+  color: white !important;
+  background-color: #161616 !important;
 }
-.customDropdown2 li{
-    color: white !important;
-    padding: 2px 2px !important;
+.customDropdown2 ul {
+  color: white !important;
+  background-color: #161616 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+.customDropdown li {
+  color: white !important;
+  padding: 2px 2px !important;
+}
+.customDropdown2 li {
+  color: white !important;
+  padding: 2px 2px !important;
 }
 
-.btn{
-    background-color: #2aba88 !important;
+.btn {
+  background-color: #2aba88 !important;
+  color: white !important;
+  border: 0 !important;
+  padding: 20px !important;
+  font-size: 13px !important;
+  transition: 0.5s;
+}
+.btn:hover {
+  box-shadow: 4px 4px 1px white !important;
+}
+.menu {
+  display: none;
+  color: white;
+}
+.logo {
+  @apply w-[170px] flex justify-center cursor-pointer;
+}
+.logo img {
+  filter: invert(1);
+}
+@media (max-width: 826px) {
+  .nav_outer {
+    @apply w-screen bg-black block p-4 fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+  .nav_outer2 {
+    @apply w-screen bg-black block p-4 fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+  .nav_innerOne,
+  .nav_innerTwo {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .drop {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+  }
+  .nav_innerOne p {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    padding: 8px;
+  }
+  .nav_innerTwo p {
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+    padding: 8px;
+  }
+  .btn {
+    background-color: black !important;
     color: white !important;
     border: 0 !important;
-    padding: 20px !important;
-    font-size: 13px !important;
-    transition: 0.5s;
-}
-.btn:hover{
-    box-shadow: 4px 4px 1px white !important;
-}
-.menu{
-    display: none;
-    color: white;
-}
-.logo{
-    @apply w-[170px] flex justify-center cursor-pointer;
-}
-.logo img{
-    filter: invert(1);
-}
-@media (max-width:826px) {
-    .nav_outer{
-        @apply w-screen bg-black block p-4 fixed;
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-    }
-    .nav_outer2{
-        @apply w-screen bg-black block p-4 fixed;
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-    }
-    .nav_innerOne,.nav_innerTwo{
-        display: none;
-    }
-    .menu{
-        display: flex;
-        width: 50%;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .drop{
-        font-size: 20px;
-        margin: 10px 0 0 0;
-    }
-    .nav_innerOne p{
-        font-size: 20px;
-        margin: 10px 0 0 0; 
-        padding-left: 8px;
-    }
-    .nav_innerTwo p{
-        font-size: 20px;
-        margin: 10px 0 10px 0; 
-        padding-left: 8px;
-    }
-    .btn{
-        background-color: black !important;
-        color: white !important;
-        border: 0 !important;
-        padding: 0px !important;
-        font-size: 20px !important;
-    }
-    .small{
-        @apply flex w-full;
-    }
+    padding: 0px !important;
+    font-size: 20px !important;
+  }
+  .small {
+    @apply flex w-full;
+  }
+  .customDropdown2 ul {
+    color: white !important;
+    background-color: #161616 !important;
+    display: block !important;
+  }
+  .customDropdown2 {
+    width: 300px;
+  }
 }

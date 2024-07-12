@@ -1,177 +1,178 @@
-.landing{
-    @apply h-screen flex flex-col justify-center pt-[150px] relative items-center;
-    background: url("../../../_assets/background/bgs.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.landing {
+  @apply h-screen flex flex-col justify-center pt-[10px] relative items-center;
+  background: url("../../../_assets/background/bgs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.content{
-    @apply h-2/3 w-[50%];
+.content {
+  @apply h-2/3 w-[80%];
 }
-.teams{
-    @apply flex text-white flex-col justify-center items-center gap-[30px] w-full
+.teams {
+  @apply flex text-white flex-col justify-center items-center gap-[30px] w-full;
 }
-.teams p{
-    margin-left: -50px;
+.teams p {
+  margin-left: -50px;
 }
-.service{
-    @apply h-screen flex justify-center items-center
+.service {
+  @apply h-screen flex justify-center items-center;
 }
-.serv_inner{
-    @apply h-[80%] w-[80%]
+.serv_inner {
+  @apply h-[80%] w-[80%];
 }
-.title{
-    @apply flex flex-col justify-center items-center
+.title {
+  @apply flex flex-col justify-center items-center;
 }
-.title h1{
-    @apply font-semibold
+.title h1 {
+  @apply font-semibold;
 }
-.title h2{
-    @apply font-semibold text-4xl text-center;
-    padding: 10px 250px;
+.title h2 {
+  @apply font-semibold text-4xl text-center;
+  padding: 10px 250px;
 }
-.tabs{
-    @apply flex justify-center items-center flex-col gap-14
+.tabs {
+  @apply flex justify-center items-center flex-col gap-14;
 }
-.tab_back{
-    @apply flex gap-6 mt-5 rounded-md text-sm;
-    padding: 5px 10px;
-    box-shadow: 1px 1px 8px 0px rgb(160, 159, 159);
+.tab_back {
+  @apply flex gap-6 mt-5 rounded-md text-sm;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 8px 0px rgb(160, 159, 159);
 }
-.tab_back > div{
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.tab_back > div {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .tab_back > div:hover {
-    background-color: rgba(0, 191, 165, 0.15);
+  background-color: rgba(0, 191, 165, 0.15);
 }
 
-.active{
-background-color: #a7f3d0; 
-color: #047857; 
+.active {
+  background-color: #a7f3d0;
+  color: #047857;
 }
-.box{
-    @apply h-[400px] w-[500px] bg-black w-1/2;
+.box {
+  @apply h-[400px] w-[500px] bg-black w-1/2;
 }
-.left{
-    width: 50%;
+.left {
+  width: 50%;
 }
-.left h1{
+.left h1 {
+  @apply text-2xl font-semibold;
+}
+.left p {
+  @apply w-[70%];
+  padding: 20px 0;
+}
+.btn {
+  @apply bg-green-300 rounded-md;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+.btn:hover {
+  box-shadow: 4px 4px 1px rgb(10, 10, 10) !important;
+  margin-top: -4px !important;
+}
+.it_works {
+  @apply bg-black h-screen text-white flex justify-center items-center relative;
+}
+.innerWorks {
+  @apply w-[80%] h-[85%] flex;
+}
+.leftInner {
+  @apply w-1/2;
+}
+.leftInner h1 {
+  @apply text-xs font-medium;
+}
+.leftInner h2 {
+  @apply text-4xl font-semibold;
+  padding: 10px 0;
+  width: 80%;
+}
+.leftInner p {
+  @apply text-sm font-extralight;
+  width: 80%;
+}
+.rightInner {
+  @apply w-1/2 flex flex-col justify-between;
+}
+.rightInner h1 {
+  @apply text-4xl font-bold;
+  color: rgb(107, 104, 104);
+}
+.rightInner h2 {
+  @apply text-3xl font-semibold;
+}
+.text {
+  @apply flex justify-center h-[75%] overflow-hidden;
+  padding: 0 0 0 30px;
+}
+.text p {
+  @apply text-base font-extralight;
+  border-left: 1px solid rgb(107, 104, 104);
+  padding: 5px 0 0 35px;
+}
+
+@media (max-width: 700px) {
+  .landing {
+    @apply pt-[10px] h-[85vh];
+  }
+  .content {
+    @apply w-[90%] h-[50%];
+  }
+  .teams p {
+    margin-left: 0px;
+  }
+  .title h2 {
+    @apply text-3xl;
+    padding: 20px 0px;
+  }
+  .service {
+    @apply items-start pt-[50px];
+  }
+  .serv_inner {
+    @apply w-[90%];
+  }
+  .left {
+    width: 90%;
+  }
+  .left h1 {
     @apply text-2xl font-semibold;
-}
-.left p{
-    @apply w-[70%];
+  }
+  .left p {
+    @apply w-[100%];
     padding: 20px 0;
-}
-.btn{
-    @apply bg-green-300 rounded-md;
-    padding: 10px 20px;
-    transition: 0.2s;
-}
-.btn:hover{
-    box-shadow: 4px 4px 1px rgb(10, 10, 10) !important;
-    margin-top:-4px !important;
-}
-.it_works{
-    @apply bg-black h-screen text-white flex justify-center items-center;
-}
-.innerWorks{
-    @apply w-[80%] h-[85%] flex
-}
-.leftInner{
-    @apply w-1/2
-}
-.leftInner h1{
-    @apply text-xs font-medium
-}
-.leftInner h2{
-    @apply text-4xl font-semibold;
-    padding: 10px 0;
-    width: 80%;
-}
-.leftInner p{
-    @apply text-sm font-extralight;
-    width: 80%;
-}
-.rightInner{
-    @apply w-1/2 flex flex-col justify-between;
-}
-.rightInner h1{
-    @apply text-4xl font-bold;
-    color: rgb(107, 104, 104);
-}
-.rightInner h2{
-    @apply text-3xl font-semibold;   
-}
-.text{
-    @apply flex justify-center h-[75%] overflow-hidden;
-    padding: 0 0 0 30px;
-}
-.text p{
-    @apply text-base font-extralight;
-    border-left: 1px solid rgb(107, 104, 104);
-    padding:5px 0 0 35px;
-}
-
-@media (max-width:700px) {
-    .landing{
-        @apply pt-[10px] h-[85vh];
-    }
-    .content{
-        @apply w-[90%] h-[50%];
-    }
-    .teams p{
-        margin-left: 0px;
-    }
-    .title h2{
-        @apply text-3xl;
-        padding: 20px 0px;
-    }
-    .service{
-        @apply items-start pt-[50px]
-    }
-    .serv_inner{
-        @apply w-[90%]
-    }
-    .left{
-        width: 90%;
-    }
-    .left h1{
-        @apply text-2xl font-semibold;
-    }
-    .left p{
-        @apply w-[100%];
-        padding: 20px 0;
-    }
-    .box{
-        @apply h-[200px] w-[400px] bg-black mt-[20px];
-    }
-    .it_works{
-        @apply h-auto;
-        padding: 40px 0;
-    }
-    .innerWorks{
-        @apply w-[80%] h-auto block
-    }
-    .leftInner{
-        @apply w-full pb-[20px]
-    }
-    .rightInner{
-        @apply w-full gap-[20px];
-    }
-    .leftInner h2{
-        @apply w-full text-3xl
-    }
-    .leftInner p{
-        @apply w-full
-    }
-    .rightInner h2{
-        @apply text-xl
-    }
-    .rightInner p{
-        @apply text-xs pt-[8px]
-    }
+  }
+  .box {
+    @apply h-[200px] w-[350px] bg-black mt-[20px];
+  }
+  .it_works {
+    @apply h-auto;
+    padding: 40px 0;
+    margin: 75px 0 0 0;
+  }
+  .innerWorks {
+    @apply w-[80%] h-auto block;
+  }
+  .leftInner {
+    @apply w-full pb-[20px];
+  }
+  .rightInner {
+    @apply w-full gap-[20px];
+  }
+  .leftInner h2 {
+    @apply w-full text-3xl;
+  }
+  .leftInner p {
+    @apply w-full;
+  }
+  .rightInner h2 {
+    @apply text-xl;
+  }
+  .rightInner p {
+    @apply text-xs pt-[8px];
+  }
 }
