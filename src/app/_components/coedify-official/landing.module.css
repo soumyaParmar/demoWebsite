@@ -20,6 +20,12 @@
   background: #21282f;
   border-radius: 15px;
   border: 1px solid #31373e;
+.ai_link span {
+  padding: 0px 15px 0px 15px;
+  color: #d4d4d8;
+  background: #21282f;
+  border-radius: 15px;
+  border: 1px solid #31373e;
 }
 .heading {
   @apply flex justify-center text-white text-[58px] text-center font-bold relative;
