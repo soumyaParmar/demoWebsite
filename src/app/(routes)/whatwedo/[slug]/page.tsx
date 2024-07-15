@@ -208,7 +208,9 @@ const What = ({ params }: { params: { slug: string } }) => {
           </div>
           <div>
             <span>
-            <Link href='/AboutUs#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
+              <Link href="/AboutUs#form">
+                <Buttons label="Schedule Meeting" varient="fill" />
+              </Link>
             </span>
           </div>
         </div>

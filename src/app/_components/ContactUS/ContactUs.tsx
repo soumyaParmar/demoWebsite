@@ -3,25 +3,19 @@
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 import styles from "../../(routes)/AboutUs/about.module.css";
 import { inter500 } from "@/app/blogs/_customFonts/inter";
-import axios from "axios";
+import * as api from "../../_lib/api";
 import { FormData } from "@/app/Interfaces/ContactUSFormData";
 import { useRouter } from "next/navigation";
 
-const ContactUs: React.FC<FormData> = () => {
+const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    companyName: "",
-    email: "",
-    dropdownOption: "", // Initialize dropdown option with an empty string
-    message: "",
+    CompanyName: "",
+    CompanyEmailAddress: "",
+    LookingFor: "",
+    Message: "",
   });
   const formRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
-
-  // useEffect(() => {
-  //   if (router.asPath.includes("#form")) {
-  //     formRef.current?.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [router]);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -42,20 +36,8 @@ const ContactUs: React.FC<FormData> = () => {
   ): Promise<void> {
     event.preventDefault();
 
-    // try {
-    //   const response = await axios.post("/api/form", formData);
-    //   console.log("Form submitted successfully:", response.data);
-    //   // Optionally reset form state after successful submission
-    //   setFormData({
-    //     companyName: "",
-    //     email: "",
-    //     dropdownOption: "", // Reset dropdown option
-    //     message: "",
-    //   });
-    // } catch (error) {
-    //   console.error("Error submitting form:", error);
-    //   // Handle errors and update state accordingly
-    // }
+    const res = await api.postData("/contact", formData);
+    console.log(res);
   }
 
   return (
@@ -81,9 +63,9 @@ const ContactUs: React.FC<FormData> = () => {
               <label htmlFor="companyName">What is your company name?</label>
               <input
                 id="companyName"
-                name="companyName"
+                name="CompanyName"
                 placeholder="What is your company name?"
-                value={formData.companyName}
+                value={formData.CompanyName}
                 onChange={handleChange}
               />
             </div>
@@ -93,9 +75,9 @@ const ContactUs: React.FC<FormData> = () => {
               </label>
               <input
                 id="email"
-                name="email"
+                name="CompanyEmailAddress"
                 type="email"
-                value={formData.email}
+                value={formData.CompanyEmailAddress}
                 onChange={handleChange}
                 placeholder="What is your business email address?"
               />
@@ -104,9 +86,9 @@ const ContactUs: React.FC<FormData> = () => {
               <label htmlFor="whatToChoose">What are you looking for?</label>
 
               <select
-                name="whatToChoose"
+                name="LookingFor"
                 id="whatToChoose"
-                value={formData.dropdownOption}
+                value={formData.LookingFor}
                 onChange={handleChange}
               >
                 <option value="select">Please choose an option</option>
@@ -121,9 +103,9 @@ const ContactUs: React.FC<FormData> = () => {
               <label htmlFor="message">Write your message.</label>
               <textarea
                 id="message"
-                name="message"
+                name="Message"
                 placeholder="Write your message."
-                value={formData.message}
+                value={formData.Message}
                 onChange={handleChange}
               ></textarea>
             </div>

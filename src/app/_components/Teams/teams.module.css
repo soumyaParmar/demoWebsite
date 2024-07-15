@@ -5,7 +5,4 @@
 .outer {
   @apply w-[75%] max-[826px]:w-full;
   padding: 0px 2px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
 }

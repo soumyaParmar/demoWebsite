@@ -1,6 +1,6 @@
 export interface FormData {
-  companyName: string;
-  email: string;
-  dropdownOption: string;
-  message: string;
+  CompanyName: string;
+  CompanyEmailAddress: string;
+  LookingFor: string;
+  Message: string;
 }

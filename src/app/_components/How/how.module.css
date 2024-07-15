@@ -1,6 +1,5 @@
 .how {
-  @apply flex justify-center flex-col text-center;
-  padding: 30px 0;
+  @apply flex justify-center flex-col text-center pt-16;
 }
 .heading {
   @apply flex flex-col gap-6;
@@ -19,9 +18,10 @@
 .left {
   @apply text-left;
   display: flex !important;
+  align-items: center !important;
   flex-direction: row !important;
   justify-content: space-between !important;
-  padding: 40px 200px 30px 200px;
+  padding: 10px 200px 10px 200px;
 }
 .right {
   @apply flex text-left flex-row-reverse justify-between;
@@ -38,6 +38,10 @@
 .right p {
   @apply text-base text-[#5b617a];
   line-height: 1.5;
+}
+.left img {
+  height: 330px;
+  width: 500px;
 }
 .btn1 {
   background-color: #2aba88 !important;

@@ -1,6 +1,6 @@
 .service {
   @apply h-auto flex justify-center items-center;
-  padding: 40px 0;
+  padding: 100px 0;
 }
 .innerService {
   @apply w-[70%] flex justify-center items-center flex-col;
@@ -19,7 +19,7 @@
 }
 .topics {
   @apply flex w-[90%];
-  padding: 40px 0;
+  padding: 40px 0 0 0;
 }
 .left {
   @apply w-1/2 flex flex-col gap-5 justify-center;
@@ -46,8 +46,8 @@
 .right {
   height: 300px;
   width: 500px;
-  background: url("../../_assets/service/side.jpg") no-repeat center
-    center/cover;
+  background: url("../../_assets/service/Rectangle_39870-removebg-preview\ 2-min.png")
+    no-repeat center center/cover;
   border-radius: 10px;
 }
 .smallDetail {

@@ -1,15 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import React, { Dispatch, SetStateAction, use, useState } from "react";
+import React, { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
 import style from "./form.module.css";
 import CloseIcon from "@mui/icons-material/Close";
-import { AutoComplete, Button, Input, Select } from "antd";
+import { Button, Input, Select } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import styledEngine from "@mui/styled-engine";
 import { Chip } from "@mui/material";
-import { Stack, padding } from "@mui/system";
-
+import { devFormType } from "@/app/Interfaces/devForm";
+import * as api from "../../_lib/api";
 interface optionType {
   value: string;
 }
@@ -20,7 +19,16 @@ interface propsComponent {
 
 const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
   const [techChips, setTechChips] = useState<string[]>([]);
-  const [newOpt,setNewOpt] = useState<optionType[]>([])
+  const [newOpt, setNewOpt] = useState<optionType[]>([]);
+  const [payload, setPayload] = useState<devFormType>({
+    name: "",
+    business_email: "",
+    company_name: "",
+    number_of_employees: "",
+    technologies_required: [],
+    hiring_needs: "",
+    other_information: "",
+  });
   const [opt, setOpt] = useState<optionType[]>([
     { value: "React" },
     { value: "Java" },
@@ -50,11 +58,10 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
     setNewOpt([]);
   };
   const onSelect1 = (data: string) => {
-    // setTechnology((prev) => [...prev, { value: data }]);
-    console.log("onSelect", data);
+    setPayload((prev) => ({ ...prev, number_of_employees: data }));
   };
   const onSelect2 = (data: string) => {
-    // setTechnology((prev) => [...prev, { value: data }]);
+    setPayload((prev) => ({ ...prev, hiring_needs: data }));
     console.log("onSelect", data);
   };
 
@@ -65,9 +72,23 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
     setTechChips(newData);
   };
 
-  const handleChange = (value:string) =>{ 
-    setNewOpt([{ value:value }])
-  }
+  const handleChange = (value: string) => {
+    setNewOpt([{ value: value }]);
+  };
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setPayload((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async () => {
+    setPayload((prev) => ({ ...prev, technologies_required: techChips }));
+
+    const res = await api.postData("/developerDetails", payload);
+    console.log(res);
+  };
 
   return (
     <div className={style.form}>
@@ -81,15 +102,27 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
         <div className={style.inputs}>
           <div>
             <label>Your name</label>
-            <Input placeholder="Enter your name" />
+            <Input
+              placeholder="Enter your name"
+              onChange={(e) => handleInputChange(e)}
+              name="name"
+            />
           </div>
           <div>
             <label>Business email</label>
-            <Input placeholder="Enter your business email" />
+            <Input
+              placeholder="Enter your business email"
+              onChange={(e) => handleInputChange(e)}
+              name="business_email"
+            />
           </div>
           <div>
             <label>Company name</label>
-            <Input placeholder="Enter your company name" />
+            <Input
+              placeholder="Enter your company name"
+              onChange={(e) => handleInputChange(e)}
+              name="company_name"
+            />
           </div>
           <div>
             <label>Current employees in your company</label>
@@ -116,9 +149,13 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
               options={newOpt.length ? newOpt : opt}
             />
             <div className="pt-[10px]">
-              {techChips?.map((item: string, index: number) => 
-                  <Chip label={item} onDelete={() => handleDelete(index)} key={index}/>
-              )}
+              {techChips?.map((item: string, index: number) => (
+                <Chip
+                  label={item}
+                  onDelete={() => handleDelete(index)}
+                  key={index}
+                />
+              ))}
             </div>
           </div>
           <div>
@@ -135,13 +172,14 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
             <TextArea
               showCount
               maxLength={100}
-              //   onChange={onChange}
+              onChange={(e) => handleInputChange(e)}
+              name="other_information"
               placeholder="Other information"
               style={{ height: 100, resize: "none" }}
             />
           </div>
           <div className={style.btn}>
-            <Button>Submit</Button>
+            <Button onClick={handleSubmit}>Submit</Button>
           </div>
         </div>
       </div>

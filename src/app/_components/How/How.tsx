@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import style from "./how.module.css";
 import Image from "next/image";
-import img1 from "../../_assets/How/how1.svg";
+import img1 from "../../_assets/How/Group 1321314572-min.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -47,9 +47,9 @@ const How: React.FC = () => {
               excels in optimization. We've successfully achieved it.
             </p>
 
-            <Buttons label="Learn more" varient="fill"/>
+            <Buttons label="Learn more" varient="fill" />
           </div>
-          <Image src={img1} alt="" height={300} width={400} id="image" />
+          <Image src={img1} alt="" id="image" />
         </div>
       </div>
     </div>

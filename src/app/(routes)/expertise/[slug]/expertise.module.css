@@ -1,6 +1,11 @@
 .landing {
   @apply h-screen flex flex-col pt-[100px] relative items-center;
-  background: url("../../../_assets/background/bgs.png");
+  background-image: linear-gradient(
+      265deg,
+      rgba(255, 255, 255, 0.0016457266500350398) 0%,
+      rgba(40, 36, 36, 0.8335784997592788) 0%
+    ),
+    url("../../../_assets/background/expertise.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,6 +57,9 @@
 }
 .box {
   @apply h-auto w-1/2 bg-black rounded-md;
+  background: url("../../../_assets/How/Group\ 1321314572-min.png") center
+    no-repeat;
+  background-size: contain;
 }
 .service3 {
   @apply flex justify-evenly;
