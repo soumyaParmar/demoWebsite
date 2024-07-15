@@ -8,6 +8,8 @@ import Buttons from "@/app/_common/Button/Buttons";
 import { Button } from "antd";
 import Teams from "@/app/_components/Teams/Teams";
 import Reviews from "@/app/_components/Reviews/Reviews";
+import Link from "next/link";
+import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
 
 const Expertise = ({ params }: { params: { slug: string } }) => {
   const [title, setTitle] = useState<string>("");
@@ -136,6 +138,7 @@ const Expertise = ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
       <div className={styles.service_black}>
+        <DotPattern/>
         <div className={styles.inner_black}>
           <div className={styles.black_head}>
             <h1>SERVICE</h1>
@@ -202,7 +205,7 @@ const Expertise = ({ params }: { params: { slug: string } }) => {
           </div>
           <div>
             <span>
-              <Buttons label="Schedule Meeting" varient="fill" />
+              <Link href='/AboutUs#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
             </span>
           </div>
         </div>

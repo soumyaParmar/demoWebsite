@@ -66,7 +66,7 @@ const ContactUs: React.FC<FormData> = () => {
           id="leftcontactUs"
         >
           <h5>Contact Us</h5>
-          <h1>Leave us a message. We’ll handle the rest</h1>
+          <h1>Leave us a message. We&#39;ll handle the rest</h1>
           <p>
             To become the company that customers want, it takes a group of
             passionate people. Get to know the people who lead

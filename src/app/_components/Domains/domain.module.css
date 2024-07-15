@@ -1,5 +1,5 @@
 .domain {
-  @apply bg-black text-white flex justify-center items-center;
+  @apply bg-black text-white flex justify-center items-center relative;
   padding: 80px 0;
 }
 .layer {
@@ -9,13 +9,13 @@
   @apply flex flex-col gap-5;
 }
 .heading h1 {
-  @apply text-base;
+  @apply text-[14px];
 }
 .heading h2 {
-  @apply text-3xl w-[40%] font-semibold;
+  @apply text-[32px] w-[40%] font-semibold;
 }
 .heading h3 {
-  @apply text-sm w-[70%] font-extralight;
+  @apply text-[16px] w-[70%] font-extralight;
 }
 .allDomains {
   display: grid;
@@ -27,7 +27,7 @@
   @apply text-[20px];
 }
 .allDomains p {
-  @apply text-[13px] font-medium text-[#878ea7];
+  @apply text-[14px] font-medium text-[#878ea7];
 }
 .allDomains span {
   @apply text-[13px] font-light;
@@ -42,10 +42,6 @@
 }
 
 @media (max-width: 826px) {
-  .domain {
-    @apply text-black;
-    background: white;
-  }
   .layer {
     @apply w-[80%];
   }

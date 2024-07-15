@@ -21,21 +21,28 @@ import img8 from "../../_assets/expertise/5.svg";
 import img9 from "../../_assets/expertise/6.svg";
 import { useRouter } from "next/navigation";
 
-const Navbar: React.FC = () => {
+interface Navbar {
+  flag: boolean,
+  motionValue: boolean
+}
+
+const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
   const devref = useRef<HTMLDivElement>(null);
   const devref1 = useRef<HTMLDivElement>(null);
   const devref2 = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState<boolean>(false);
-  const [nav, setNav] = useState<boolean>(false);
+  const [nav, setNav] = useState<boolean>(flag);
   const router = useRouter();
 
   const { scrollY } = useScroll();
+
+  
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
       setNav(true);
     } else {
-      setNav(false);
+      setNav(motionValue);
     }
   });
 

@@ -5,7 +5,7 @@ import React from 'react'
 const Layout = ({children}:{children:React.ReactNode}) => {
   return (
     <section>
-        <Navbar/>
+        <Navbar flag = {false} motionValue = {false}/>
         {children}
         <Footer/>
     </section>

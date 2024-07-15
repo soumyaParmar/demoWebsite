@@ -14,6 +14,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Forms from "@/app/_common/Forms/Forms";
 import Hero from "../Hero/Hero";
+import Link from "next/link";
+import Buttons from "@/app/_common/Button/Buttons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,7 +91,7 @@ const Coedify: React.FC = () => {
           <button className={style.btn1} onClick={handleClick}>
             Hire Professional
           </button>
-          <p>2-week free trial available</p>
+          <p className="text-[14px]">2-week free trial available</p>
         </div>
       </div>
       <Service />
@@ -102,7 +104,7 @@ const Coedify: React.FC = () => {
           </div>
           <div>
             <span>
-              <Button className={style.btn1}>Schedule Meeting </Button>
+            <Link href='/AboutUs#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
             </span>
           </div>
         </div>

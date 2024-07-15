@@ -10,18 +10,18 @@ const LatestPostCard: React.FC<insightsCardData> = (props) => {
   return (
     <>
       <div className={styles.cardContainer}>
-        <div className={styles.leftContainer}>
+        <div className={`${styles.leftContainer}`}>
           <div className={styles.image}>
             <Image src={CardImg} alt="Card 1" className={styles.image} />
           </div>
         </div>
 
-        <div className={styles.rightContainer}>
-          <div className={styles.topContent}>
+        <div className={`${styles.rightContainer}`}>
+          <div className={`${styles.topContent}`}>
             <div className={`${inter400.className} ${styles.category}`}>
               <span>{props.category}</span>
             </div>
-            <div className={styles.authorDateContainer}>
+            <div className={`${styles.authorDateContainer}`}>
               <span className={`${inter400.className} ${styles.author}`}>
                 {props.author}
               </span>

@@ -35,8 +35,8 @@ const recentPosts: insightsCardData[] = posts.slice(0, 4);
 
 const LatestPostSection: React.FC<paginationPropsData> = () => {
   return (
-    <div className={styles.right}>
-      <h1 className={`${inter700.className}`}>Latest Post</h1>
+    <div className={`${styles.right} w-3/10 p-4`}>
+      <h1 className={`${inter700.className} ${styles.title}`}>Latest Post</h1>
       <div className={styles.latestPost}>
         {recentPosts.map((post, index) => (
           <Link

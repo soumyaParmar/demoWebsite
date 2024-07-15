@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 
+
 // custom fonts and styles
-import "./global.css";
-import { inter500 } from "./_customFonts/inter";
+// import "./global.css";
+import { inter700 } from "./_customFonts/inter";
 import styles from "./blogsPage.module.css";
 
 // components
@@ -47,7 +48,7 @@ const BlogPage: React.FC = () => {
 
       {/* Editiors pick container */}
       <div className={styles.editiorPick}>
-        <h1 className={`${inter500.className} ${styles.heading}`}>
+        <h1 className={`${inter700.className} ${styles.heading}`}>
           Editior's Pick
         </h1>
         <div className={styles.editiorPickCardBox}>{postData}</div>

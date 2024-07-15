@@ -39,12 +39,11 @@ const Page: React.FC = () => {
   // for animations
   useGSAP();
 
-  
-
   return (
     <>
       <div className={styles.container}>
-        <Navbar />
+        <Navbar flag={false} motionValue={false} />
+        
         {/* Hero Section */}
         <div className={style1.landing}>
           <div className={style1.content} id="landingPage">

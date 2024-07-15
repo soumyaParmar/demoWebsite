@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className='page'>
-      <Navbar/>
+      <Navbar flag = {false} motionValue = {false}/>
       <Coedify/>  
       <Footer/>
     </div>

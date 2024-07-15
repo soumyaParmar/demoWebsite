@@ -22,11 +22,11 @@
   border: 1px solid #31373e;
 }
 .heading {
-  @apply flex justify-center text-white text-[60px] text-center font-bold relative;
+  @apply flex justify-center text-white text-[58px] text-center font-bold relative;
   line-height: 70px;
 }
 .detail {
-  @apply flex text-center justify-center text-gray-300 text-2xl;
+  @apply flex text-center justify-center text-gray-300 text-[16px];
 }
 .btns {
   @apply flex justify-center mt-11 gap-6;
@@ -105,7 +105,7 @@
   @apply text-center font-extralight;
 }
 .enterprise {
-  @apply text-white font-extralight mt-[40px];
+  @apply text-white font-extralight mt-[40px] mb-[40px];
   height: 70vh;
   background-image: linear-gradient(
       265deg,
@@ -124,10 +124,10 @@
   @apply font-normal text-xs;
 }
 .enterprise h2 {
-  @apply font-semibold text-3xl w-[350px];
+  @apply font-semibold text-[32px] w-[350px];
 }
 .enterprise h3 {
-  @apply w-[450px] font-light text-sm;
+  @apply w-[450px] font-light text-[16px];
 }
 .innerEnter {
   @apply h-[80%] w-[70%];

@@ -13,16 +13,18 @@ import matter from "gray-matter";
 import { getTrendingPostContent } from "@/app/blogs/_utils";
 import ReadingPageSection from "@/app/blogs/_components/ReadingPageSection";
 
-const TrendingDataReadingPage:React.FC = (props: any) => {
+const TrendingDataReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   let objData = getTrendingPostContent(slug);
   return (
-    <div>
-      <div className={styles.container}>
+    <>
+      <div className={`${styles.container} flex w-full`}>
         <div className={`${styles.left} ${inter500.className}`}>
-          <ReadingPageSection objData={objData} />
+          {/* <ReadingPageSection objData={objData} /> */}
 
-          <Markdown className={styles.markdown}>{objData.content}</Markdown>
+          <div className={`${styles.markdownContent}`}>
+            <Markdown>{objData.content}</Markdown>
+          </div>
         </div>
 
         {/* Latest Blog site */}
@@ -30,7 +32,7 @@ const TrendingDataReadingPage:React.FC = (props: any) => {
       </div>
 
       <Subscribers />
-    </div>
+    </>
   );
 };
 

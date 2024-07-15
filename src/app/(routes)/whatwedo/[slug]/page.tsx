@@ -10,6 +10,7 @@ import Reviews from "@/app/_components/Reviews/Reviews";
 import Buttons from "@/app/_common/Button/Buttons";
 import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
 import { cn } from "@/app/_lib/utils";
+import Link from "next/link";
 
 const What = ({ params }: { params: { slug: string } }) => {
   const [tab, setTab] = useState<number>(1);
@@ -208,7 +209,7 @@ const What = ({ params }: { params: { slug: string } }) => {
           </div>
           <div>
             <span>
-              <Buttons label="Schedule Meeting" varient="fill" />
+            <Link href='/AboutUs#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
             </span>
           </div>
         </div>

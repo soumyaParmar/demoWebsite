@@ -8,146 +8,177 @@ category: "Coding"
 author: "Nikhil Upadhaya"
 ---
 
-There's been massive innovation in the database and backend space for developers building applications with serverless and edge compute. There are new tools, companies, and even programming models that simplify how developers store data.
+![Cover image](https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fm9phbghld7ihlxgoulzs.jpg)
 
-This post will be an overview of databases that pair well with modern application and compute providers.
+# 2023 State of Databases for Serverless & Edge
 
-## Criteria
+For understanding the concept of callbacks and callback hell, I think you should know about **Synchronous** and **Asynchronous** programming in JavaScript(or any other language). Let's see a quick view on these topics in context of JavaScript.
 
-I'll focus on **transactional¹** workloads instead of analytical² workloads.
+## Synchronous Programming
+It is a way of programming in which you can perform only one task at a time and when one task is completed we move to another task. This is what we called **Blocking Code** operation because you need to wait for a task to finish to move to the next one. 
+In the above code snippet, you see code will execute line by line and when an operation on one line is finished then we move to the next line so this is just a simple example of the synchronous way of programming and we do this in our daily life of programming.
 
-The “backend” space is vast: search, analytics, data science, and more – so I'll niche down here. The primary criteria of this overview is:
-
-1. Services that work exceptionally well when paired with serverless and edge compute
-2. Services that work with JavaScript and TypeScript codebases
-
-> **Disclaimer:** I work at Vercel, which partners with companies in this post. I also have personally used many of these tools for my own personal projects. My site currently uses PlanetScale and I'm also an angel investor in Supabase (mentioned below).
-
-## A new programming model
-
-Relational databases have been around for 25+ years.
-
-While there are new companies creating _serverless-first_ storage solutions, a new programming model is required for workloads to be compatible with serverless compute and modern runtimes.
-
-These solutions must be:
-
-- **Connectionless:** Developers don't want to think about manual connection management. Traditional database protocols are stateful, whereas HTTP is mostly stateless, making it easier to use with scale to zero compute. Exposed through an SDK or HTTP API, “connectionless” solutions provide an **abstraction over connection pooling**.
-- **Web native:** Browser data-fetching APIs (e.g. Web `fetch`) and protocols are eating the world. New databases use HTTP APIs or WebSockets, rather than opening direct connections to the database. This makes them compatible with all forms of compute (including the lighter runtime used in edge compute).
-- **Lightweight:** Client libraries (and drivers) are becoming thin. Complexity is shifting to the database vendor, taking on the burden as part of their global infrastructure. For example, their gateway might handle connection pooling or provide caching infrastructure. This has led to a new wave of ORMs (i.e. abstractions to query data) both as standalone libraries and as integrated database SDKs.
-- **(Bonus) Type-safe:** TypeScript developers are favoring databases or libraries which provide tooling to enable type-safe access to your data. For example: [Prisma](https://www.prisma.io/), [Kysely](https://github.com/koskimas/kysely), [Drizzle](https://github.com/drizzle-team/drizzle-orm), [Contentlayer](https://www.contentlayer.dev/), and [Zapatos](https://jawj.github.io/zapatos/).
-
-Consider databases like Postgres. New solutions like Neon and Supabase abstract connection management, providing you with a simple way to query and mutate data. In the case of Supabase, there's a client library that uses an HTTP API [built on PostgREST](https://supabase.com/docs/guides/api):
-
-```jsx
-import { createClient } from '@supabase/supabase-js';
-let supabase = createClient('https://<project>.supabase.co', '<your-anon-key>');
-let { data } = await supabase.from('countries').select();
+```javascript
+console.log("Program Starts");
+let sum = getSum(2,3);
+console.log(sum);
+console.log("Program Ends");
 ```
 
-And for Neon:
+## Asynchronous Programming
+Asynchronous programming allows you to perform that work without blocking the main process(or thread). It’s often related to parallelization, the art of performing independent tasks in parallel, that is achieved by using asynchronous programming.
+In asynchronous operation, you can move to another task before the previous one finishes, and this way you can deal with multiple requests simultaneously.
+In JavaScript, a good example of asynchronous programming is `setTimeout` function, let's see a quick example - 
 
-```jsx
-import { Client } from '@neondatabase/serverless';
-let client = new Client(env.DATABASE_URL);
-let {
-  rows: [{ now }],
-} = await client.query('select now();');
+```javascript
+console.log("Program Starts");
+setTimeout(() => {
+  console.log("Reading an user from database...");
+}, 2000);
+console.log("Program Ends");
+```
+So, the output of this program will look like - 
+```
+Program Starts
+Program Ends
+Reading an user from database...
+```
+Pretty cool, right? Our program didn't wait for `setTimeout` to finish, just goes for the next line, then came back to the function and prints the output. This is what we called **Non Blocking** code. You can read more about it [here](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing). 
+There are three design patterns in javascript to deal with asynchronous programming - 
+- Callbacks
+- Promises
+- async/await (just a syntactical sugar of promises)
+
+## Callbacks
+Callbacks is a great way of handling asynchronous behavior in javascript. In JavaScript, everything behaves like an object so functions have the type of object and like any other object (strings, arrays, etc) you can pass functions as an argument to other functions and that's the idea of callback.
+
+```
+function getUser(id, callback) {
+  setTimeout(() => {
+    console.log("Reading an user from database...");
+    callback({id: id, githubUsername: 'jerrycode06'});
+  }, 2000);
+}
+
+getUser(1, (user) => {
+  console.log("User", user);
+})
+```
+You see, we are passing function as an argument to `getUser` function and it calls inside the `getUser` function, output will look like - 
+```
+Reading an user from database...
+User {id: 1, githubUsername: 'jerrycode06'}
 ```
 
-Neon's solution is [particularly interesting](https://neon.tech/blog/serverless-driver-for-postgres/).
+```
+const result = await page.evaluate(() => {
+    let headingFromWeb = document.querySelectorAll(".mw-headline");
+    const headingList = [...headingFromWeb];
+    return headingList.map((h) => h.innerText);
+  });
+```
 
-> The basic premise is simple: our driver redirects the PostgreSQL wire protocol via a special proxy. Our driver connects from the edge function to the proxy over a WebSocket, telling the proxy which database host and port it wants to reach. The proxy opens a TCP connection to that host and port and relays traffic in both directions.
+## Callback Hell
+In above code snippet, we are getting user with github username now let's suppose you also want repositories for that username and also commits in the specific repository so what can we do with the callback approach -
 
-<Image
-  alt={`Neon architecture diagram for connection pooling`}
-  src={`/images/backend/neon.png`}
-  width={1600}
-  height={840}
-/>
+```javascript
+getUser(1, (user) => {
+  console.log("User", user);
+  getRepositories(user.githubUsername, (repos) => {
+    console.log(repos);
+    getCommits(repos[0], (commits) => {
+      console.log(commits);
+      // Callback Hell ("-_-)
+    }
+})
+```
+You are seeing now a nesting of functions here and code also looks scary and this is what we called **Callback Hell**. For a big application it creates more nesting.
+![Callback Hell](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b8euo2n7twvgh3dbuatd.jpeg)
+To avoid this, we will see now **Promises**.
 
-<Callout emoji="💡">
+## Promises
+Promises are the alternative to callbacks for delivering the results of asynchronous computation. They require more effort from implementors of asynchronous functions, but provide several benefits for users of those functions. They are more readable as compared to callbacks and promises has many applications like `fetch` in javascript , `mongoose` operations and so on. Let's see how to implement promises with above example. Actually, promises have four states - 
+- fulfilled - The action relating to the promise succeeded
+- rejected - The action relating to the promise failed
+- pending - Hasn't fulfilled or rejected yet
+- settled - Has fulfilled or rejected
+![Promises](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p60413nfwvkuezgtzzcx.png)
+First we have to create promises to understand this - 
 
-Using WebSockets, instead of HTTP, does have tradeoffs. There might be additional latency on the first request setup, but subsequent requests are faster. There's an [RFC](https://www.rfc-editor.org/rfc/rfc9220.pdf) for WebSockets with `HTTP/3` which would remove that extra network roundtrip.
+```
+function getUser(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Reading from a database....");
+      resolve({ id: id, githubUsername: "jerrycode06" });
+    }, 2000);
+  });
+}
 
-</Callout>
+function getRepositories(username) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(`Extracting Repositories for ${username}....`);
+      resolve(["repo1", "repo2", "repo3"]);
+      // reject(new Error("Error occured in repositories"));
+    }, 2000);
+  });
+}
 
-The connection management isn't going away – it's just being handled by the vendor now.
+function getCommits(repo) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Extracting Commits for " + repo + "....");
+      resolve(["commits"]);
+    }, 2000);
+  });
+}
+```
 
-There's even solutions like PlanetScale which can handle up to [a million connections](https://planetscale.com/blog/one-million-connections), which also allows you to effectively never think about managing connections.
+We created three functions, instead of passing callback function we are now returning a Promise which has two argument **resolve** and **reject**. If everything worked, call `resolve` otherwise call `reject`. Let's see how to use promises - 
 
-## Trends
+```
+// Replace Callback with Promises to avoid callback hell
+getUser(1)
+  .then((user) => getRepositories(user.githubUsername))
+  .then((repos) => getCommits(repos[0]))
+  .then((commits) => console.log("Commits", commits))
+  .catch((err) => console.log("Error: ", err.message));
+```
 
-This new programming model has created emerging trends for database companies:
+More readable, Isn't it? Using arrow functions made this less complex than using simple functions. We have avoided nesting of functions and reduce the complexity of code (callback approach) and that's how promises work. You can deep-dive more about promises [here](https://web.dev/promises).
 
-- Databases are increasingly becoming **data platforms**, including other adjacent solutions like full-text search and analytics.
-- The **decoupling of storage and compute**, popularized by Snowflake (and more), is enabling new players (e.g. Neon et al.) to massively reduce the cost of a “database at rest”. This pairs well with frontend git branch-based workflows, where you want to scale to zero when not being used.
-- Increasingly developers **don't want to “dial the knobs”**. Solutions like DynamoDB (and in some ways S3) provided infinite scale without needing to tweak memory, storage, CPU, clusters, and instances.
-- The dream of **global data** is here, but not how it was predicted. Trying to replicate _all_ data to _every_ network edge is probably not the correct solution most times. Instead, we're seeing specialized data APIs and the emergence of user-specific data stores (e.g. for shopping cart data).
-- More databases are **embracing serverless**, but what “serverless” means to them varies. There are different vectors of autoscaling: connections, storage, compute, and more.
+## async/await 
+It is supposed to be the better way to write promises and it helps us keep our code simple and clean.
+![Aync-Await](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3s7u6tt9iqs9k80dtdkn.png)
+All you have to do is write the word `async` before any regular function and it becomes a promise. In other words `async/await` is a syntactical sugar of using promises it means if you want to avoid chaining of `then()` methods in promises, so you can use the `async/await` approach but internally it also uses the chaining. 
+Let's see how to implement it with above example - 
 
-## Databases
+```
+// Async- await approach
+async function displayCommits() {
+  try {
+    const user = await getUser(1);
+    const repos = await getRepositories(user.githubUsername);
+    const commits = await getCommits(repos[0]);
+    console.log(commits);
+  } catch (err) {
+    console.log("Error: ", err.message);
+  }
+}
 
-I'll bucket these into “established” and “rising” categories, serverless/serverful, as well as generally available (GA) and pre-GA. I'll also mostly talk about managed vendors.
+displayCommit();
+```
 
-For example, you can of course run MySQL or Postgres on major cloud providers like AWS. There's a long tail of niche data storage solutions, so some will definitely be missing that I haven't heard of or used.
+Now, it is more readable than using promises above. Every time we use `await`, we need to decorate this with a function with `async`. Like promises, we don't have `catch()` method here so that's why we are using `try-catch` block for the error handling.
 
-**2024 Update:** A few others providers to add to the list: [Tembo](https://tembo.io), [Nile](https://www.thenile.dev), and [Yugabyte](https://www.yugabyte.com).
+## Conclusion
+In this article we've seen - 
+- Synchronous vs Asynchronous
+- Callbacks and Callback Hell
+- Avoid Callback hell with promises and async/await
 
-### Established serverless solutions
+I personally like the async/await approach the most but sometimes we should the promises approach to deal with async behaviour. 
 
-- **DynamoDB**
-  - **[AWS DynamoDB:](https://aws.amazon.com/dynamodb/)** Fully managed, serverless, key-value NoSQL database.
-- **Firebase**
-  - **[Firestore:](https://firebase.google.com/docs/firestore)** Over 10 years old now, Firestore is a well-adopted document database. One unique advantage Firebase is its built-in support for authentication, real-time workloads, and cross-platform support for mobile.
-- **MongoDB**
-  - [Atlas Serverless:](https://www.mongodb.com/use-cases/serverless) MongoDB has an entire data platform, including search / analytics / etc. Their recent investment into serverless is very exciting, with Atlas Serverless now [generally available](https://www.mongodb.com/blog/post/embrace-benefits-serverless-development-atlas). Their [Data API](https://www.mongodb.com/docs/atlas/api/data-api/) makes them a fantastic pair for serverless / edge.
-- **MySQL**
-  - **[PlanetScale](https://planetscale.com/):** MySQL through [Vitess](https://planetscale.com/blog/all-the-tech-planetscale-replaces). Can easily handle quite a [large](https://planetscale.com/blog/one-million-queries-per-second-with-mysql) [scale](https://planetscale.com/blog/one-million-connections) and also includes some nice features to [speed up](https://planetscale.com/blog/introducing-planetscale-boost) and [monitor](https://planetscale.com/blog/introducing-planetscale-insights-advanced-query-monitoring) queries. Their [serverless driver](https://planetscale.com/blog/introducing-the-planetscale-serverless-driver-for-javascript) (`@planetscale/database`) has been easy to use, but I prefer [Kysely](https://github.com/depot/kysely-planetscale).
-- **PostgreSQL**
-  - **[AWS Aurora](https://aws.amazon.com/rds/aurora/serverless/):** One of the first serverless Postgres offerings.
-  - **[CockroachDB](https://www.cockroachlabs.com/blog/announcing-cockroachdb-serverless/):** Autoscales and distributes data across multiple nodes. Focused on high data consistency and integrity. Supports most of Postgres but not stored procedures and extensions.
-- **Redis**
-  - **[Upstash](https://upstash.com/):** Offers durable/consistent Redis, global replication options, and Kafka. Fantastic `@upstash/redis` HTTP/REST client library.
-
-### Rising serverless database solutions
-
-- **Generally Available (GA)**
-  - **[Fauna](https://fauna.com/):** They were an early mover in the serverless data space. I've had success with their GraphQL APIs before, but feel mostly indifferent on [FQL](https://docs.fauna.com/fauna/current/api/fql/).
-- **Pre-GA**
-  - **[Convex](https://www.convex.dev/)**: Fantastic for real-time workloads, but also a very simple, type-safe interface for querying/mutating data. You write (and think) in functions. Pairs well with React's mental model.
-  - **[Grafbase](https://grafbase.com/)**: If you love GraphQL, Grafbase is worth exploring. Designed to integrate into branch-based workflows + fast reads globally. Realtime and full-text search are in the works.
-  - **[Neon:](https://neon.tech/)** Postgres with separation of storage and compute. Uniquely designed for serverless and works with the native Postgres driver + supports database branching workflows.
-  - **[Supabase](https://supabase.com/):** Open-source, built-on pure Postgres. [Database](https://supabase.com/database) + [Auth](https://supabase.com/auth) + [Storage](https://supabase.com/storage) and more. Scales up on pay-as-you-go, and [working on scale to zero](https://supabase.com/blog/supabase-series-b#where-were-going).
-  - **[Xata](https://xata.io/)**: Not only a database, but search / analytics as well. I'm a fan of their spreadsheet-like UI, which is approachable for a wider audience.
-- _+ Long tail of new providers that can do DB hosting (Railway, Render, Fly, etc)._
-
-### Stateful backends and other solutions
-
-- **Generally Available (GA)**
-  - **[AlloyDB](https://cloud.google.com/alloydb):** Very exciting innovation coming from Google. AlloyDB is unique because it can handle both transactional¹ and analytical² workloads.
-  - **[Ably](https://ably.com/):** Realtime infrastructure with [queues support](https://ably.com/docs/general/queues) and other message durability options.
-  - **[Crunchy Postgres](https://www.crunchydata.com/):** Crunchy Postgres is ["just Postgres"](https://changelog.com/news/just-postgres-LWm4). Focused on performance and availability, cost-effectiveness, and supporting all native Postgres features.
-  - **[Hasura:](https://hasura.io/)** Makes it easy to connect data from many different sources and expose it as a GraphQL API. Can use Neon under-the-hood as the database provider.
-  - **[Liveblocks](https://liveblocks.io/):** Realtime collaboration infrastructure, they offer persistent [conflict-free data](https://liveblocks.io/conflict-free-data-types) along with APIs for document browsing, permissions management, database sync. Beautiful design and documentation.
-  - **[Replicache](https://replicache.dev/)**: More of a database _synchronization engine_ that can be coupled with other solutions with no real-time solution. We use this for [comments on Vercel previews](https://vercel.com/blog/making-live-reviews-a-reality-enhanced-preview-experience).
-  - **[TimeScale](https://www.timescale.com/):** For both transactional and analytical workloads. Adds many features found in NoSQL databases to Postgres, and also integrates with S3 for storage.
-- **Pre-GA**
-  - **[ChiselStrike](https://www.chiselstrike.com/):** Write your TypeScript class, generate an API. Really leaning into the “infrastructure from code” approach, you write and think in functions, somewhat similar to Convex.
-  - **[EdgeDB](https://www.edgedb.com/):** EdgeDB is challenging the status quo. Particularly the “merger” between ORM / database, more than just a query builder, but a way to _optimize_ queries.
-  - **[Nhost:](https://nhost.io/)** Firebase, but with GraphQL. Built on Hasura, Postgres, and S3.
-  - [Rowy:](https://www.rowy.io) Low-code, spreadsheet-like backend (almost like an open-source Airtable) but they also have the ability to write functions to mutate data.
-  - [SurrealDB:](https://surrealdb.com/) Has its own SQL-flavored syntax, also trying to provide the spreadsheet-like UI for viewing data (still waitlist access, haven't used it).
-  - **[Tigris:](https://www.tigrisdata.com/)** Document database, focused on real-time and also includes full-text search.
-  - **[WunderGraph:](https://wundergraph.com/)** Trying to lead with an excellent ORM / client library (end-to-end type safety, GraphQL support) and wedge into a cloud product (still waitlist access, haven't used it).
-- **Other Solutions**
-  - **Caching Engines:** [Stellate](https://stellate.co/), [Prisma Accelerate](https://www.prisma.io/data-platform/accelerate), [ReadySet](https://readyset.io/).
-  - **Cloud Provider Offerings:** Azure SQL, Azure CosmosDB, Google Cloud SQL, Google BigTable, and many more.
-  - **Content Management (Headless CMS):** These can still act as a database, just a different domain-specific solution. [Sanity](https://www.sanity.io/), [Contentful](https://www.contentful.com/), [Sitecore](https://www.sitecore.com/), and more.
-
----
-
-¹ Commonly referred to as OLTP (Online _Transactional_ Processing). These are for CRUD operations, most commonly the MySQL and Postgres databases of the world.
-
-² Commonly referred to as OLAP (Online _Analytical_ Processing). These are for your real-time data workloads, like [Clickhouse](https://clickhouse.com/) (also [Tinybird](https://www.tinybird.co/)), [SingleStore](https://www.singlestore.com/), [TimeScale](https://www.timescale.com/), and [ElasticSearch](https://www.elastic.co/).
-
-_Thanks to [Guillermo Rauch](https://twitter.com/rauchg), [Paul Copplestone](https://twitter.com/kiwicopple), [Fredrik Björk](https://twitter.com/fbjork), [Anthony Shew](https://twitter.com/anthonysheww), [Craig Kerstiens](https://twitter.com/craigkerstiens), [Jamie Turner](https://twitter.com/jamwt), [Nikita Shamgunov](https://twitter.com/nikitabase), [Yoko Li](https://twitter.com/stuffyokodraws), [Pratyush Choudhury](https://twitter.com/177pc), [Stas Kelvich](https://twitter.com/kelvich), [Enes Akar](https://twitter.com/enesakar), and [Steven Tey](https://twitter.com/steventey) for reviewing this post._
+Thanks for reading this long post! I hope it helped you understand these topics  a little better. If you liked this post, then please do give me a few ❤️ and share it if you can. You are welcome to 
+give any suggestions in comments and ask anything!

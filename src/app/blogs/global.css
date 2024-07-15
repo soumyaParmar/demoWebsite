@@ -1,19 +1,25 @@
 /* global css for the blog post*/
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   /* outline: 1px solid red; */
 }
 
+/* .nav_outer {
+  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
+  padding: 0 30px;
+} */
 
 html,
 body {
-  max-height: auto;
-  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
   overflow-x: hidden;
   /* overflow-y: hidden; */
 }

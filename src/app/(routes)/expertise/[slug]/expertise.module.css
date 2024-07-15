@@ -67,7 +67,7 @@
   @apply text-sm text-[#5b617a] w-[90%];
 }
 .service_black {
-  @apply bg-black h-screen w-screen flex justify-center items-center;
+  @apply bg-black h-screen w-screen flex justify-center items-center relative;
 }
 .inner_black {
   @apply w-[80%] h-[90%] flex items-center flex-col justify-evenly;

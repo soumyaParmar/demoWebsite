@@ -147,11 +147,12 @@
     padding: 20px 0;
   }
   .box {
-    @apply h-[200px] w-[400px] bg-black mt-[20px];
+    @apply h-[200px] w-[350px] bg-black mt-[20px];
   }
   .it_works {
     @apply h-auto;
     padding: 40px 0;
+    margin: 75px 0 0 0;
   }
   .innerWorks {
     @apply w-[80%] h-auto block;

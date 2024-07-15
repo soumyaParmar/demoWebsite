@@ -15,11 +15,13 @@ const EditiorPickReadingPage: React.FC = (props: any) => {
 
   return (
     <>
-      <div className={styles.container}>
-        
+      <div className={`${styles.container} flex w-full`}>
         <div className={`${styles.left} ${inter500.className}`}>
-          <ReadingPageSection objData={objData} />
-          <Markdown className={styles.markdown}>{objData.content}</Markdown>
+          {/* <ReadingPageSection objData={objData} /> */}
+
+          <div className={`${styles.markdownContent}`}>
+            <Markdown>{objData.content}</Markdown>
+          </div>
         </div>
 
         {/* Latest Blog site */}
