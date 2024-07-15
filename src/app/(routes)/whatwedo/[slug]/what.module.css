@@ -1,12 +1,12 @@
 .landing {
-  @apply h-screen flex flex-col justify-center pt-[10px] relative items-center;
+  @apply h-screen flex flex-col justify-center pt-[10px] relative items-center mb-[40px];
   background: url("../../../_assets/background/bgs.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .content {
-  @apply h-2/3 w-[80%];
+  @apply h-[50%] w-[80%];
 }
 .teams {
   @apply flex text-white flex-col justify-center items-center gap-[30px] w-full;
@@ -15,7 +15,8 @@
   margin-left: -50px;
 }
 .service {
-  @apply h-screen flex justify-center items-center;
+  @apply flex justify-center items-center;
+  padding:40px 0;
 }
 .serv_inner {
   @apply h-[80%] w-[80%];
@@ -54,7 +55,7 @@
   color: #047857;
 }
 .box {
-  @apply h-[400px] w-[500px] bg-black w-1/2;
+  @apply w-[500px] bg-black w-1/2;
 }
 .left {
   width: 50%;
@@ -77,6 +78,7 @@
 }
 .it_works {
   @apply bg-black h-screen text-white flex justify-center items-center relative;
+  margin:40px 0;
 }
 .innerWorks {
   @apply w-[80%] h-[85%] flex;
