@@ -15,11 +15,11 @@ export const getEditiorsPick = () => {
     const matterResult = matter(fileContents);
 
     return {
-      title: matterResult.data.title || "",
-      description: matterResult.data.summary || "",
-      category: matterResult.data.category || "",
-      slug: filename.replace(".mdx", "") || "",
-      folderName: "editiorPickBlogs" || "",
+      title: matterResult.data.title,
+      description: matterResult.data.summary,
+      category: matterResult.data.category,
+      slug: filename.replace("mdx", ""),
+      folderName: "editiorPickBlogs",
     };
   });
 
@@ -28,17 +28,17 @@ export const getEditiorsPick = () => {
 
 // function to get the data fromt the editiors mdx file
 export const getEditiorsPostContent = (slug: string): any => {
-  const folder = "public/content/editiorPickBlogs/";
-  const file = `${folder}${slug}.mdx`;
+  const folder = "content/editiorPickBlogs/";
+  const file = `${folder}${slug}mdx`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   const obj = {
-    title: matterResult.data.title || "",
-    description: matterResult.data.summary || "",
-    category: matterResult.data.category || "",
-    author: matterResult.data.author || "",
-    date: matterResult.data.publishedAt || "",
-    image: matterResult.data.image || "",
+    title: matterResult.data.title,
+    description: matterResult.data.summary,
+    category: matterResult.data.category,
+    author: matterResult.data.author,
+    date: matterResult.data.publishedAt,
+    image: matterResult.data.image,
   };
   return { obj, content };
 };
@@ -57,13 +57,13 @@ export const getInsightsBlogData = () => {
     const matterResult = matter(fileContents);
 
     return {
-      title: matterResult.data.title || "",
-      description: matterResult.data.summary || "",
-      slug: filename.replace(".mdx", ""),
-      author: matterResult.data.author || "",
-      date: matterResult.data.publishedAt || "",
-      category: matterResult.data.category || "",
-      img: matterResult.data.image || "",
+      title: matterResult.data.title,
+      description: matterResult.data.summary,
+      slug: filename.replace("mdx", ""),
+      author: matterResult.data.author,
+      date: matterResult.data.publishedAt,
+      category: matterResult.data.category,
+      img: matterResult.data.image,
     };
   });
 
@@ -72,17 +72,17 @@ export const getInsightsBlogData = () => {
 
 // Function to get the content of the insights mdx files
 export const getInsightsPostContent = (slug: string) => {
-  const folder = "public/content/insights/";
-  const file = `${folder}${slug}.mdx`;
+  const folder = "content/insights/";
+  const file = `${folder}${slug}mdx`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   const obj = {
-    title: matterResult.data.title || "",
-    description: matterResult.data.summary || "",
-    category: matterResult.data.category || "",
-    author: matterResult.data.author || "",
-    date: matterResult.data.publishedAt || "",
-    image: matterResult.data.image || "",
+    title: matterResult.data.title,
+    description: matterResult.data.summary,
+    category: matterResult.data.category,
+    author: matterResult.data.author,
+    date: matterResult.data.publishedAt,
+    image: matterResult.data.image,
   };
 
   return { obj, content };
@@ -102,10 +102,10 @@ export const getTrendingBlogData = () => {
     const matterResult = matter(fileContents);
 
     return {
-      title: matterResult.data.title || "",
-      description: matterResult.data.summary || "",
-      slug: filename.replace(".mdx", "") || "",
-      folderName: "trendingBlogs" || "",
+      title: matterResult.data.title,
+      description: matterResult.data.summary,
+      slug: filename.replace("mdx", ""),
+      folderName: "trendingBlogs",
     };
   });
 
@@ -114,18 +114,18 @@ export const getTrendingBlogData = () => {
 
 // Function to get the content of the trending mdx files
 export const getTrendingPostContent = (slug: string): any => {
-  const folder = "public/content/trendingBlogs/";
-  const file = `${folder}${slug}.mdx`;
+  const folder = "content/trendingBlogs/";
+  const file = `${folder}${slug}mdx`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
 
   const obj = {
-    title: matterResult.data.title || "",
-    description: matterResult.data.summary || "",
-    category: matterResult.data.category || "",
-    author: matterResult.data.author || "",
-    date: matterResult.data.publishedAt || "",
-    image: matterResult.data.image || "",
+    title: matterResult.data.title,
+    description: matterResult.data.summary,
+    category: matterResult.data.category,
+    author: matterResult.data.author,
+    date: matterResult.data.publishedAt,
+    image: matterResult.data.image,
   };
   return { obj, content };
 };

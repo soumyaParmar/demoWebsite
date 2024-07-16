@@ -1,17 +1,17 @@
 .landing {
-  @apply h-screen flex flex-col justify-center pt-[10px] relative items-center mb-[40px];
+  @apply h-[70vh] flex flex-col justify-between pt-[50px] relative items-center mb-[40px];
   background-image: linear-gradient(
       265deg,
       rgba(255, 255, 255, 0.0016457266500350398) 0%,
-      rgba(40, 36, 36, 0.8335784997592788) 30%
+      rgba(40, 36, 36, 0.8335784997592788) 90%
     ),
-    url("../../../_assets/background/what.jpg");
+    url("../../../_assets/background/x2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .content {
-  @apply h-2/3 w-[80%];
+  @apply h-[50%] w-[80%];
 }
 .teams {
   @apply flex text-white flex-col justify-center items-center gap-[30px] w-full;
@@ -65,15 +65,18 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  height: 300px;
+  width: 500px;
 }
 .left {
+  @apply flex flex-col justify-center;
   width: 50%;
 }
 .left h1 {
   @apply text-2xl font-semibold;
 }
 .left p {
-  @apply w-[70%];
+  @apply w-[80%];
   padding: 20px 0;
 }
 .btn {
@@ -126,10 +129,13 @@
   border-left: 1px solid rgb(107, 104, 104);
   padding: 5px 0 0 35px;
 }
+.tab_data {
+  width: 80%;
+}
 
 @media (max-width: 700px) {
   .landing {
-    @apply pt-[10px] h-[85vh];
+    @apply pt-[100px];
   }
   .content {
     @apply w-[90%] h-[50%];
@@ -185,5 +191,14 @@
   }
   .rightInner p {
     @apply text-xs pt-[8px];
+  }
+  .tab_back {
+    gap: 0;
+  }
+  .tabs {
+    align-items: flex-start;
+  }
+  .tab_data {
+    width: 100%;
   }
 }

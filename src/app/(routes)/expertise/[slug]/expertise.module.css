@@ -1,11 +1,12 @@
 .landing {
-  @apply h-screen flex flex-col pt-[100px] relative items-center;
-  background-image: linear-gradient(
+  @apply h-[70vh] flex flex-col pt-[100px] relative items-center;
+  background-image:
+  linear-gradient(
       265deg,
       rgba(255, 255, 255, 0.0016457266500350398) 0%,
-      rgba(40, 36, 36, 0.8335784997592788) 0%
+      rgba(40, 36, 36, 0.8335784997592788) 90%
     ),
-    url("../../../_assets/background/expertise.jpg");
+    url("../../../_assets/background/x1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,20 +47,22 @@
   line-height: 25px;
 }
 .right {
-  @apply w-1/2 flex flex-col  gap-[10px];
+  @apply w-1/2 flex flex-col justify-center gap-[10px];
 }
 .right h2 {
   @apply text-3xl font-medium w-[80%];
 }
 .right p {
-  @apply text-sm text-[#5b617a] w-[80%];
+  @apply text-sm text-[#5b617a];
   line-height: 25px;
 }
 .box {
   @apply h-auto w-1/2 bg-black rounded-md;
-  background: url("../../../_assets/How/Group\ 1321314572-min.png") center
-    no-repeat;
+  background: url("../../../_assets/How/Group\ 1321314572-min.png") no-repeat;
   background-size: contain;
+}
+.service1 > .box {
+  background-position: center;
 }
 .service3 {
   @apply flex justify-evenly;
@@ -111,9 +114,6 @@
   @apply text-white text-[13px];
 }
 @media (max-width: 700px) {
-  .landing {
-    height: 85vh;
-  }
   .content {
     @apply w-[90%] h-[60%];
   }

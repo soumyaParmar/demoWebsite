@@ -1,64 +1,64 @@
-.review{
-    @apply flex pt-[80px] pb-[50px] flex-col justify-center items-center
+.review {
+  @apply flex pt-[80px] pb-[80px] flex-col justify-center items-center;
 }
-.innerLayer{
-    @apply h-[80%] w-[80%] flex flex-col gap-[60px]
+.innerLayer {
+  @apply h-[80%] w-[80%] flex flex-col gap-[60px];
 }
-.heading{
-    @apply text-center flex flex-col gap-4
+.heading {
+  @apply text-center flex flex-col gap-4;
 }
-.heading h2{
-    @apply text-3xl font-semibold;
-    padding: 0 350px;
+.heading h2 {
+  @apply text-3xl font-semibold;
+  padding: 0 350px;
 }
-.reviewerLayer{
-    display: flex !important;
-    gap:30px;
-    padding: 0 80px;
-    /* border: 1px solid black; */
+.reviewerLayer {
+  display: flex !important;
+  gap: 30px;
+  padding: 0 80px;
+  /* border: 1px solid black; */
 }
-.carousel{
-    @apply pt-7
+.carousel {
+  @apply pt-7;
 }
 .carousel ul {
-    filter: invert(1) !important;
-    margin-bottom: -30px !important;
+  filter: invert(1) !important;
+  margin-bottom: -50px !important;
 }
-.image{
-  @apply w-1/2 flex justify-center items-center ;
+.image {
+  @apply w-1/2 flex justify-center items-center;
 }
-.detail{
-    @apply w-1/2 flex flex-col justify-center justify-around;
+.detail {
+  @apply w-1/2 flex flex-col justify-center justify-around;
 }
-.personData{
-    border-top: 0.2px solid #b2b4b6;
+.personData {
+  border-top: 0.2px solid #b2b4b6;
 }
-.detail h1{
-    @apply text-xl font-semibold
+.detail h1 {
+  @apply text-xl font-semibold;
 }
-.detail p{
-    @apply text-sm font-bold
+.detail p {
+  @apply text-sm font-bold;
 }
-.detail span{
-    @apply text-sm font-normal
+.detail span {
+  @apply text-sm font-normal;
 }
-.image img{
-    border-radius: 10px;
+.image img {
+  border-radius: 10px;
 }
 
-@media (max-width:826px) {
-    .heading h2{
-        padding: 0;
-    }
-    .reviewerLayer{
-        flex-direction: column-reverse;
-        padding: 0 10px;
-        align-items: center;
-    }
-    .image{
-        @apply w-full pt-6;
-    }
-    .detail{
-          @apply w-full gap-7;
-    }
+@media (max-width: 826px) {
+  .heading h2 {
+    padding: 0;
+  }
+  .reviewerLayer {
+    flex-direction: column-reverse;
+    padding: 0 10px;
+    align-items: center;
+  }
+  .image {
+    @apply w-full pt-6;
+  }
+  .detail {
+    @apply w-full gap-7;
+  }
 }

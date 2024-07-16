@@ -1,19 +1,59 @@
 import axiosInstance from "../../../axiosConfig";
+import axios from "axios";
 
-export const getData = async (url: string) => {
+interface SuccessResponse {
+  data: {
+    status: string;
+    response: {
+      VisitorID: string;
+    };
+  };
+}
+
+interface ErrorResponse {
+  error: boolean;
+  message: string;
+}
+
+export const getData = async (
+  url: string
+): Promise<SuccessResponse | ErrorResponse> => {
   try {
     const response = await axiosInstance.get(url);
     return response;
   } catch (error) {
-    throw error;
+    if (axios.isAxiosError(error)) {
+      return {
+        error: true,
+        message: error.response?.data?.message || "An error occurred",
+      };
+    } else {
+      return {
+        error: true,
+        message: "An unknown error occurred",
+      };
+    }
   }
 };
 
-export const postData = async (url: string, data: any) => {
+export const postData = async (
+  url: string,
+  data: any
+): Promise<SuccessResponse | ErrorResponse> => {
   try {
     const response = await axiosInstance.post(url, data);
     return response;
   } catch (error) {
-    throw error;
+    if (axios.isAxiosError(error)) {
+      return {
+        error: true,
+        message: error.response?.data?.message || "An error occurred",
+      };
+    } else {
+      return {
+        error: true,
+        message: "An unknown error occurred",
+      };
+    }
   }
 };

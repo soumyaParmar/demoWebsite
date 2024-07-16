@@ -87,7 +87,9 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <Buttons label="Learn more" varient="fill" />
+                    <div>
+                      <Buttons label="Learn more" varient="fill" />
+                    </div>
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -103,7 +105,9 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <Buttons label="Learn more" varient="fill" />
+                    <div>
+                      <Buttons label="Learn more" varient="fill" />
+                    </div>
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -119,7 +123,9 @@ const What = ({ params }: { params: { slug: string } }) => {
                       potential of your cloud investments, achieving significant
                       cost savings while maintaining high performance.{" "}
                     </p>
-                    <Buttons label="Learn more" varient="fill" />
+                    <div>
+                      <Buttons label="Learn more" varient="fill" />
+                    </div>
                   </div>
                   <div className={styles.box}></div>
                 </div>

@@ -18,7 +18,9 @@ const Cookie: React.FC = () => {
       ConsentDetails: "Accept",
     };
     const res = await axios.postData("/visitors", payload);
-    Cookies.set("VisitorID", res.data.response.VisitorID, { expires: 365 });
+    if ('data' in res && res.data.status == 'Success') {
+      Cookies.set("VisitorID", res.data.response.VisitorID, { expires: 365 });
+    }
     setShowBanner(false);
   };
 

@@ -6,6 +6,7 @@ import { inter500 } from "@/app/blogs/_customFonts/inter";
 import * as api from "../../_lib/api";
 import { FormData } from "@/app/Interfaces/ContactUSFormData";
 import { useRouter } from "next/navigation";
+import { Modal } from "antd";
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -23,7 +24,6 @@ const ContactUs: React.FC = () => {
     >
   ) => {
     const { name, value } = e.target;
-    console.log(e.target);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -36,8 +36,30 @@ const ContactUs: React.FC = () => {
   ): Promise<void> {
     event.preventDefault();
 
+    if (
+      !formData.CompanyName ||
+      !formData.CompanyEmailAddress ||
+      !formData.LookingFor
+    ) {
+      Modal.warning({
+        title: "Warning",
+        content: "Please fill all required fields",
+      });
+      return;
+    }
+
     const res = await api.postData("/contact", formData);
-    console.log(res);
+    if ("data" in res && res.data.status == "Success") {
+      Modal.success({
+        title: "Successfully submitted",
+        content: "Thaank you",
+      });
+    } else {
+      Modal.error({
+        title: "Oops an error occured!",
+        content: "Please try again",
+      });
+    }
   }
 
   return (
@@ -92,10 +114,12 @@ const ContactUs: React.FC = () => {
                 onChange={handleChange}
               >
                 <option value="select">Please choose an option</option>
-                <option value="volvo">Option 1</option>
-                <option value="saab">Option 2</option>
-                <option value="mercedes">Option 3</option>
-                <option value="audi">Option 4</option>
+                <option value="Hire Developer">Hire Developer</option>
+                <option value="Cloud cost Optimization">
+                  Cloud cost Optimization
+                </option>
+                <option value="mercedes">AI/ML</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
