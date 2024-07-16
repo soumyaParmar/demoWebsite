@@ -4,6 +4,7 @@ import axios from "axios";
 interface SuccessResponse {
   data: {
     status: string;
+    statusCode: number;
     response: {
       VisitorID: string;
     };
