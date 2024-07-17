@@ -2,7 +2,6 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { Button } from "antd";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -16,14 +15,15 @@ import blogImage from "../../../../public/blogImage.jpeg";
 // componenets
 import Navbar from "@/app/_common/Navbar/Navbar";
 import OurValueCard from "@/app/_components/OurValuesCards/OurValueCard";
-import Carousels from "@/app/_components/AboutCarousel/Carousels";
 import GalleryCarousel from "@/app/_components/AboutCarousel/GalleryCarousel";
 import ContactUs from "@/app/_components/ContactUS/ContactUs";
 import Buttons from "@/app/_common/Button/Buttons";
 import Reviews from "@/app/_components/Reviews/Reviews";
 import Footer from "@/app/_common/Footer/Footer";
-import { OurValue } from "@/app/Interfaces/ourValues";
 import useGSAP from "@/app/utils/useGSAP";
+import { developer } from "@/app/utils/aboutus";
+import { aboutusType } from "@/app/Interfaces/aboutus";
+import img from "../../_assets/aboutusa/Globe.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -179,8 +179,44 @@ const Page: React.FC = () => {
               passionate people. Get to know the people who lead
             </p>
           </div>
-
-          <Carousels />
+          <div className={styles.dev_outer}>
+            <div className={styles.dev_sec}>
+              {developer.map((item: aboutusType, index: number) => (
+                <div key={index} className={styles.dev_inner}>
+                  <div>
+                    <Image src={item.img} alt="" />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <div className={styles.sec_name}>
+                      <label>{item.name}</label>
+                      <span>{item.position}</span>
+                    </div>
+                    <div className={styles.sec_exp}>
+                      <label>Experience</label>
+                      <span>{item.experience}</span>
+                    </div>
+                    <div className={styles.sec_lang}>
+                      <label>
+                        <Image src={img} alt="" />
+                        <span>Speaks</span>
+                      </label>
+                      {item.speaks.map((item: string, index1: number) => (
+                        <span className={styles.sp} key={index1}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                    <div className={styles.sec_tech}>
+                      <label>Tech Stack</label>
+                      {item.techStack.map((item: string, index1: number) => (
+                        <span key={index1}>{item}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         {/* End of Our Team Section */}
 
