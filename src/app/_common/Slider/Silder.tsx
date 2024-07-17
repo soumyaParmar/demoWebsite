@@ -19,11 +19,6 @@ export const Silder: React.FC<propComp> = ({ data }) => {
             {item.item}
           </div>
         ))}
-        {data.map((item: any, index: number) => (
-          <div key={index} className={styles.slide}>
-            {item.item}
-          </div>
-        ))}
       </div>
     </div>
   );

@@ -1,32 +1,54 @@
 import React from "react";
 import style from "./teams.module.css";
 import { Silder } from "@/app/_common/Slider/Silder";
+import img1 from "../../_assets/teams/binmile.svg";
+import img2 from "../../_assets/teams/deci.png";
+import img3 from "../../_assets/teams/devlabs.svg";
+import img4 from "../../_assets/teams/equipped.svg";
+import img5 from "../../_assets/teams/innovation.png";
+import img6 from "../../_assets/teams/iq.png";
+import img7 from "../../_assets/teams/pelocal.png";
+import img8 from "../../_assets/teams/prolitus.png";
+import img9 from "../../_assets/teams/tech.svg";
+import Image from "next/image";
 
 const Teams: React.FC = () => {
   const data: Array<object> = [
     {
       id: "1",
-      item: <h1 className={style.h1}>Coedify</h1>,
+      item: <Image src={img1} alt="" className={style.image} />,
     },
     {
       id: "2",
-      item: <h1 className={style.h1}>Equipped</h1>,
+      item: <Image src={img2} alt="" className={style.image} />,
     },
     {
       id: "3",
-      item: <h1 className={style.h1}>PayLocal</h1>,
+      item: <Image src={img3} alt="" className={style.image} />,
     },
     {
       id: "4",
-      item: <h1 className={style.h1}>Adani</h1>,
+      item: <Image src={img4} alt="" className={style.image} />,
     },
     {
       id: "5",
-      item: <h1 className={style.h1}>BlackRock</h1>,
+      item: <Image src={img5} alt="" className={style.image} />,
     },
     {
       id: "6",
-      item: <h1 className={style.h1}>Airtel</h1>,
+      item: <Image src={img6} alt="" className={style.image} />,
+    },
+    {
+      id: "7",
+      item: <Image src={img7} alt="" className={style.image} />,
+    },
+    {
+      id: "8",
+      item: <Image src={img8} alt="" className={style.image} />,
+    },
+    {
+      id: "9",
+      item: <Image src={img9} alt="" className={style.image} />,
     },
   ];
   return (
