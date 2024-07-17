@@ -1,7 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import React, { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
+import React, {
+  ChangeEvent,
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import style from "./form.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button, Input, Modal, Select } from "antd";
@@ -55,9 +61,12 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
     { value: "Part Time" },
   ]);
 
+  useEffect(() => {
+    setPayload((prev) => ({ ...prev, technologies_required: techChips }));
+  }, [techChips]);
+
   const onSelect = (data: string) => {
     setTechChips((prev) => [...prev, data]);
-    setPayload((prev) => ({ ...prev, technologies_required: techChips }));
     setNewOpt([]);
   };
   const onSelect1 = (data: string) => {
