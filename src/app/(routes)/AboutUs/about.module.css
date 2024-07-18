@@ -346,6 +346,10 @@
   border-bottom: 1px solid #e9ecf6;
   padding: 40px 0 40px 0;
 }
+.sec_name {
+  display: flex;
+  align-items: center;
+}
 .sec_name label {
   @apply font-semibold text-xl pr-2;
 }
@@ -374,8 +378,12 @@
 .sec_tech label {
   @apply pr-2 text-sm font-medium;
 }
+.sec_tech {
+  @apply flex gap-2 items-center;
+}
 .sec_tech span {
-  @apply pr-2 text-xs text-[#818498];
+  @apply text-xs text-[#818498] bg-[#F2F4F6] rounded-lg;
+  padding: 6px 8px;
 }
 /* Media Quesies */
 @media (max-width: 1440px) {
