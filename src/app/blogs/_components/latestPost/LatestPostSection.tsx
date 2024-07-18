@@ -3,6 +3,7 @@ import Link from "next/link";
 import LatestPostCard from "./LatestPostCard";
 
 import styles from "../../(routes1)/readingPage.module.css";
+import stylex from "./LatestPostCars.module.css";
 import { inter700 } from "../../_customFonts/inter";
 
 import {
@@ -31,32 +32,62 @@ const posts: insightsCardData[] = postData
   });
 
 // Getting 4 recents post from the posts
-const recentPosts: insightsCardData[] = posts.slice(0, 4);
+let recentPosts: insightsCardData[] = posts.slice(0, 5);
+const lastPost: insightsCardData = recentPosts[3];
+const lastPost1: insightsCardData = recentPosts[4];
+recentPosts = recentPosts.slice(0, 3);
 
 const LatestPostSection: React.FC<paginationPropsData> = () => {
   return (
-    <div className={`${styles.right} w-3/10 p-4`}>
-      <h1 className={`${inter700.className} ${styles.title}`}>Latest Post</h1>
-      <div className={styles.latestPost}>
-        {recentPosts.map((post, index) => (
-          <Link
-            href={`/blogs/insights/${post.slug}`}
-            className={styles.link}
-            key={index}
-          >
-            <LatestPostCard
-              category={post.category}
-              title={post.title}
-              description={post.description}
-              author={post.author}
-              img={post.img}
-              date={post.date}
-              slug={post.slug}
-            />
-          </Link>
-        ))}
+    <>
+      <div className={`${styles.right}`}>
+        <h1 className={`${inter700.className} ${styles.title}`}>Latest Post</h1>
+        <div className={styles.latestPost}>
+          {recentPosts.map((post, index) => (
+            <Link
+              href={`/blogs/insights/${post.slug}`}
+              className={`${styles.link}`}
+              key={index}
+            >
+              <LatestPostCard
+                category={post.category}
+                title={post.title}
+                description={post.description}
+                author={post.author}
+                img={post.img}
+                date={post.date}
+                slug={post.slug}
+                index={index}
+              />
+            </Link>
+          ))}
+        </div>
+        <div className={stylex.customSticky}>
+        <LatestPostCard
+          category={lastPost.category}
+          title={lastPost.title}
+          description={lastPost.description}
+          author={lastPost.author}
+          img={lastPost.img}
+          date={lastPost.date}
+          slug={lastPost.slug}
+          index={3}
+        />
+        <br />
+        <LatestPostCard
+          category={lastPost1.category}
+          title={lastPost1.title}
+          description={lastPost1.description}
+          author={lastPost1.author}
+          img={lastPost1.img}
+          date={lastPost1.date}
+          slug={lastPost1.slug}
+          index={4}
+        />
+
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

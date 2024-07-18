@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const Unsubscribe = ({ params }: { params: { slug: string } }) => {
+  console.log(params.slug);
   return (
     <div className={style.unsubscribe}>
       <div className={style.unsub_inner}>

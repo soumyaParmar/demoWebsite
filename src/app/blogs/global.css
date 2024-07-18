@@ -11,16 +11,12 @@
   /* outline: 1px solid red; */
 }
 
-/* .nav_outer {
-  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
-  padding: 0 30px;
-} */
 
 html,
 body {
   max-height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* overflow-y: hidden; */
 }
 

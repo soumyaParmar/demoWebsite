@@ -66,6 +66,7 @@
 @media (max-width: 1050px) {
   .container {
     height: auto;
+    width: 70%;
   }
   .heading {
     font-size: 1.2rem;
@@ -92,8 +93,11 @@
 }
 
 @media (max-width: 750px) {
+  .container {
+    width: 70%;
+  }
   .inputfield button {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -127,36 +131,37 @@
 
   .inputfield {
     height: 15vh;
+    /* border: 1px solid; */
 
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+  }
+
+  .inputfield button {
+    height: auto;
+    height: 2.5rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 500px) {
   .container {
-    width: 70vw;
+    width: auto;
     height: auto;
   }
   .inputfield {
-    margin-top: -2rem;
+    margin-top: -1rem;
   }
   .inputfield input {
     height: auto;
   }
   .inputfield button {
-    height: auto;
-    height: 2.5rem;
+    width: 50%;
   }
 }
 
-@media (max-width: 350px) {
-  .container {
-    width: 80vw;
-    height: auto;
-  }
-
+@media (max-width: 400px) {
   .heading {
     font-size: 0.9rem;
     margin-bottom: 1rem;
@@ -168,7 +173,7 @@
     margin-bottom: 1rem;
   }
   .inputfield {
-    margin-top: -1rem;
+    margin-top: 0.2rem;
   }
 
   .inputfield input {

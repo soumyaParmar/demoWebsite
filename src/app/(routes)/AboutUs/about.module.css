@@ -114,7 +114,7 @@
   height: auto;
   display: flex;
   gap: 6rem;
-  padding: 0rem 7rem 0rem 7rem;
+  padding: 0rem 7rem 0rem 10rem;
   margin-bottom: 8rem;
 }
 
@@ -330,7 +330,53 @@
   color: white;
   cursor: pointer;
 }
+.dev_outer {
+  @apply flex justify-center items-center;
+  padding: 40px 0;
+}
 
+.dev_sec {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dev_inner {
+  @apply flex gap-[20px];
+  border-bottom: 1px solid #e9ecf6;
+  padding: 40px 0 40px 0;
+}
+.sec_name label {
+  @apply font-semibold text-xl pr-2;
+}
+.sec_name span {
+  @apply bg-[#DEF5EC] rounded-lg text-xs;
+  padding: 6px 8px;
+}
+.sec_exp label {
+  @apply pr-3 text-sm font-semibold;
+}
+.sec_exp span {
+  @apply text-sm text-[#818498];
+}
+.sec_lang {
+  @apply flex;
+}
+.sec_lang label {
+  @apply flex gap-1 pr-2 text-xs;
+}
+.sec_lang span {
+  @apply pr-2 text-xs;
+}
+.sp {
+  @apply pr-2 text-xs text-[#818498];
+}
+.sec_tech label {
+  @apply pr-2 text-sm font-medium;
+}
+.sec_tech span {
+  @apply pr-2 text-xs text-[#818498];
+}
 /* Media Quesies */
 @media (max-width: 1440px) {
   .service {
@@ -619,9 +665,63 @@
   .contactUs .rightContactUs .formGroup select {
     font-size: 1rem;
   }
+  .dev_sec {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sec_name {
+    @apply flex flex-col gap-1;
+  }
+  .sec_name label {
+    @apply text-sm;
+  }
+  .sec_name span {
+    @apply rounded-lg text-xs w-[150px];
+    text-wrap: nowrap;
+  }
+  .sec_exp label {
+    @apply text-xs font-semibold;
+  }
+  .sec_exp span {
+    @apply text-xs;
+  }
+  .sec_lang label {
+    @apply font-medium;
+  }
+  .sec_tech label {
+    @apply text-xs;
+  }
 }
 
 @media (max-width: 600px) {
+  .dev_sec {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sec_name {
+    @apply flex flex-col gap-1;
+  }
+  .sec_name label {
+    @apply text-sm;
+  }
+  .sec_name span {
+    @apply rounded-lg text-xs w-[150px];
+    text-wrap: nowrap;
+  }
+  .sec_exp label {
+    @apply text-xs font-semibold;
+  }
+  .sec_exp span {
+    @apply text-xs;
+  }
+  .sec_lang label {
+    @apply font-medium;
+  }
+  .sec_tech label {
+    @apply text-xs;
+  }
   .service {
     flex-direction: column;
     flex-wrap: wrap;
@@ -666,6 +766,9 @@
   .CeoIntro .rightCeoIntro .rightCeoIntroTopSection p {
     font-size: 1rem;
   }
+  .dev_outer {
+    grid-template-columns: 1fr;
+  }
   .CeoIntro .rightCeoIntro .rightCeoIntroBotttomSection p:nth-child(1) {
     font-size: 1.2rem;
   }
@@ -706,6 +809,33 @@
 }
 
 @media (max-width: 480px) {
+  .dev_sec {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sec_name {
+    @apply flex flex-col gap-1;
+  }
+  .sec_name label {
+    @apply text-sm;
+  }
+  .sec_name span {
+    @apply rounded-lg text-xs w-[150px];
+    text-wrap: nowrap;
+  }
+  .sec_exp label {
+    @apply text-xs font-semibold;
+  }
+  .sec_exp span {
+    @apply text-xs;
+  }
+  .sec_lang label {
+    @apply font-medium;
+  }
+  .sec_tech label {
+    @apply text-xs;
+  }
   .container {
     box-sizing: border-box;
     max-width: 100%;
@@ -778,6 +908,33 @@
 }
 
 @media (max-width: 380px) {
+  .dev_sec {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sec_name {
+    @apply flex flex-col gap-1;
+  }
+  .sec_name label {
+    @apply text-sm;
+  }
+  .sec_name span {
+    @apply rounded-lg text-xs w-[150px];
+    text-wrap: nowrap;
+  }
+  .sec_exp label {
+    @apply text-xs font-semibold;
+  }
+  .sec_exp span {
+    @apply text-xs;
+  }
+  .sec_lang label {
+    @apply font-medium;
+  }
+  .sec_tech label {
+    @apply text-xs;
+  }
   .ourValuesHeading h1 {
     font-size: 0.8rem;
     line-height: 1.5rem;

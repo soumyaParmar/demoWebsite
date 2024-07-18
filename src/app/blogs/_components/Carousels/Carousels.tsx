@@ -22,7 +22,12 @@ const HeroSection: React.FC<TrendingDataProps> = ({ trendingData }) => {
         <Carousel autoplay infinite>
           {trendingData.map((post: TrendingBlogs, index: number) => (
             <div className={styles.carouselSlide} key={index}>
-              <Image src={Banner2} alt="1st slide" className={styles.image} />
+              <Image
+                src={post.image}
+                alt="1st slide"
+                className={styles.image}
+                layout="fill"
+              />
               <div className={`${styles.innerText}`}>
                 <h1 className={` ${inter700.className} ${styles.innerHeading}`}>
                   {post.title}

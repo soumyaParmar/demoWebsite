@@ -1,23 +1,25 @@
 /* eslint-disable import/no-anonymous-default-export */
 /** @type {import('next').NextConfig} */
 
+
 import withMDX from "@next/mdx";
-import { hostname } from "os";
+
 
 const nextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-  images: {
-    domains: ["media.dev.to"],
-  },
   // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: 'https',
-  //       hostname: '**',
-  //       // pathname: '/cdn-cgi/image/**',
-  //     },
-  //   ],
+  //   domains: ["media.dev.to", 'files.ably.io', "miro.medium.com", "www.crio.do"],
   // },
+  
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+ 
   // Other Next.js configurations can go here
 };
 

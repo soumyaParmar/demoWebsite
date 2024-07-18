@@ -1,6 +1,11 @@
 .landing {
-  @apply h-screen flex flex-col justify-center pt-[10px] relative items-center mb-[40px];
-  background: url("../../../_assets/background/bgs.png");
+  @apply h-[75vh] flex flex-col pt-[100px] relative items-center gap-[80px];
+  background-image: linear-gradient(
+      265deg,
+      rgba(255, 255, 255, 0.0016457266500350398) 0%,
+      rgba(40, 36, 36, 0.8335784997592788) 90%
+    ),
+    url("../../../_assets/background/x2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,14 +14,14 @@
   @apply h-[50%] w-[80%];
 }
 .teams {
-  @apply flex text-white flex-col justify-center items-center gap-[30px] w-full;
+  @apply flex text-white flex-col justify-center items-center gap-[20px] w-full;
 }
 .teams p {
   margin-left: -50px;
 }
 .service {
   @apply flex justify-center items-center;
-  padding:40px 0;
+  padding: 40px 0;
 }
 .serv_inner {
   @apply h-[80%] w-[80%];
@@ -55,16 +60,23 @@
   color: #047857;
 }
 .box {
-  @apply w-[500px] bg-black w-1/2;
+  @apply w-1/2;
+  background-image: url("../../../_assets/How/Group\ 1321314572-min.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 500px;
 }
 .left {
+  @apply flex flex-col justify-center;
   width: 50%;
 }
 .left h1 {
   @apply text-2xl font-semibold;
 }
 .left p {
-  @apply w-[70%];
+  @apply w-[80%];
   padding: 20px 0;
 }
 .btn {
@@ -78,7 +90,7 @@
 }
 .it_works {
   @apply bg-black h-screen text-white flex justify-center items-center relative;
-  margin:40px 0;
+  margin: 40px 0;
 }
 .innerWorks {
   @apply w-[80%] h-[85%] flex;
@@ -117,10 +129,13 @@
   border-left: 1px solid rgb(107, 104, 104);
   padding: 5px 0 0 35px;
 }
+.tab_data {
+  width: 80%;
+}
 
 @media (max-width: 700px) {
   .landing {
-    @apply pt-[10px] h-[85vh];
+    @apply pt-[100px];
   }
   .content {
     @apply w-[90%] h-[50%];
@@ -177,4 +192,19 @@
   .rightInner p {
     @apply text-xs pt-[8px];
   }
+  .tab_back {
+    gap: 0;
+  }
+  .tabs {
+    align-items: flex-start;
+  }
+  .tab_data {
+    width: 100%;
+  }
 }
+@media (max-width: 1400px) {
+  .landing {
+    @apply h-[85vh];
+  }
+}
+

@@ -99,19 +99,17 @@ const Carousels: React.FC = () => {
 
   return (
     <div className={styles.sliderContainer}>
-      <Slider {...settings}>
+      <Slider {...settings} className={styles.sec_inner}>
         {teamMembers.map((member: TeamMembers, index: number) => (
-          <>
-            <div key={index}>
-              <div className={styles.sliderImg}>
-                <Image src={Img} width={500} height={500} alt="Employee Img" />
-              </div>
-              <div className={`${styles.sliderText} ${inter500.className}`}>
+          <div key={index} className="pl-[20px] pr-[20px]">
+            <div className={styles.sec_1}>
+              <Image src={Img} width={500} height={500} alt="" />
+              <div className={styles.sec_p1}>
                 <p>{member.name}</p>
                 <p>{member.title}</p>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </Slider>
     </div>

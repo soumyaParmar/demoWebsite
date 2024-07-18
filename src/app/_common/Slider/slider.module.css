@@ -40,15 +40,16 @@
 .slideTrack {
   display: flex;
   animation: scroll 40s linear infinite;
-  width: calc(250px * 14); /* Adjust this based on the number of logos */
+  width: calc(250px * 14);
 }
 
 .slide {
   height: 100px;
-  width: 250px; /* Adjust the width as needed */
+  width: 330px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
 .slide img {

@@ -1,7 +1,59 @@
+"use client";
+
 import styles from "./Subscriber.module.css";
-import {inter400,inter700} from "../../_customFonts/inter";
+import { inter400, inter700 } from "../../_customFonts/inter";
+import { useEffect, useState } from "react";
+import { getData, postData } from "../../../_lib/api";
+import { Modal } from "antd";
 
 const Subscribers: React.FC = () => {
+  const [email, setEmail] = useState({
+    Email: "",
+  });
+
+  useEffect(() => {
+    async function fetchData(): Promise<void> {
+      // You can await here
+      const response = await getData("/visitors");
+      console.log(response);
+    }
+    fetchData();
+  }, []);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    setEmail({
+      Email: e.target.value,
+    });
+  };
+
+  async function handleSubmit(): Promise<void> {
+    if (email.Email === "") {
+      Modal.warning({
+        title: "Warning",
+        content: "Please fill the email field",
+      });
+      return;
+    }
+
+    const res = await postData("/subscribe", email);
+    if (res.status == 200) {
+      Modal.success({
+        title: "Successfully subscribed",
+        content: "Thank you for subscribing",
+      });
+    } else {
+      Modal.error({
+        title: "Oops an error occured!",
+        content: "Please try again",
+      });
+    }
+    setEmail({ Email: "" });
+  }
+
   return (
     <>
       <div className={styles.container}>
@@ -14,8 +66,16 @@ const Subscribers: React.FC = () => {
         </p>
 
         <div className={`${styles.inputfield} ${inter400.className}`}>
-          <input type="text" placeholder="test@gmail.com" />
-          <button type="submit">Subscribe</button>
+          <input
+            type="email"
+            placeholder="test@gmail.com"
+            value={email.Email}
+            name="Email"
+            onChange={handleChange}
+          />
+          <button type="submit" onClick={handleSubmit}>
+            Subscribe
+          </button>
         </div>
       </div>
     </>

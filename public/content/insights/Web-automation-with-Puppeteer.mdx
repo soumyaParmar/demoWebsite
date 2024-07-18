@@ -9,6 +9,9 @@ author: "Nikhil Upadhyay"
 
 ![Cover image](https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2Fcrphsq85rsgrivdmntmj.jpg)
 
+Written By: Nikhil Upadhaya <br /> Date: 03-07-2024
+<br />
+
 # Web Automation with Puppeteer - Node JS
 
 I have a question in my mind right now, "Should I call this blog _Web Automation_ or _Web Scraping_ ?" Leave it for now.
@@ -42,9 +45,9 @@ This tutorial is beginner friendly, no advanced knowledge of code is required. I
 
 - Make a folder with any name
 - Open that folder in VS Code
-- Open terminal in VS Code and type `npm init --yes`. This will generate a `package.json` for managing project dependencies like this -
+- Open terminal in VS Code and type **npm init --yes**. This will generate a **package.json** for managing project dependencies like this -
 
-```
+```json
 {
   "name": "puppeteer-nodejs",
   "version": "1.0.0",
@@ -59,10 +62,10 @@ This tutorial is beginner friendly, no advanced knowledge of code is required. I
 }
 ```
 
-- Now install puppeteer by using command `npm install puppeteer` or you can also see their [documentation](https://github.com/puppeteer/puppeteer/blob/main/README.md) and read the installation.
-- After installing you can see the puppeteer in the dependencies in the `package.json` file like this -
+- Now install puppeteer by using command **npm install puppeteer** or you can also see their [documentation](https://github.com/puppeteer/puppeteer/blob/main/README.md) and read the installation.
+- After installing you can see the puppeteer in the dependencies in the **package.json** file like this -
 
-```
+```json
 {
   "name": "puppeteer-nodejs",
   "version": "1.0.0",
@@ -80,12 +83,12 @@ This tutorial is beginner friendly, no advanced knowledge of code is required. I
 }
 ```
 
-- At last create you javascript file with any name, I personally prefer `index.js`.
+- At last create you javascript file with any name, I personally prefer **index.js**.
 
 ###Quickstart
-We will start with an easy example where we took screenshot of this [Corona Wikipedia Page](https://en.wikipedia.org/wiki/Coronavirus). In the `index.js` file write this code which you can see in the example code of documentation.
+We will start with an easy example where we took screenshot of this [Corona Wikipedia Page](https://en.wikipedia.org/wiki/Coronavirus). In the **index.js** file write this code which you can see in the example code of documentation.
 
-```
+```javascript
 const puppeteer = require("puppeteer");
 
 (async () => {
@@ -97,21 +100,21 @@ const puppeteer = require("puppeteer");
 })();
 ```
 
-So what this example does is it uses async [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) and wraps the whole script inside it . Now run this script by writing `node index.js` in terminal of VS Code and you will see something like this.
+So what this example does is it uses async [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) and wraps the whole script inside it . Now run this script by writing **node index.js** in terminal of VS Code and you will see something like this.
 
 ![Code Image](https://dev-to-uploads.s3.amazonaws.com/i/nisr2dng14hqn4gcksu8.jpg)
 
-If everything went well You would see a new png file `corona-wiki.png` which contains the screenshot of our wikipedia page.
+If everything went well You would see a new png file *corona-wiki.png* which contains the screenshot of our wikipedia page.
 
 ###Explanation
 
-- `const puppeteer = require(‘puppeteer’);` is used to import puppeteer, it is going to be the first line of your scraper.
-- `await puppeteer.launch();` is used to initiate a web browser or more specifically to create a browser instance you can open your browser in headless mode and non- headless mode using `{headless:false}` by default its true that means it will run browser processes in the background.
+- **const puppeteer = require(‘puppeteer’);** is used to import puppeteer, it is going to be the first line of your scraper.
+- **await puppeteer.launch();** is used to initiate a web browser or more specifically to create a browser instance you can open your browser in headless mode and non- headless mode using **{headless:false}** by default its true that means it will run browser processes in the background.
 - We use await to wrap method calls in an async function, which we immediately invoke.
-- `newPage()` method is used to get the page object.
-- `goto()` method to surf that URL and load it in the browser.
-- `screenshot()` takes a path argument and returns a screenshot of the webpage in 800×600 px form in the local directory.
-- Once we are done with our script, we call `close()` method on the browser.
+- **newPage()** method is used to get the page object.
+- **goto()** method to surf that URL and load it in the browser.
+- **screenshot()** takes a path argument and returns a screenshot of the webpage in 800×600 px form in the local directory.
+- Once we are done with our script, we call **close()** method on the browser.
 
 ###Scraping Data from Wikipedia
 We will scrape some basic info from our Coronavirus Wikipedia page and output this in our console or you can put it in separate file(.txt, .dat, etc) like we did above.
@@ -123,11 +126,11 @@ Now we will collect these all heading from this page now right click and you wil
 
 ![Blog Image](https://dev-to-uploads.s3.amazonaws.com/i/p8dhqahbu9kyr33s5163.jpg)
 
-You can see the Heading `<h2>` contains span of `class = "mw-headline"` and this class is common for all heading and it is our path to collect all headings.
+You can see the Heading *<h2>* contains span of *class = "mw-headline"* and this class is common for all heading and it is our path to collect all headings.
 
 We add this function in our code -
 
-```
+```javascript
 const result = await page.evaluate(() => {
     let headingFromWeb = document.querySelectorAll(".mw-headline");
     const headingList = [...headingFromWeb];
@@ -135,14 +138,14 @@ const result = await page.evaluate(() => {
   });
 ```
 
-- We are using `page.evaluate()` function for this process and store it in a variable `result`.
-- We are selecting that class with `document.querySelectorAll(".mw-headline");`
-- Make it an array using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and store in other variable `headingList`.
+- We are using **page.evaluate()** function for this process and store it in a variable *result*.
+- We are selecting that class with **document.querySelectorAll(".mw-headline");**
+- Make it an array using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and store in other variable *headingList*.
 - [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) that array and return the inner text part which contains our Headings.
 
 Our final code will look like this -
 
-```
+```javascript
 const puppeteer = require("puppeteer");
 
 (async () => {
@@ -160,7 +163,7 @@ const puppeteer = require("puppeteer");
 })();
 ```
 
-We are showing our result in terminal that's why we are using `console.log(result);`. If you have done right till now then you will see output like this -
+We are showing our result in terminal that's why we are using **console.log(result);**. If you have done right till now then you will see output like this -
 
 ![Blog Image](https://dev-to-uploads.s3.amazonaws.com/i/3mpoco841yf5bc79t43z.jpg)
 

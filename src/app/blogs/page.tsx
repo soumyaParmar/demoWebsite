@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import Link from "next/link";
 
 
@@ -20,6 +19,8 @@ import {
   getInsightsBlogData,
   getTrendingBlogData,
 } from "./_utils";
+import Footer from "../_common/Footer/Footer";
+import Navbar from "../_common/Navbar/Navbar";
 
 const BlogPage: React.FC = () => {
   // Calling the function to get the metadata for trending blogs
@@ -30,6 +31,7 @@ const BlogPage: React.FC = () => {
         category={post.category}
         title={post.title}
         description={post.description}
+        image = {post.image}
       />
     </Link>
   ));
@@ -42,8 +44,9 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
+      <Navbar flag={true} motionValue={true} />
+
       {/* Hero Section Component */}
-      {/* <Navbar /> */}
       <HeroSection trendingData={TrendingData} />
 
       {/* Editiors pick container */}
@@ -59,6 +62,7 @@ const BlogPage: React.FC = () => {
 
       {/* NewsLetter Subscriber component */}
       <Subscribers />
+      <Footer />
     </>
   );
 };

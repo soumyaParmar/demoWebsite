@@ -8,10 +8,9 @@
   height: 70vh;
   width: 100%;
   position: relative;
-  border: 1px solid;
-  background-color: #0ca07d;
+  /* border: 1px solid; */
+  background-color: black;
   margin-bottom: 2.5rem;
-  background-color: #0ca07d;
   overflow: hidden;
 }
 .carouselSlide {
@@ -24,6 +23,7 @@
 }
 .image {
   object-fit: cover;
+  opacity: 0.4  ;
   height: 100%;
   width: 100%;
 }
@@ -41,7 +41,7 @@
 
 .innerHeading {
   font-size: 2.5rem;
-  line-height: 2.2rem;
+  line-height: 2.6rem;
   margin-bottom: 1rem;
 }
 .innerPara {

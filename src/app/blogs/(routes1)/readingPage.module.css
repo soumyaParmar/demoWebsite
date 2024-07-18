@@ -5,35 +5,26 @@
 }
 
 .container {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  /* height: 165vh; */
   display: flex;
-  /* margin: auto; */
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .left {
   width: 70%;
-  height: 100%;
-  height: 150vh;
   margin-top: 4rem;
-  overflow: hidden;
-  overflow: auto;
-  position: sticky;
-  top: 0;
-  /* overflow-y: scroll; */
+  background-color: white;
 }
 
 .left img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .left p {
-  padding: 0rem 1rem;
   line-height: 1.8rem;
   font-size: 1.1rem;
 }
@@ -49,6 +40,7 @@
   margin: auto;
   margin-top: -1rem;
   text-align: center;
+  /* background-color: #fafafa; */
 }
 
 .left .image {
@@ -56,48 +48,8 @@
   margin: auto;
 }
 
-/* .left pre {
-  width: 31rem;
-  height: auto;
-  margin-left: 4rem;
-  padding: 1rem;
-  border-radius: 10px;
-  background: #e9e9e9;
-  background-color: #e5e5e54d;
-
-  width: auto;
-  height: auto;
-  margin-left: 0;
-  overflow: auto;
-} */
-
 .imageTextContainer {
-  /* border: 1px solid black; */
   padding: inherit;
-}
-
-.category {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.category span {
-  border-radius: 13px;
-  border: 1px solid rgb(199, 195, 195);
-  padding: 0.5rem 1.4rem;
-  width: auto;
-}
-
-.authorDateContainer {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: flex-start;
-  color: #495057;
-  font-style: italic;
-  font-size: 1rem;
-  width: auto;
 }
 
 .left .heading {
@@ -108,8 +60,8 @@
 /* For the latest post */
 .right {
   width: calc(100% - 70%);
-  height: 150vh;
-  background-color: #e5e5e54d;
+  height: 153vh;
+  height: auto;
   margin-top: 6rem;
   padding: 2rem;
   display: flex;
@@ -121,12 +73,10 @@
 }
 
 .right .latestPost {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
   display: grid;
+  gap: 15px;
   grid-template-columns: 1fr;
+  
 }
 
 .right .title {
@@ -134,6 +84,8 @@
   line-height: 1.1rem;
   margin-bottom: 1.2rem;
 }
+
+
 
 /* Media Queries */
 @media (max-width: 1200px) {
@@ -157,12 +109,18 @@
     margin: 0;
     padding: 2rem 4rem;
     padding-top: 0rem;
-    border: 1px solid;
+  }
+  .right .title {
+    margin-top: 1rem;
   }
 
   .right .latestPost {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); */
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom: 0.5rem;
   }
 
   .imageTextContainer {
@@ -170,10 +128,17 @@
   }
 }
 
+
+
 @media (max-width: 1100px) {
   .right {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+  .right .title{
+    margin-top: 2rem;
+    font-size: 2.2rem;
+
   }
 }
 
@@ -192,7 +157,7 @@
     @apply prose p-[0rem] pt-[2rem];
   }
   .right .latestPost {
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
   }
   .right h1 {
@@ -218,4 +183,3 @@
     padding-right: 1rem;
   }
 }
-

@@ -1,22 +1,27 @@
 .landing {
-  @apply h-screen flex flex-col pt-[100px] relative items-center;
-  background: url("../../../_assets/background/bgs.png");
+  @apply h-[75vh] flex flex-col pt-[100px] relative items-center gap-[80px];
+  background-image: linear-gradient(
+      265deg,
+      rgba(255, 255, 255, 0.0016457266500350398) 0%,
+      rgba(40, 36, 36, 0.8335784997592788) 90%
+    ),
+    url("../../../_assets/background/x1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .content {
-  @apply h-2/3 w-[80%];
+  @apply h-[50%] w-[80%];
 }
 .teams {
-  @apply flex text-white flex-col justify-center items-center gap-[30px] w-full;
+  @apply flex text-white flex-col justify-center items-center gap-[20px] w-full;
 }
 .teams p {
   margin-left: -50px;
 }
 .outer_service {
   @apply flex justify-center items-center;
-  padding: 80px 0;
+  padding: 80px 0 80px 50px;
 }
 .inner_service {
   @apply flex w-[80%] h-[80%] flex-col gap-[100px];
@@ -41,17 +46,23 @@
   line-height: 25px;
 }
 .right {
-  @apply w-1/2 flex flex-col  gap-[10px];
+  @apply w-1/2 flex flex-col justify-center gap-[10px];
 }
 .right h2 {
   @apply text-3xl font-medium w-[80%];
 }
 .right p {
-  @apply text-sm text-[#5b617a] w-[80%];
+  @apply text-sm text-[#5b617a] w-[90%];
+
   line-height: 25px;
 }
 .box {
   @apply h-auto w-1/2 bg-black rounded-md;
+  background: url("../../../_assets/How/Group\ 1321314572-min.png") no-repeat;
+  background-size: contain;
+}
+.service1 > .box {
+  background-position: left;
 }
 .service3 {
   @apply flex justify-evenly;
@@ -67,7 +78,7 @@
   @apply text-sm text-[#5b617a] w-[90%];
 }
 .service_black {
-  @apply bg-black h-screen w-screen flex justify-center items-center relative;
+  @apply bg-black h-screen flex justify-center items-center relative;
 }
 .inner_black {
   @apply w-[80%] h-[90%] flex items-center flex-col justify-evenly;
@@ -103,9 +114,6 @@
   @apply text-white text-[13px];
 }
 @media (max-width: 700px) {
-  .landing {
-    height: 85vh;
-  }
   .content {
     @apply w-[90%] h-[60%];
   }
@@ -171,5 +179,14 @@
   }
   .grid_box {
     @apply mb-[15px];
+  }
+}
+
+@media (max-width: 1400px) {
+  .landing {
+    @apply h-[85vh];
+  }
+  .left p {
+    width: 90%;
   }
 }

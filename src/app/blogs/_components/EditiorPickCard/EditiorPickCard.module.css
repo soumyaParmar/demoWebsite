@@ -5,7 +5,8 @@
   border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
-  background: url("../../../../../public/editiorPickimage.png");
+  /* background: url("../../../../../public/editiorPickimage.png"); */
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -13,8 +14,16 @@
   overflow: hidden;
 }
 
+
 .container:hover {
   box-shadow: 10px 10px 13px 2px #c1bfbf;
+}
+
+.container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.4;
 }
 
 .containerText {

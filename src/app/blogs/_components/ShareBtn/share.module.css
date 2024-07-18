@@ -1,0 +1,91 @@
+/* share.module.css */
+
+.container {
+  padding: 1rem 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.customBorder {
+  border: 0.5px solid;
+  width: 100%;
+  margin: 0rem 3rem;
+  border-color: #9c9c9c;
+  width: 43%;
+}
+
+.container .heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.shareBtnContainer {
+  padding-left: 0.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.container .shareBtnContainer svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.shareBtnContainer .shareBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media queries */
+@media (max-width: 800px) {
+  .container {
+    padding: 0rem;
+  }
+  .container .shareBtnContainer svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding-left: 1rem;
+    gap: 0.5rem;
+  }
+  .container .shareBtnContainer svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    flex-direction: column;
+    gap: 0rem;
+    padding-left: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .heading {
+    margin-top: 0rem;
+  }
+}
+@media (max-width: 300px) {
+  .container {
+    overflow: scroll;
+  }
+  .shareBtnContainer {
+    gap: 0.5rem;
+  }
+}

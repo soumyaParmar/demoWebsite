@@ -20,6 +20,7 @@ export const getEditiorsPick = () => {
       category: matterResult.data.category || "",
       slug: filename.replace(".mdx", "") || "",
       folderName: "editiorPickBlogs" || "",
+      image: matterResult.data.image || "",
     };
   });
 
@@ -106,6 +107,7 @@ export const getTrendingBlogData = () => {
       description: matterResult.data.summary || "",
       slug: filename.replace(".mdx", "") || "",
       folderName: "trendingBlogs" || "",
+      image: matterResult.data.image || ""
     };
   });
 

@@ -3,23 +3,30 @@ import style from "./cookies.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "antd";
 import Cookies from "js-cookie";
+import * as axios from "@/app/_lib/api";
 
 const Cookie: React.FC = () => {
   const [showBanner, setShowBanner] = useState<boolean>(false);
 
   useEffect(() => {
-    const cookieConsent = Cookies.get("cookieConsent");
+    const cookieConsent = Cookies.get("VisitorID");
     setShowBanner(cookieConsent === undefined);
   }, []);
 
-  const acceptCookies = () => {
-    Cookies.set("cookieConsent", "true", { expires: 365 });
+  const acceptCookies = async () => {
+    let payload = {
+      ConsentDetails: "Accept",
+    };
+    const res = await axios.postData("/visitors", payload);
+    if ('data' in res && res.data.statusCode == 200) {
+      Cookies.set("VisitorID", res.data.response.VisitorID, { expires: 365 });
+    }
     setShowBanner(false);
   };
 
-  const hidePopup = () =>{
+  const hidePopup = () => {
     setShowBanner(false);
-  }
+  };
 
   return (
     <>
@@ -35,8 +42,12 @@ const Cookie: React.FC = () => {
               site traffic. Do you accept our use of cookies?
             </p>
             <div className={style.btns}>
-              <Button className={style.btn1} onClick={acceptCookies}>Accept</Button>
-              <Button className={style.btn2} onClick={hidePopup}>Decline</Button>
+              <Button className={style.btn1} onClick={acceptCookies}>
+                Accept
+              </Button>
+              <Button className={style.btn2} onClick={hidePopup}>
+                Decline
+              </Button>
             </div>
           </div>
         </div>

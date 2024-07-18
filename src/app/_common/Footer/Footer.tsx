@@ -7,7 +7,7 @@ import img2 from "../../_assets/image/in.svg";
 import img3 from "../../_assets/image/li.svg";
 import img4 from "../../_assets/image/x.svg";
 import Image from "next/image";
-import logo from "../../_assets/background/logo.png"
+import logo from "../../_assets/background/logo.png";
 
 const Footer: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         <div className={style.navigation}>
           <div className={style.pages}>
             <div className="w-[230px] mt-[-20px] max-[700px]:w-full pb-4">
-              <Image src={logo} alt="logo" className={style.image}/>
+              <Image src={logo} alt="logo" className={style.image} />
               <p>
                 At CoEdify, we take immense pride in being your trusted partner
                 in achieving your goals and exceeding your expectations. Our
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className={style.copywrite}>
-          <div className="pt-2 flex justify-between">
-            <p>&copy; CoEdify by Design 2024.</p>
+          <div className="pt-2 flex justify-between max-[700px]:text-[12px]">
+            <p>&copy;Design by CoEdify 2024.</p>
             <div className="flex gap-4">
               <Image src={img1} alt="fb" />
               <Image src={img2} alt="insta" />
