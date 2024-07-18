@@ -9,11 +9,13 @@ interface SuccessResponse {
       VisitorID: string;
     };
   };
+  status?: number;
 }
 
 interface ErrorResponse {
   error: boolean;
   message: string;
+  status?: number;
 }
 
 export const getData = async (

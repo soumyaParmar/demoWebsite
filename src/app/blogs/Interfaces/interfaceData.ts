@@ -7,6 +7,7 @@ export interface insightsCardData {
   date: string;
   img: any;
   slug: string;
+  index ?: number
 }
 
 export type visibleInsights = insightsCardData[];

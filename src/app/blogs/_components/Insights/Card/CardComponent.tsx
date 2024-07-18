@@ -19,6 +19,7 @@ const CardComponent: React.FC<insightsCardData> = (props) => {
           className={styles.image}
           width={500}
           height={500}
+          // layout="fill"
         />
         <div className={styles.content}>
           <div className={styles.top}>

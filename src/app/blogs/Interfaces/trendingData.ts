@@ -3,6 +3,7 @@ export interface TrendingBlogs {
   description: string;
   slug: string;
   folderName: string;
+  image:any;
 }
 
 export interface TrendingDataProps {

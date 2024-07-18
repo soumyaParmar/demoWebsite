@@ -1,37 +1,38 @@
-import fs from "fs";
 import Markdown from "markdown-to-jsx";
-import Image from "next/image";
 
 // Styles and fonts
 import styles from "../../readingPage.module.css";
 import { inter500 } from "@/app/blogs/_customFonts/inter";
 
 // Components import
-import Subscribers from "@/app/blogs/_components/Subscribers/Subscribers";
 import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
-import matter from "gray-matter";
 import { getTrendingPostContent } from "@/app/blogs/_utils";
-import ReadingPageSection from "@/app/blogs/_components/ReadingPageSection";
+import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
+import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 
 const TrendingDataReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   let objData = getTrendingPostContent(slug);
+  let siteUrl = "https://coedify.onrender.com"
+  const url = `${siteUrl}/blogs/trendingBlogs/${slug}`;
   return (
     <>
-      <div className={`${styles.container} flex w-full`}>
-        <div className={`${styles.left} ${inter500.className}`}>
-          {/* <ReadingPageSection objData={objData} /> */}
-
-          <div className={`${styles.markdownContent}`}>
-            <Markdown>{objData.content}</Markdown>
-          </div>
+      <div className={`${styles.left} ${inter500.className}`}>
+        <div className={`${styles.markdownContent}`}>
+          <Markdown
+            options={{
+              overrides: {
+                code: {
+                  component: CodeBlock,
+                },
+              },
+            }}
+          >
+            {objData.content}
+          </Markdown>
         </div>
-
-        {/* Latest Blog site */}
-        <LatestPostSection insightsData={[]} />
+        <ShareButton url={url} title={objData.obj.title} />
       </div>
-
-      <Subscribers />
     </>
   );
 };

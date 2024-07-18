@@ -52,7 +52,7 @@ const ContactUs: React.FC = () => {
     if ("data" in res && res.data.status == "Success") {
       Modal.success({
         title: "Successfully submitted",
-        content: "Thaank you",
+        content: "Thank you",
       });
     } else {
       Modal.error({
