@@ -22,11 +22,11 @@ import img9 from "../../_assets/expertise/6.svg";
 import { useRouter } from "next/navigation";
 
 interface Navbar {
-  flag: boolean,
-  motionValue: boolean
+  flag: boolean;
+  motionValue: boolean;
 }
 
-const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
+const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
   const devref = useRef<HTMLDivElement>(null);
   const devref1 = useRef<HTMLDivElement>(null);
   const devref2 = useRef<HTMLDivElement>(null);
@@ -35,8 +35,6 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
   const router = useRouter();
 
   const { scrollY } = useScroll();
-
-  
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
@@ -267,7 +265,9 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
               <CaretDownOutlined />
             </Space>
           </Dropdown>
-          <p>Case Studies</p>
+          <p>
+            <Link href="/blogs">Case Studies</Link>
+          </p>
 
           <p>
             {" "}
