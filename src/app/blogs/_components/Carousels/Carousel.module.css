@@ -23,7 +23,7 @@
 }
 .image {
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.4  ;
   height: 100%;
   width: 100%;
 }
@@ -75,10 +75,8 @@
   }
 
   .innerText {
-    /* width: 25rem;
-    height: 11rem; */
-    width: 60%;
-    height: auto;
+    width: 25rem;
+    height: 11rem;
   }
 
   .innerHeading {
@@ -86,7 +84,7 @@
   }
   .innerPara {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.8rem;
   }
 
@@ -98,33 +96,29 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
   .carouselSlide {
     align-items: center;
     justify-content: center;
-    height: 85vh;
   }
   .innerText {
-    width: 30rem;
-    height: fit-content;
-
+    width: 25rem;
+    height: 25rem;
     top: 50%;
     left: 50%;
-    /* padding: 2rem; */
-    margin-top: 1rem;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
   }
 
   .innerHeading {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
-    line-height: 3rem;
+    line-height: 3.4rem;
   }
   .innerPara {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 1.2rem;
     text-align: center;
   }
@@ -143,13 +137,10 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .carouselSlide {
-    height: 90vh;
-  }
+@media screen and (max-width: 380px) {
   .innerText {
     width: 20rem;
-    height: fit-content;
+    height: 20rem;
 
     display: flex;
     align-items: center;
@@ -157,12 +148,12 @@
 
   .innerHeading {
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 3rem;
   }
   .innerPara {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
+    font-size: 0.7rem;
     margin-bottom: 1rem;
+    width: 60%;
     height: auto;
   }
 
@@ -170,13 +161,5 @@
     width: 7.2rem;
     height: 2.9rem;
     font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .innerText {
-    width: 15rem;
-    /* height: 20rem; */
-    height: fit-content;
   }
 }

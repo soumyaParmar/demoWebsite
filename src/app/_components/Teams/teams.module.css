@@ -12,3 +12,7 @@
 .image {
   filter: grayscale(100%);
 }
+.image1 {
+  fill: white;
+  filter: brightness(0) invert(1);
+}

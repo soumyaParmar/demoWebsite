@@ -5,7 +5,6 @@
   transition: all ease 0.04s;
   border-radius: 15px;
   overflow: hidden;
-  /* border: 1px solid black; */
 }
 
 .cardContainer:hover {
@@ -83,13 +82,8 @@
   text-decoration: none;
 }
 
-/* Media queries */
 
-/* @media (max-width: 1900px) {
-  .cardContainer {
-    height: 70vh;
-  }
-} */
+/* Media queries */
 @media (max-width: 1500px) {
   .authorDateContainer {
     font-size: 0.8rem;
@@ -115,9 +109,6 @@
 }
 
 @media (max-width: 600px) {
-  /* .cardContainer {
-    height: 78vh;
-  } */
   .authorDateContainer {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
