@@ -1,16 +1,15 @@
 import fs from "fs";
 import matter from "gray-matter";
-import "../content/"
 
 // function to get the data from the markdown file and shown it on the editiors pick card
 export const getEditiorsPick = () => {
-  const folder = "../content/editiorPickBlogs/";
+  const folder = "public/content/editiorPickBlogs/";
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
 
   const posts = markdownPosts.map((filename) => {
     const fileContents = fs.readFileSync(
-      `../content/editiorPickBlogs/${filename}`,
+      `public/content/editiorPickBlogs/${filename}`,
       "utf8"
     );
     const matterResult = matter(fileContents);
@@ -30,7 +29,7 @@ export const getEditiorsPick = () => {
 
 // function to get the data fromt the editiors mdx file
 export const getEditiorsPostContent = (slug: string): any => {
-  const folder = "../content/editiorPickBlogs/";
+  const folder = "public/content/editiorPickBlogs/";
   const file = `${folder}${slug}.mdx`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
@@ -47,13 +46,13 @@ export const getEditiorsPostContent = (slug: string): any => {
 
 // to get the metadata from the insights blog
 export const getInsightsBlogData = () => {
-  const folder = "../content/insights/";
+  const folder = "public/content/insights/";
   const files: string[] = fs.readdirSync(folder);
   const markdownPosts: string[] = files.filter((file) => file.endsWith(".mdx"));
 
   const posts = markdownPosts.map((filename) => {
     const fileContents = fs.readFileSync(
-      `../content/insights/${filename}`,
+      `public/content/insights/${filename}`,
       "utf8"
     );
     const matterResult = matter(fileContents);
@@ -74,7 +73,7 @@ export const getInsightsBlogData = () => {
 
 // Function to get the content of the insights mdx files
 export const getInsightsPostContent = (slug: string) => {
-  const folder = "../content/insights/";
+  const folder = "public/content/insights/";
   const file = `${folder}${slug}.mdx`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
@@ -92,13 +91,13 @@ export const getInsightsPostContent = (slug: string) => {
 
 // function to get the data from the markdown file and shown it on the trending blogs
 export const getTrendingBlogData = () => {
-  const folder = "../content/trendingBlogs/";
+  const folder = "public/content/trendingBlogs/";
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
 
   const posts = markdownPosts.map((filename) => {
     const fileContents = fs.readFileSync(
-      `../content/trendingBlogs/${filename}`,
+      `public/content/trendingBlogs/${filename}`,
       "utf8"
     );
     const matterResult = matter(fileContents);
@@ -117,7 +116,7 @@ export const getTrendingBlogData = () => {
 
 // Function to get the content of the trending mdx files
 export const getTrendingPostContent = (slug: string): any => {
-  const folder = "../content/trendingBlogs/";
+  const folder = "public/content/trendingBlogs/";
   const file = `${folder}${slug}.mdx`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);

@@ -14,7 +14,7 @@ import { getInsightsPostContent } from "@/app/blogs/_utils";
 const ReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   const objData = getInsightsPostContent(slug);
-  let siteUrl = "https://coedifydemo.netlify.app";
+  let siteUrl = "https://coedify.onrender.com";
   const url = `${siteUrl}/blogs/insights/${slug}`;
 
   return (

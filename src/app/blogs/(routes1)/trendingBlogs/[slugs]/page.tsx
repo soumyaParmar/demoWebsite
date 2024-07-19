@@ -13,7 +13,7 @@ import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 const TrendingDataReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   let objData = getTrendingPostContent(slug);
-  let siteUrl = "https://coedifydemo.netlify.app"
+  let siteUrl = "https://coedify.onrender.com"
   const url = `${siteUrl}/blogs/trendingBlogs/${slug}`;
   return (
     <>

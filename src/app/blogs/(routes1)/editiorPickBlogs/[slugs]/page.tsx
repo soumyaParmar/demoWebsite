@@ -13,7 +13,7 @@ import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 const EditiorPickReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   let objData = getEditiorsPostContent(slug);
-  let siteUrl = "https://coedifydemo.netlify.app";
+  let siteUrl = "https://coedify.onrender.com";
   const url = `${siteUrl}/blogs/editiorPickBlogs/${slug}`;
 
   return (
