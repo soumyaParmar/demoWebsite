@@ -40,7 +40,6 @@ const Unsubscribe = ({ params }: { params: { slug: string } }) => {
     }
 
     const res = await postData("/unsubscribe", unsubscribePayload);
-    console.log(res)
     if (res.status == 200) {
       Modal.success({
         title: "Successfully unsubscribed",
