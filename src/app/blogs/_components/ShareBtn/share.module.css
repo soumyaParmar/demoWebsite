@@ -43,13 +43,20 @@
 }
 
 /* @media queries */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
-    padding: 0rem;
+    padding: 0;
+    padding-left: 4rem;
   }
   .container .shareBtnContainer svg {
     width: 2.5rem;
     height: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding-left: 0rem;
   }
 }
 

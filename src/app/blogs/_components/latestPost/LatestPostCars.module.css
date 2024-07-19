@@ -141,7 +141,19 @@
 
 @media (max-width: 1100px) {
   .title {
+    font-size: 1.1rem;
     margin-bottom: 0.6rem;
+    line-height: 1.4rem;
+  }
+  .para {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .category span {
+    font-size: 0.7rem;
+  }
+  .authorDateContainer {
+    font-size: 0.8rem;
   }
   .cardContainer {
     height: 38vh;

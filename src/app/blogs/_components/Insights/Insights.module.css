@@ -91,7 +91,7 @@
 }
 
 /* Media Queries */
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .cardContainer {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -101,10 +101,13 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .cardContainer {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 900px) {
   .heading {
     text-align: center;
   }
@@ -118,13 +121,17 @@
   }
 }
 
+@media (max-width: 700px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 0rem 1rem;
   }
-  .cardContainer {
-    grid-template-columns: 1fr;
-  }
+
   .heading {
     margin-bottom: 1.2rem;
   }
