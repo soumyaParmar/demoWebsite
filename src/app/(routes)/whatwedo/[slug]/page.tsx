@@ -51,7 +51,7 @@ const What = ({ params }: { params: { slug: string } }) => {
         </div>
         <div className={styles.teams}>
           <p>Loved by next-generation teams</p>
-          <Teams />
+          <Teams color="white"/>
         </div>
       </div>
 

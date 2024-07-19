@@ -12,7 +12,11 @@ import img8 from "../../_assets/teams/prolitus.png";
 import img9 from "../../_assets/teams/tech.svg";
 import Image from "next/image";
 
-const Teams: React.FC = () => {
+interface propType {
+  color?: "white" | "gray";
+}
+
+const Teams: React.FC<propType> = ({ color }) => {
   const data: Array<object> = [
     {
       id: "1",
@@ -51,9 +55,49 @@ const Teams: React.FC = () => {
       item: <Image src={img9} alt="" className={style.image} />,
     },
   ];
+
+  const data1: Array<object> = [
+    {
+      id: "1",
+      item: <Image src={img1} alt="" className={style.image1} />,
+    },
+    {
+      id: "2",
+      item: <Image src={img2} alt="" className={style.image1} />,
+    },
+    {
+      id: "3",
+      item: <Image src={img3} alt="" className={style.image1} />,
+    },
+    {
+      id: "4",
+      item: <Image src={img4} alt="" className={style.image1} />,
+    },
+    {
+      id: "5",
+      item: <Image src={img5} alt="" className={style.image1} />,
+    },
+    // {
+    //   id: "6",
+    //   item: <Image src={img6} alt="" className={style.image1} />,
+    // },
+    {
+      id: "6",
+      item: <Image src={img7} alt="" className={style.image1} />,
+    },
+    {
+      id: "7",
+      item: <Image src={img8} alt="" className={style.image1} />,
+    },
+    {
+      id: "8",
+      item: <Image src={img9} alt="" className={style.image1} />,
+    },
+  ];
+
   return (
     <div className={style.outer}>
-      <Silder data={data} />
+      {color == "gray" ? <Silder data={data} /> : <Silder data={data1} />}
     </div>
   );
 };

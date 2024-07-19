@@ -61,7 +61,7 @@ const Coedify: React.FC = () => {
       <Hero />
       <div className={style.teams}>
         <p>Loved by next-generation teams</p>
-        <Teams />
+        <Teams color="gray"/>
       </div>
       <How />
       <div className={style.enterprise} id="enterprise">

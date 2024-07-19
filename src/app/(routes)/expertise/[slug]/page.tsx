@@ -68,7 +68,7 @@ const Expertise = ({ params }: { params: { slug: string } }) => {
         
         <div className={styles.teams}>
           <p>Loved by next-generation teams</p>
-          <Teams />
+          <Teams color="white"/>
         </div>
       </div>
       <div className={styles.outer_service}>
