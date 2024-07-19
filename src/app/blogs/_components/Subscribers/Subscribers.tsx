@@ -11,14 +11,14 @@ const Subscribers: React.FC = () => {
     Email: "",
   });
 
-  // useEffect(() => {
-  //   async function fetchData(): Promise<void> {
-  //     // You can await here
-  //     const response = await getData("/visitors");
-  //     console.log(response);
-  //   }
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    async function fetchData(): Promise<void> {
+      // You can await here
+      const response = await getData("/visitors");
+      console.log(response);
+    }
+    fetchData();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<

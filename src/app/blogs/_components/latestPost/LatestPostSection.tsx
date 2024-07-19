@@ -19,7 +19,7 @@ const posts: insightsCardData[] = postData
   .map((post) => ({
     title: post.title,
     description: post.description,
-    author: post.author,
+    author: "David Clerk",
     date: post.date, // Assuming 'publishedAt' is a valid date string
     category: post.category,
     img: post.img,
@@ -63,37 +63,28 @@ const LatestPostSection: React.FC<paginationPropsData> = () => {
           ))}
         </div>
         <div className={stylex.customSticky}>
-          <Link
-            href={`/blogs/insights/${lastPost.slug}`}
-            className={`${styles.link}`}
-          >
-            <LatestPostCard
-              category={lastPost.category}
-              title={lastPost.title}
-              description={lastPost.description}
-              author={lastPost.author}
-              img={lastPost.img}
-              date={lastPost.date}
-              slug={lastPost.slug}
-              index={3}
-            />
-          </Link>
-          <br />
-          <Link
-            href={`/blogs/insights/${lastPost1.slug}`}
-            className={`${styles.link}`}
-          >
-            <LatestPostCard
-              category={lastPost1.category}
-              title={lastPost1.title}
-              description={lastPost1.description}
-              author={lastPost1.author}
-              img={lastPost1.img}
-              date={lastPost1.date}
-              slug={lastPost1.slug}
-              index={4}
-            />
-          </Link>
+        <LatestPostCard
+          category={lastPost.category}
+          title={lastPost.title}
+          description={lastPost.description}
+          author={lastPost.author}
+          img={lastPost.img}
+          date={lastPost.date}
+          slug={lastPost.slug}
+          index={3}
+        />
+        <br />
+        <LatestPostCard
+          category={lastPost1.category}
+          title={lastPost1.title}
+          description={lastPost1.description}
+          author={lastPost1.author}
+          img={lastPost1.img}
+          date={lastPost1.date}
+          slug={lastPost1.slug}
+          index={4}
+        />
+
         </div>
       </div>
     </>

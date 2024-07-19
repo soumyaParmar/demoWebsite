@@ -8,6 +8,7 @@ import { Carousel } from "antd";
 import styles from "./Carousel.module.css";
 import { inter700, inter400 } from "../../_customFonts/inter";
 
+import Banner2 from "../../../../../public/banner2.png";
 import {
   TrendingBlogs,
   TrendingDataProps,
@@ -18,15 +19,14 @@ const HeroSection: React.FC<TrendingDataProps> = ({ trendingData }) => {
     <>
       <div className={styles.carouselContainer}>
         {/*  trending blogs files is mapping */}
-        <Carousel autoplay infinite effect="fade">
+        <Carousel autoplay infinite>
           {trendingData.map((post: TrendingBlogs, index: number) => (
             <div className={styles.carouselSlide} key={index}>
               <Image
                 src={post.image}
-                alt={post.title}
+                alt="1st slide"
                 className={styles.image}
-                width={2500}
-                height={1500}
+                layout="fill"
               />
               <div className={`${styles.innerText}`}>
                 <h1 className={` ${inter700.className} ${styles.innerHeading}`}>

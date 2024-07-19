@@ -11,8 +11,8 @@ import styles from "../../readingPage.module.css";
 
 import { getInsightsPostContent } from "@/app/blogs/_utils";
 
-const ReadingPage = ({ params }: { params: { slugs: string } }) => {
-  const slug = params.slugs;
+const ReadingPage: React.FC = (props: any) => {
+  const slug = props.params.slugs;
   const objData = getInsightsPostContent(slug);
   let siteUrl = "https://coedify.onrender.com";
   const url = `${siteUrl}/blogs/insights/${slug}`;

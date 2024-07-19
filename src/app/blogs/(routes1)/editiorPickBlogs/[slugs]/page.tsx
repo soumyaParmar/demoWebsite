@@ -6,11 +6,12 @@ import styles from "../../readingPage.module.css";
 
 // components
 import { getEditiorsPostContent } from "@/app/blogs/_utils";
+import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
 import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
 import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 
-const EditiorPickReadingPage = ({ params }: { params: { slugs: string } }) => {
-  const slug = params.slugs;
+const EditiorPickReadingPage: React.FC = (props: any) => {
+  const slug = props.params.slugs;
   let objData = getEditiorsPostContent(slug);
   let siteUrl = "https://coedify.onrender.com";
   const url = `${siteUrl}/blogs/editiorPickBlogs/${slug}`;
