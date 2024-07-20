@@ -36,6 +36,7 @@
     "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
+    "firebase": "^10.12.4",
     "framer-motion": "^11.2.12",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
