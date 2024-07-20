@@ -4,14 +4,12 @@ import Markdown from "markdown-to-jsx";
 import styles from "../../readingPage.module.css";
 import { inter500 } from "@/app/blogs/_customFonts/inter";
 
-// Components import
-import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
 import { getTrendingPostContent } from "@/app/blogs/_utils";
 import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
 import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 
-const TrendingDataReadingPage: React.FC = (props: any) => {
-  const slug = props.params.slugs;
+const TrendingDataReadingPage = ({ params }: { params: { slugs: string } }) => {
+  const slug = params.slugs;
   let objData = getTrendingPostContent(slug);
   let siteUrl = "https://coedify.onrender.com"
   const url = `${siteUrl}/blogs/trendingBlogs/${slug}`;
