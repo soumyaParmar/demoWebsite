@@ -37,4 +37,8 @@ const TrendingDataReadingPage: React.FC = (props: any) => {
   );
 };
 
+export const generateStaticParams  =() =>{
+  return [{slugs:"Single-Page-Applications"}]
+}
+
 export default TrendingDataReadingPage;

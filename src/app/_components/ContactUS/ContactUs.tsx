@@ -7,6 +7,11 @@ import * as api from "../../_lib/api";
 import { FormData } from "@/app/Interfaces/ContactUSFormData";
 import { useRouter } from "next/navigation";
 import { Modal } from "antd";
+import Buttons from "@/app/_common/Button/Buttons";
+
+interface Window {
+  Calendly: any;
+}
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -17,6 +22,33 @@ const ContactUs: React.FC = () => {
   });
   const formRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
+  // for setting up the calendly
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.head.removeChild(link);
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const openCalendlyPopup = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/shraddha-coedify/meet-and-greet",
+      });
+    }
+  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -75,6 +107,26 @@ const ContactUs: React.FC = () => {
             To become the company that customers want, it takes a group of
             passionate people. Get to know the people who lead
           </p>
+
+          <div>
+            <p
+              style={{
+                fontSize: "1.5rem",
+                marginTop: "3rem",
+                marginBottom: "3rem",
+              }}
+            >
+              OR
+            </p>
+
+            <button
+              type="submit"
+              className={` ${styles.button1}`}
+              onClick={openCalendlyPopup}
+            >
+              Schedule a Meeting
+            </button>
+          </div>
         </div>
         <div
           className={`${styles.rightContactUs} ${inter500.className}`}
@@ -118,7 +170,7 @@ const ContactUs: React.FC = () => {
                 <option value="Cloud cost Optimization">
                   Cloud cost Optimization
                 </option>
-                <option value="mercedes">AI/ML</option>
+                <option value="AI/ML">AI/ML</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -134,7 +186,9 @@ const ContactUs: React.FC = () => {
               ></textarea>
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className={styles.button}>
+              Submit
+            </button>
           </form>
         </div>
       </div>

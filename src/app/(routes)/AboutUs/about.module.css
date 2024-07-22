@@ -259,6 +259,7 @@
   padding: 0rem 7rem;
   margin-bottom: 1rem;
   padding-top: 7rem;
+  margin-top: 2rem;
 }
 
 .contactUs .leftContactUs {
@@ -322,13 +323,40 @@
   height: 15rem;
 }
 
-.contactUs .rightContactUs button {
+.button,
+.button1 {
   padding: 0.7em 1.4em;
   border: none;
   border-radius: 5px;
   background-color: #2aba88;
   color: white;
   cursor: pointer;
+}
+
+.button1 {
+  width: 65%;
+  height: auto;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+  transition: all ease 0.3s;
+  overflow: hidden;
+}
+
+.button1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #128d62;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%);
+  transition: all ease 0.3s;
+}
+.button1:hover:before {
+  transform: translate(0);
+  z-index: -1;
 }
 .dev_outer {
   @apply flex justify-center items-center;
@@ -402,6 +430,9 @@
   }
   .CeoIntro .rightCeoIntro {
     width: 70%;
+  }
+  .button1{
+    width: 100%;
   }
 }
 

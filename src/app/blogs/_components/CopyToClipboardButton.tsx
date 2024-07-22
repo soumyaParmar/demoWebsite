@@ -27,23 +27,15 @@ const CodeContent = styled.pre`
 
 const CopyButton = styled.button`
   position: absolute;
-  top: 20px;
-  right: 20px;
-  //   background-color: #007bff;
+  top: 12px;
+  right: 12px;
   color: white;
   border: none;
   border-radius: 4px;
   padding: 4px 8px;
   cursor: pointer;
-
-  //   &:hover {
-  //     background-color: #0056b3;
-  //   }
 `;
 
-// interface CodeBlockProps {
-//   children?: any; // Make children optional with `?`
-// }
 
 const CodeBlock = ({ children }: { children: string }) => {
   const [copied, setCopied] = useState(false);
