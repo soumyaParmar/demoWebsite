@@ -5,7 +5,6 @@
   border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
-  /* background: url("../../../../../public/editiorPickimage.png"); */
   background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,12 +13,11 @@
   overflow: hidden;
 }
 
-
 .container:hover {
   box-shadow: 10px 10px 13px 2px #c1bfbf;
 }
 
-.container img{
+.container img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -27,13 +25,14 @@
 }
 
 .containerText {
+  width: auto;
+  height: auto;
   position: absolute;
   display: flex;
   flex-direction: column;
   color: white;
   top: 7rem;
   padding: 0px 2rem;
-  /* border: 1px soli white; */
 }
 .category {
   display: flex;
@@ -73,7 +72,7 @@
   font-size: 0.7rem;
   font-weight: 400;
   text-align: left;
-  margin-bottom:-2rem ;
+  margin-bottom: -2rem;
 }
 
 /* Media queries */
@@ -101,30 +100,36 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   .container {
     height: 15rem;
   }
   .category {
-    margin-bottom: -0.2rem;
+    margin-bottom: 0.2rem;
   }
   .containerText {
-    top: 4rem;
+    top: 2rem;
     padding: 0px 1rem;
+    /* border: 1px solid white; */
+    height: auto;
   }
   .heading {
     width: 230px;
-    margin-bottom: 0.1rem;
-    font-size: 0.9rem;
+    width: 80%;
+    margin-bottom: -0.5rem;
+    font-size: 1rem;
     line-height: 1.4em;
+    text-align: justify;
   }
 
   .para {
-    font-size: 0.6rem;
-
+    font-size: 0.8rem;
     text-align: left;
-    width: 13rem;
-    height: 5rem;
-    line-height: 0.8rem;
+    width: 85%;
+    height: fit-content;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+
   }
 }

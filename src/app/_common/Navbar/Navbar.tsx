@@ -267,7 +267,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
               <CaretDownOutlined />
             </Space>
           </Dropdown>
-          <p>Case Studies</p>
+          <p><Link href = "/blogs">Case Studies</Link></p>
 
           <p>
             {" "}
