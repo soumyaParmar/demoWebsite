@@ -5,7 +5,7 @@ import { inter400, inter500, inter700 } from "../../../_customFonts/inter";
 import styles from "../../readingPage.module.css";
 
 // components
-import { getEditiorsPostContent } from "@/app/blogs/_utils";
+import { getEditiorsPostContent, getEditorsPick } from "@/app/blogs/_utils";
 import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
 import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
 import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
@@ -37,5 +37,13 @@ const EditiorPickReadingPage: React.FC = (props: any) => {
     </>
   );
 };
+
+export const generateStaticParams  =() =>{
+  const editiorsData = getEditorsPick();
+  const params = editiorsData.map((editior) => ({
+    slugs: editior.slug
+  }))
+  return params;
+}
 
 export default EditiorPickReadingPage;

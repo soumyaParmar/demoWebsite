@@ -9,7 +9,7 @@ import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 import { inter500 } from "@/app/blogs/_customFonts/inter";
 import styles from "../../readingPage.module.css";
 
-import { getInsightsPostContent } from "@/app/blogs/_utils";
+import { getInsightsBlogData, getInsightsPostContent } from "@/app/blogs/_utils";
 
 const ReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
@@ -40,5 +40,13 @@ const ReadingPage: React.FC = (props: any) => {
     </>
   );
 };
+
+export const generateStaticParams  =() =>{
+  const insightsData = getInsightsBlogData();
+  const params = insightsData.map((insights) => ({
+    slugs: insights.slug
+  }))
+  return params;
+}
 
 export default ReadingPage;
