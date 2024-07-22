@@ -18,15 +18,14 @@ const HeroSection: React.FC<TrendingDataProps> = ({ trendingData }) => {
     <>
       <div className={styles.carouselContainer}>
         {/*  trending blogs files is mapping */}
-        <Carousel autoplay infinite effect="fade">
+        <Carousel autoplay infinite>
           {trendingData.map((post: TrendingBlogs, index: number) => (
             <div className={styles.carouselSlide} key={index}>
               <Image
                 src={post.image}
                 alt={post.title}
                 className={styles.image}
-                width={2500}
-                height={1500}
+                layout="fill"
               />
               <div className={`${styles.innerText}`}>
                 <h1 className={` ${inter700.className} ${styles.innerHeading}`}>

@@ -19,7 +19,7 @@ const posts: insightsCardData[] = postData
   .map((post) => ({
     title: post.title,
     description: post.description,
-    author: post.author,
+    author: "David Clerk",
     date: post.date, // Assuming 'publishedAt' is a valid date string
     category: post.category,
     img: post.img,

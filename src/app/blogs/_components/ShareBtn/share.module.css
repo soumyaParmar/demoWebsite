@@ -1,11 +1,10 @@
 /* share.module.css */
 
 .container {
-  padding: 1rem 10rem;
+  padding: 1rem 3rem;
   display: flex;
   gap: 2rem;
   align-items: center;
-  /* border: 1px solid; */
 }
 
 .customBorder {
@@ -43,20 +42,13 @@
 }
 
 /* @media queries */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .container {
-    padding: 0;
-    padding-left: 4rem;
+    padding: 0rem;
   }
   .container .shareBtnContainer svg {
     width: 2.5rem;
     height: 2.5rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .container {
-    padding-left: 0rem;
   }
 }
 
