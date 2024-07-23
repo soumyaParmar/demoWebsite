@@ -37,7 +37,7 @@ const Hero = () => {
         <Cookies />
         <div className={style.content}>
           <div className={style.ai_link}>
-            <Link href={"/blogs"}>
+            <Link href={"/case-studies"}>
               <div
                 className="flex text-[15px] justify-between gap-3 bg-[#151c24] p-1 pl-4  rounded-full max-[600px]:p-2 cursor-pointer"
                 id="landingHeading0"
