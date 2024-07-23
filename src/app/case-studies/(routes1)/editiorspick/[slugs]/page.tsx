@@ -6,6 +6,7 @@ import styles from "../../readingPage.module.css";
 
 // components
 import { getEditiorsPick, getEditiorsPostContent } from "@/app/case-studies/_utils";
+import LatestPostSection from "@/app/case-studies/_components/latestPost/LatestPostSection";
 import CodeBlock from "@/app/case-studies/_components/CopyToClipboardButton";
 import ShareButton from "@/app/case-studies/_components/ShareBtn/ShareButton";
 

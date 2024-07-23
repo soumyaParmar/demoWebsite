@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx";
 
 // Components
+import LatestPostSection from "@/app/case-studies/_components/latestPost/LatestPostSection";
 import CodeBlock from "@/app/case-studies/_components/CopyToClipboardButton";
 import ShareButton from "@/app/case-studies/_components/ShareBtn/ShareButton";
 
