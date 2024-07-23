@@ -1,6 +1,6 @@
 .cardContainer {
   width: 27vw;
-  height: 30vh;
+  height: 38vh;
   background-color: #f3f4f6b2;
   border-radius: 15px;
   /* margin-left: 3rem; */
@@ -12,7 +12,7 @@
   width: 53px;
   height: 53px;
   border-radius: 5px;
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
 
   margin: auto;
 }

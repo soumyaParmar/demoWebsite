@@ -72,11 +72,13 @@ function GalleryCarousel() {
             <Image src={slide2} width={500} height={500} alt="Employee Img" />
           </div>
           <div className={`${styles.sliderText} ${inter500.className}`}>
-            <p>What we believe in</p>
+            <p>Our Mission:</p>
             <p>
-              Over the years at Sans, we’ve put a lot of thought into what it is
-              that makes us who we are. The qualities that unite us, that make
-              us such an effective...
+              At CoEdify, our mission is to provide exceptional engineering
+              talent and IT consultation services. Our expertise lies in
+              Artificial intelligence, Machine Learning , Devops , Cloud
+              infrastructure, Database tuning, and Robust software architecture
+              implementing practices.
             </p>
           </div>
         </div>

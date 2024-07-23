@@ -124,7 +124,7 @@ const ContactUs: React.FC = () => {
               className={` ${styles.button1}`}
               onClick={openCalendlyPopup}
             >
-              Schedule a Meeting
+              Schedule a Call
             </button>
           </div>
         </div>

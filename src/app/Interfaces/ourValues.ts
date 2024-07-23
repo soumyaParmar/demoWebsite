@@ -1,5 +1,5 @@
 export interface OurValue {
-  image ?: string;
+  image ?: any;
   teamName: string;
   somePara: string;
 }

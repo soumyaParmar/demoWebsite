@@ -11,6 +11,12 @@ import style from "../../_components/coedify-official/landing.module.css";
 import style1 from "../../(routes)/expertise/[slug]/expertise.module.css";
 import { inter400, inter500 } from "@/app/blogs/_customFonts/inter";
 import blogImage from "../../../../public/blogImage.jpeg";
+import CEOImg from "../../_assets/CEO/ceo2.png";
+import CS from "../../_assets/OurValues/successful.png";
+import innovation from "../../_assets/OurValues/excellence1.png";
+import culture from "../../_assets/OurValues/culture.png";
+import excellence from "../../_assets/OurValues/excellence.png";
+import integrity from "../../_assets/OurValues/integrity.png";
 
 // componenets
 import Navbar from "@/app/_common/Navbar/Navbar";
@@ -71,24 +77,26 @@ const Page: React.FC = () => {
         {/* Start of service section */}
         <div className={`${styles.service}`} id="service">
           <div className={`${styles.leftService} ${inter500.className}`}>
-            <p>service</p>
+            <p>Who we are</p>
             <h1>
               We believe that our work & client opinions define who we truly are
             </h1>
           </div>
           <div className={`${styles.rightService} ${inter400.className}`}>
             <p>
-              The use of machine learning in business is increasing rapidly.
-              Smart companies are harnessing the value of their data in machine
-              learning models to reduce costs, optimize processes, and increase
-              customer satisfaction.
+              Founded in 2019, CoEdify Technology has evolved from a small team
+              of passionate engineers with over 30 years of collective
+              experience into a premier provider of high-quality software
+              solutions. We excel in delivering top-tier IT services to clients
+              across diverse industries, including finance, healthcare,
+              education, and e-commerce.
             </p>
             <br />
             <p>
-              AI and machine learning have the potential to reshape industries
-              ML algorithms can be used in applications across practically all
-              sectors, from eCommerce to finance, healthcare to education, and
-              cybersecurity to charity.
+              Choose CoEdify for unmatched technical expertise, transparent
+              collaboration, and a commitment to making your software shine.
+              We're not just engineers; we're problem solvers, and we're here to
+              engineer the future together.
             </p>
           </div>
         </div>
@@ -102,35 +110,37 @@ const Page: React.FC = () => {
         <div className={styles.ourValues} id="values">
           <div className={`${inter500.className} ${styles.ourValuesHeading}`}>
             <h5>Our values</h5>
-            <h1>
-              Build at the intersection of generative <br /> AI and human
-              knowledge
-            </h1>
+            <h1>Empowering Innovation with Expertise and Collaboration</h1>
           </div>
 
           <div className={styles.ourValuesCards}>
             <div className={styles.topSection}>
               <OurValueCard
-                teamName="Team First"
-                somePara="Discover how we put our team at the heart and support each other."
+                image={culture}
+                teamName="Our Culture"
+                somePara="At CoEdify, we believe in the power of teamwork. Our culture of collaboration and mutual support ensures that every project is a success.Together, we achieve more."
               />
               <OurValueCard
-                teamName="Team First"
-                somePara="Discover how we put our team at the heart and support each other."
+                image={innovation}
+                teamName="Innovation"
+                somePara="We stay at the forefront of technology by embracing new ideas and continuously improving. Our expertise in AI, fintech, SaaS, and cloud infrastructure drives innovation in every project we undertake."
               />
             </div>
             <div className={styles.bottomSection}>
               <OurValueCard
-                teamName="Team First"
-                somePara="Discover how we put our team at the heart and support each other."
+                image={CS}
+                teamName="Client Success"
+                somePara="Your success is our success. We are committed to delivering solutions that meet your needs and exceed your expectations. When you win, we win."
               />
               <OurValueCard
-                teamName="Team First"
-                somePara="Discover how we put our team at the heart and support each other."
+                image={integrity}
+                teamName="Integrity"
+                somePara=" We operate with the highest standards of integrity. Trust and transparency are the cornerstones of our business, ensuring long-lasting relationships with our clients."
               />
               <OurValueCard
-                teamName="Team First"
-                somePara="Discover how we put our team at the heart and support each other."
+                image={excellence}
+                teamName="Excellence"
+                somePara="Excellence is at the heart of everything we do. From in-house training to project delivery, we strive to achieve the highest quality in all our services."
               />
             </div>
           </div>
@@ -139,18 +149,20 @@ const Page: React.FC = () => {
 
         {/* Start of CEO Intro */}
         <div className={styles.CeoIntro}>
-          <div className={styles.leftCeoIntro} id="CEOintroimg"></div>
+          <div className={styles.leftCeoIntro} id="CEOintroimg">
+            <Image src={CEOImg} width={478} height={390} alt="Md nadeem" />
+          </div>
           <div className={styles.rightCeoIntro} id="CEOintroright">
             <div className={styles.rightCeoIntroTopSection}>
-              <h5 className={inter400.className}>A word from CEO</h5>
+              <h5 className={inter400.className}>A Word from Our CEO</h5>
               <h1 className={inter500.className}>
                 “We&#39;re defining the future of what modern software products
                 should look and function like”
               </h1>
               <p className={inter400.className}>
-                Our team of experts is committed to tackling the most complex
-                challenges and delivering innovative solutions that transform
-                businesses.
+                At CoEdify Technology, we tackle complex challenges and deliver
+                innovative solutions that transform businesses. Partner with
+                CoEdify and gain a trusted ally committed to your success.
               </p>
             </div>
 
@@ -169,13 +181,13 @@ const Page: React.FC = () => {
             id="ourTeam"
           >
             <h5>our team</h5>
-            <h1>
-              Meet our team of creators, designers, and world-class problem
-              solvers
-            </h1>
+            <h1>Meet Our Visionaries and Innovators</h1>
             <p>
-              To become the company that customers want, it takes a group of
-              passionate people. Get to know the people who lead
+              At CoEdify, we believe that exceptional results stem from a team
+              of passionate creators, designers, and problem solvers. Our
+              diverse group of experts is dedicated to transforming your vision
+              into reality with cutting-edge solutions and unparalleled
+              expertise. Get to know the brilliant minds driving our success.
             </p>
           </div>
           <div className={styles.dev_outer}>
