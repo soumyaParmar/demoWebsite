@@ -40,11 +40,7 @@ const How: React.FC = () => {
           <div className="w-[40%] max-[826px]:w-full" id="cloud">
             <h1>Cloud Cost Optimization</h1>
             <p className="pb-3">
-              We guarantee cost savings, efficient resource utilization, and
-              enhanced performance. Let's have a conversation; we only charge
-              when we deliver on our promises. Our team of cloud experts
-              possesses an in-depth understanding of cloud technologies and
-              excels in optimization. We've successfully achieved it.
+            We promise you'll save money, utilize resources effectively, and boost performance. Let's talk – you pay only when we meet our commitments. Our cloud specialists have profound expertise in cloud technologies and shine in optimization. We've proven our success.
             </p>
 
             <Buttons label="Learn more" varient="fill" />

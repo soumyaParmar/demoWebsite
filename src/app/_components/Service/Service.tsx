@@ -58,13 +58,13 @@ const Service: React.FC = () => {
       <div className={style.innerService}>
         <div className={style.heading} id="heading_service">
           <h1>SERVICE</h1>
-          <h2>Innovate with AI/ML Transformation</h2>
+          <h2>Harness the Potential of AI/ML: GenAI and Beyond</h2>
           <h3>
-            Empower your products with intelligence through our AI integration
-            services. We seamlessly blend artificial intelligence into your
-            software, making it smarter and more efficient. Our experts are
-            well-versed in AI technologies, ensuring a seamless transition to
-            intelligent solutions.
+            Unlock the immense potential of AI/ML with our expert GenAI
+            solutions. From streamlining processes to enhancing decision-making,
+            our integration services empower your business to innovate and
+            thrive. Dive into the future of technology and let us guide you
+            through the transformative power of AI/ML.
           </h3>
         </div>
         <div className={style.topics} id="topics">
@@ -72,29 +72,31 @@ const Service: React.FC = () => {
             <div className={style.fast}>
               <h1>Generative AI</h1>
               <p>
-                Create stunning mobile funnels quickly and easily. Now you can
-                build in minutes, not hours.
+                Revolutionizing Business Processes with Next-Gen Intelligence.
+                Leverage GenAI to streamline operations and enhance
+                productivity.
               </p>
             </div>
             <div className={style.fast}>
               <h1>LLM Training</h1>
               <p>
-                Create stunning mobile funnels quickly and easily. Now you can
-                build in minutes, not hours.
+                Empower Your Team with Advanced AI Expertise. Equip your team
+                with cutting-edge LLM training for AI proficiency.
               </p>
             </div>
             <div className={style.fast}>
               <h1>ML Model Development</h1>
               <p>
-                Create stunning mobile funnels quickly and easily. Now you can
-                build in minutes, not hours.
+                Custom Solutions for Complex Challenges. Develop tailored ML
+                models to address your unique business needs.
               </p>
             </div>
             <div className={style.fast}>
               <h1>Data Engineering</h1>
               <p>
-                Create stunning mobile funnels quickly and easily. Now you can
-                build in minutes, not hours.
+                Unlock Insights and Drive Data-Driven Decisions. Utilize data
+                science to uncover valuable insights and inform strategic
+                decisions.
               </p>
             </div>
           </div>
@@ -122,7 +124,7 @@ const Service: React.FC = () => {
                 Accelerate your customer success, internal productivity, market
                 share, and more with GenAI technology.
               </p>
-              <Buttons label="Learn more" varient="fill"/>
+              <Buttons label="Learn more" varient="fill" />
             </div>
           </div>
           <div className={style.otherItem}>

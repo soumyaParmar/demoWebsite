@@ -14,14 +14,15 @@ const Cookie: React.FC = () => {
   }, []);
 
   const acceptCookies = async () => {
+    setShowBanner(false);
     let payload = {
       ConsentDetails: "Accept",
+      
     };
     const res = await axios.postData("/visitors", payload);
     if ('data' in res && res.data.statusCode == 200) {
       Cookies.set("VisitorID", res.data.response.VisitorID, { expires: 365 });
     }
-    setShowBanner(false);
   };
 
   const hidePopup = () => {

@@ -67,10 +67,9 @@ const Coedify: React.FC = () => {
       <div className={style.enterprise} id="enterprise">
         <div className={style.innerEnter}>
           <h1>FOR ENTERPRISE</h1>
-          <h2>Scale your software development team on demand</h2>
+          <h2>Get Top-Tier Developers on Demand: No More Hiring Hassles!</h2>
           <h3>
-            Accelerate your software engineering and close skill gaps with our
-            AI-vetted technical professionals.
+          Unlock the future of hiring with our on-demand developer service. Say goodbye to lengthy recruitment processes and hello to top-tier, vetted engineers ready to tackle your projects. Whether you need a specialist for a short-term task or a dedicated team member for a long-term project, our developers bring expertise, efficiency, and innovation.
           </h3>
           <div className={style.individual}>
             <div>

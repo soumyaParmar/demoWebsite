@@ -1,68 +1,28 @@
 import fs from "fs";
 import matter from "gray-matter";
-import path from 'path';
 
 // function to get the data from the markdown file and shown it on the editiors pick card
-// export const getEditiorsPick = () => {
-//   const folder = path.join(process.cwd(), 'src/content/editiorPickBlogs/');
-//   const files = fs.readdirSync(folder);
-//   const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
-
-//   const posts = markdownPosts.map((filename) => {
-//     const fileContents = fs.readFileSync(
-//       `src/content/editiorPickBlogs/${filename}`,
-//       "utf8"
-//     );
-//     const matterResult = matter(fileContents);
-
-//     return {
-//       title: matterResult.data.title || "",
-//       description: matterResult.data.summary || "",
-//       category: matterResult.data.category || "",
-//       slug: filename.replace(".mdx", "") || "",
-//       folderName: "editiorPickBlogs" || "",
-//       image: matterResult.data.image || "",
-//     };
-//   });
-
-//   return posts;
-// };
-
-export const getEditorsPick = () => {
-  const folder = path.join(process.cwd(), 'src/content/editiorPickBlogs/');
-  
-  let files;
-  try {
-    files = fs.readdirSync(folder);
-  } catch (error) {
-    console.error('Error reading directory:', error);
-    return [];
-  }
-
-  const markdownPosts = files.filter((file) => file.endsWith('.mdx'));
+export const getEditiorsPick = () => {
+  const folder = "public/content/editiorPickBlogs/";
+  const files = fs.readdirSync(folder);
+  const markdownPosts = files.filter((file) => file.endsWith(".mdx"));
 
   const posts = markdownPosts.map((filename) => {
-    const filePath = path.join(folder, filename);
-    
-    let fileContents;
-    try {
-      fileContents = fs.readFileSync(filePath, 'utf8');
-    } catch (error) {
-      console.error('Error reading file:', filePath, error);
-      return null;
-    }
-    
+    const fileContents = fs.readFileSync(
+      `public/content/editiorPickBlogs/${filename}`,
+      "utf8"
+    );
     const matterResult = matter(fileContents);
 
     return {
-      title: matterResult.data.title || '',
-      description: matterResult.data.summary || '',
-      category: matterResult.data.category || '',
-      slug: filename.replace('.mdx', '') || '',
-      folderName: 'editiorPickBlogs' || '',
-      image: matterResult.data.image || '',
+      title: matterResult.data.title || "",
+      description: matterResult.data.summary || "",
+      category: matterResult.data.category || "",
+      slug: filename.replace(".mdx", "") || "",
+      folderName: "editiorPickBlogs" || "",
+      image: matterResult.data.image || "",
     };
-  }).filter(post => post !== null);  // Filter out any null posts due to read errors
+  });
 
   return posts;
 };

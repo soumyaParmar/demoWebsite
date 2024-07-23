@@ -5,7 +5,7 @@ import { inter400, inter500, inter700 } from "../../../_customFonts/inter";
 import styles from "../../readingPage.module.css";
 
 // components
-import { getEditiorsPostContent, getEditorsPick } from "@/app/blogs/_utils";
+import { getEditiorsPick, getEditiorsPostContent } from "@/app/blogs/_utils";
 import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
 import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
 import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
@@ -13,7 +13,7 @@ import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
 const EditiorPickReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   let objData = getEditiorsPostContent(slug);
-  let siteUrl = "https://coedify.onrender.com";
+  let siteUrl = "https://coedifydemo.netlify.app";
   const url = `${siteUrl}/blogs/editiorPickBlogs/${slug}`;
 
   return (
@@ -39,7 +39,7 @@ const EditiorPickReadingPage: React.FC = (props: any) => {
 };
 
 export const generateStaticParams  =() =>{
-  const editiorsData = getEditorsPick();
+  const editiorsData = getEditiorsPick();
   const params = editiorsData.map((editior) => ({
     slugs: editior.slug
   }))

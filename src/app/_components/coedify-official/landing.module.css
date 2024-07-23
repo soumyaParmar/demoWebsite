@@ -107,6 +107,7 @@
 .enterprise {
   @apply text-white font-extralight mt-[40px] mb-[40px];
   height: 70vh;
+  height: auto;
   background-image: linear-gradient(
       265deg,
       rgba(255, 255, 255, 0.0016457266500350398) 0%,
@@ -119,15 +120,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .enterprise h1 {
   @apply font-normal text-xs;
 }
 .enterprise h2 {
-  @apply font-semibold text-[32px] w-[350px];
+  @apply font-semibold text-[32px] w-[400px];
 }
 .enterprise h3 {
-  @apply w-[450px] font-light text-[16px];
+  @apply w-[650px] font-light text-[16px];
 }
 .innerEnter {
   @apply h-[80%] w-[70%];
@@ -241,5 +244,8 @@
   }
   .tempImage {
     top: 65%;
+  }
+  .enterprise h2{
+    @apply w-[100%];
   }
 }

@@ -15,7 +15,7 @@ import Insights from "./_components/Insights/Insights";
 
 // utils function
 import {
-  getEditorsPick,
+  getEditiorsPick,
   getInsightsBlogData,
   getTrendingBlogData,
 } from "./_utils";
@@ -24,7 +24,7 @@ import Navbar from "../_common/Navbar/Navbar";
 
 const BlogPage: React.FC = () => {
   // Calling the function to get the metadata for trending blogs
-  const editorsPickData = getEditorsPick();
+  const editorsPickData = getEditiorsPick();
   const postData = editorsPickData.map((post, index) => (
     <Link key={index} href={`/blogs/${post.folderName + "/" + post.slug}`}>
       <EditiorPickCard
