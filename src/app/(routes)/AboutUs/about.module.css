@@ -361,12 +361,14 @@
 .dev_outer {
   @apply flex justify-center items-center;
   padding: 40px 0;
+  /* border: 1px solid black; */
 }
 
 .dev_sec {
-  width: 80%;
+  width: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* border: 1px solid black; */
 }
 
 .dev_inner {

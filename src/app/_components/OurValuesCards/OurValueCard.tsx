@@ -1,4 +1,4 @@
-import { inter500, inter400 } from "@/app/blogs/_customFonts/inter";
+import { inter500, inter400 } from "@/app/case-studies/_customFonts/inter";
 import styles from "./OurValueCard.module.css";
 import Image from "next/image";
 

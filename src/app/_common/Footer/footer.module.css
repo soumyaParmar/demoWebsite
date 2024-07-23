@@ -1,8 +1,11 @@
 .footer {
   @apply flex h-[60vh] justify-center items-center pt-14 overflow-hidden;
+  /* border: 1px solid black; */
 }
 .innerLayer {
   @apply w-[70%] h-full flex flex-col justify-between;
+  /* border: 1px solid black; */
+  gap: 10rem;
 }
 .navigation {
   @apply flex gap-8;
@@ -14,10 +17,10 @@
   @apply flex flex-col gap-2 pt-2;
 }
 .navigation li {
-  @apply text-sm font-normal text-[#768190];
+  @apply text-sm font-normal text-[#768190] text-[1rem];
 }
 .navigation p {
-  @apply text-sm font-normal pt-2 text-[#768190];
+  @apply text-sm font-normal pt-2 text-[#768190] text-[1rem];
 }
 .copywrite {
   @apply text-[#94a3b8];

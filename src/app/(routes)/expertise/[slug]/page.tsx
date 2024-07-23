@@ -10,33 +10,37 @@ import Teams from "@/app/_components/Teams/Teams";
 import Reviews from "@/app/_components/Reviews/Reviews";
 import Link from "next/link";
 import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
+import { useRouter } from "next/navigation";
+
 
 const Expertise = ({ params }: { params: { slug: string } }) => {
   const [title, setTitle] = useState<string>("");
+  const router = useRouter();
+
 
   useEffect(() => {
     switch (params.slug) {
-      case "cloud_cost_optimization": {
+      case "cloud-cost-optimization": {
         setTitle("Cloud Cost Optimization");
         break;
       }
-      case "dedicated_experienced_developers": {
+      case "dedicated-experienced-developers": {
         setTitle("Dedicated Experienced Developers");
         break;
       }
-      case "system_design_and_development": {
+      case "system-design-and-development": {
         setTitle("System Design and Development");
         break;
       }
-      case "AI_intergration": {
+      case "ai-intergration": {
         setTitle("AI Intergration");
         break;
       }
-      case "redesign_and_performance_enhancement": {
+      case "redesign-and-performance-enhancement": {
         setTitle("Redesign & Performance Enhancement");
         break;
       }
-      case "comprehensive_system_audit": {
+      case "comprehensive-system-audit": {
         setTitle("Comprehensive System Audit");
         break;
       }
@@ -46,6 +50,10 @@ const Expertise = ({ params }: { params: { slug: string } }) => {
       }
     }
   }, [params.slug]);
+
+  const handleRoute = () => {
+    router.push("/aboutus#form");
+  };
 
   return (
     <div>
@@ -62,7 +70,7 @@ const Expertise = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Buttons label="Schedule Meeting" varient="fill" />
+            <Buttons label="Schedule Meeting" varient="fill" onClick={handleRoute}/>
           </div>
         </div>
         

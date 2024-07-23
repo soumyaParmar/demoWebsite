@@ -8,7 +8,7 @@ import Image from "next/image";
 
 import styles from "./Carousels.module.css";
 import Img from "../../../../public/trail.jpg";
-import { inter500 } from "@/app/blogs/_customFonts/inter";
+import { inter500 } from "@/app/case-studies/_customFonts/inter";
 import { TeamMembers } from "@/app/Interfaces/teamMember";
 
 const Carousels: React.FC = () => {

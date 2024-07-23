@@ -45,7 +45,7 @@ const LatestPostSection: React.FC<paginationPropsData> = () => {
         <div className={styles.latestPost}>
           {recentPosts.map((post, index) => (
             <Link
-              href={`/blogs/insights/${post.slug}`}
+              href={`/case-studies/insights/${post.slug}`}
               className={`${styles.link}`}
               key={index}
             >

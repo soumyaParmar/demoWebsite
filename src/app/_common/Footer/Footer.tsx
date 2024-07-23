@@ -8,6 +8,7 @@ import img3 from "../../_assets/image/li.svg";
 import img4 from "../../_assets/image/x.svg";
 import Image from "next/image";
 import logo from "../../_assets/background/logo.png";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -29,7 +30,9 @@ const Footer: React.FC = () => {
               <h1>Quick Links</h1>
               <ul>
                 {pages.map((item: pagesType, index: number) => (
-                  <li key={index}>{item.page}</li>
+                  <Link href={item.link} key={index}>
+                    <li>{item.page}</li>
+                  </Link>
                 ))}
               </ul>
             </div>
@@ -39,7 +42,7 @@ const Footer: React.FC = () => {
               <h1>Hire Professionals</h1>
               <ul>
                 {solution.map((item: solutionType, index: number) => (
-                  <li key={index}>{item.solution}</li>
+                  <Link href={item.link} key={index}><li>{item.solution}</li></Link>
                 ))}
               </ul>
             </div>
@@ -59,10 +62,18 @@ const Footer: React.FC = () => {
           <div className="pt-2 flex justify-between max-[700px]:text-[12px]">
             <p>&copy;Design by CoEdify 2024.</p>
             <div className="flex gap-4">
-              <Image src={img1} alt="fb" />
-              <Image src={img2} alt="insta" />
-              <Image src={img3} alt="linkedin" />
-              <Image src={img4} alt="x" />
+              <Link href="https://www.facebook.com/coedifytechnology">
+                <Image src={img1} alt="fb" />
+              </Link>
+              <Link href="https://www.instagram.com/coedifytechnology/">
+                <Image src={img2} alt="insta" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/coedify/mycompany/">
+                <Image src={img3} alt="linkedin" />
+              </Link>
+              <Link href="https://x.com/CoEdifyTech">
+                <Image src={img4} alt="x" />
+              </Link>
             </div>
           </div>
         </div>

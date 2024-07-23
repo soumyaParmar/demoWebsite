@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Card } from "antd";
 
 import styles from "./Card.module.css";
-import { inter400, inter700 } from "@/app/blogs/_customFonts/inter";
-import { insightsCardData } from "@/app/blogs/Interfaces/interfaceData";
+import { inter400, inter700 } from "@/app/case-studies/_customFonts/inter";
+import { insightsCardData } from "@/app/case-studies/Interfaces/interfaceData";
 
 const { Meta } = Card;
 

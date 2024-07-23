@@ -1,8 +1,8 @@
 "use client";
 
 import React, { FormEvent, useEffect, useRef, useState } from "react";
-import styles from "../../(routes)/AboutUs/about.module.css";
-import { inter500 } from "@/app/blogs/_customFonts/inter";
+import styles from "../../(routes)/aboutus/about.module.css";
+import { inter500 } from "@/app/case-studies/_customFonts/inter";
 import * as api from "../../_lib/api";
 import { FormData } from "@/app/Interfaces/ContactUSFormData";
 import { useRouter } from "next/navigation";

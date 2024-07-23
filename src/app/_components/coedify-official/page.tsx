@@ -103,7 +103,7 @@ const Coedify: React.FC = () => {
           </div>
           <div>
             <span>
-            <Link href='/AboutUs#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
+            <Link href='/aboutus#form'><Buttons label="Schedule Meeting" varient="fill" /></Link>
             </span>
           </div>
         </div>

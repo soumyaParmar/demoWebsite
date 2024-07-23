@@ -10,7 +10,7 @@ import styles from "./GalleryCarousel.module.css";
 import slide1 from "../../../../public/slide1.jpeg";
 import slide2 from "../../../../public/slide2.jpeg";
 import slide3 from "../../../../public/slide3.jpeg";
-import { inter500 } from "@/app/blogs/_customFonts/inter";
+import { inter500 } from "@/app/case-studies/_customFonts/inter";
 
 function GalleryCarousel() {
   const settings = {
@@ -72,7 +72,7 @@ function GalleryCarousel() {
             <Image src={slide2} width={500} height={500} alt="Employee Img" />
           </div>
           <div className={`${styles.sliderText} ${inter500.className}`}>
-            <p>Our Mission:</p>
+            <p>Our Mission</p>
             <p>
               At CoEdify, our mission is to provide exceptional engineering
               talent and IT consultation services. Our expertise lies in

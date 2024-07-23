@@ -11,12 +11,14 @@ import Buttons from "@/app/_common/Button/Buttons";
 import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
 import { cn } from "@/app/_lib/utils";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const What = ({ params }: { params: { slug: string } }) => {
   const [tab, setTab] = useState<number>(1);
   const ref1 = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
   const ref3 = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (ref1.current) ref1.current.className = tab === 1 ? styles.active : "";
@@ -29,6 +31,10 @@ const What = ({ params }: { params: { slug: string } }) => {
     if (ref1.current) ref1.current.className = num === 1 ? styles.active : "";
     if (ref2.current) ref2.current.className = num === 2 ? styles.active : "";
     if (ref3.current) ref3.current.className = num === 3 ? styles.active : "";
+  };
+
+  const handleRoute = () => {
+    router.push("/aboutus#form");
   };
 
   return (
@@ -46,12 +52,16 @@ const What = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
           <div className={style.btns} id="landingHeading3">
-            <Buttons label="Schedule Meeting" varient="fill" />
+            <Buttons
+              label="Schedule Meeting"
+              varient="fill"
+              onClick={handleRoute}
+            />
           </div>
         </div>
         <div className={styles.teams}>
           <p>Loved by next-generation teams</p>
-          <Teams color="white"/>
+          <Teams color="white" />
         </div>
       </div>
 

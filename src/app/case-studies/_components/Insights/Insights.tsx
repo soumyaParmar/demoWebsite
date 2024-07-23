@@ -20,7 +20,7 @@ const showData = (insightsData: insightsCardData[], visibleCards: number) => {
     .slice(0, visibleCards)
     .map((post: insightsCardData, index: number) => (
       <Link
-        href={`/blogs/insights/${post.slug}`}
+        href={`/case-studies/insights/${post.slug}`}
         className={styles.link}
         key={index}
       >

@@ -26,7 +26,7 @@ const BlogPage: React.FC = () => {
   // Calling the function to get the metadata for trending blogs
   const editorsPickData = getEditiorsPick();
   const postData = editorsPickData.map((post, index) => (
-    <Link key={index} href={`/blogs/${post.folderName + "/" + post.slug}`}>
+    <Link key={index} href={`/case-studies/${post.folderName + "/" + post.slug}`}>
       <EditiorPickCard
         category={post.category}
         title={post.title}

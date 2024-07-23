@@ -35,7 +35,7 @@ const HeroSection: React.FC<TrendingDataProps> = ({ trendingData }) => {
                 <p className={` ${inter400.className} ${styles.innerPara}`}>
                   {post.description}
                 </p>
-                <Link href={`/blogs/trendingBlogs/${post.slug}`}>
+                <Link href={`/case-studies/trending/${post.slug}`}>
                   <button
                     className={` ${inter400.className} ${styles.innerButton}`}
                   >

@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./about.module.css";
 import style from "../../_components/coedify-official/landing.module.css";
 import style1 from "../../(routes)/expertise/[slug]/expertise.module.css";
-import { inter400, inter500 } from "@/app/blogs/_customFonts/inter";
+import { inter400, inter500 } from "@/app/case-studies/_customFonts/inter";
 import blogImage from "../../../../public/blogImage.jpeg";
 import CEOImg from "../../_assets/CEO/ceo2.png";
 import CS from "../../_assets/OurValues/successful.png";
@@ -30,10 +30,14 @@ import useGSAP from "@/app/utils/useGSAP";
 import { developer } from "@/app/utils/aboutus";
 import { aboutusType } from "@/app/Interfaces/aboutus";
 import img from "../../_assets/aboutusa/Globe.png";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Page: React.FC = () => {
+
+  const router = useRouter();
+
   // for smooth scrolling
   useEffect(() => {
     (async () => {
@@ -44,6 +48,10 @@ const Page: React.FC = () => {
 
   // for animations
   useGSAP();
+
+  const handleClick = () => {
+    router.push("/aboutus#form");
+  };
 
   return (
     <>
@@ -68,7 +76,7 @@ const Page: React.FC = () => {
               </p>
             </div>
             <div className={style.btns} id="landingHeading3">
-              <Buttons label="Schedule Meeting" varient="fill" />
+              <Buttons label="Schedule Meeting" varient="fill" onClick={handleClick}/>
             </div>
           </div>
         </div>

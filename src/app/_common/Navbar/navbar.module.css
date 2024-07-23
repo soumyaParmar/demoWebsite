@@ -1,9 +1,9 @@
 .nav_outer {
-  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-transparent;
+  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[16px] bg-transparent;
   padding: 0 30px;
 }
 .nav_outer2 {
-  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[13px] bg-black;
+  @apply flex justify-between h-[60px] items-center fixed w-screen z-10 text-[16px] bg-black;
   padding: 0 30px;
 }
 .nav_innerOne {
@@ -22,7 +22,7 @@
   cursor: pointer;
   padding: 8px;
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 16px;
   width: 100%;
 }
 .what {
@@ -79,7 +79,7 @@
   color: white !important;
   border: 0 !important;
   padding: 20px !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
   transition: 0.5s;
 }
 .btn:hover {

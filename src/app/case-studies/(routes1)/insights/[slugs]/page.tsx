@@ -1,21 +1,20 @@
 import Markdown from "markdown-to-jsx";
 
 // Components
-import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
-import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
-import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
+import CodeBlock from "@/app/case-studies/_components/CopyToClipboardButton";
+import ShareButton from "@/app/case-studies/_components/ShareBtn/ShareButton";
 
 // custom styles and fonts
-import { inter500 } from "@/app/blogs/_customFonts/inter";
+import { inter500 } from "@/app/case-studies/_customFonts/inter";
 import styles from "../../readingPage.module.css";
 
-import { getInsightsBlogData, getInsightsPostContent } from "@/app/blogs/_utils";
+import { getInsightsBlogData, getInsightsPostContent } from "@/app/case-studies/_utils";
 
 const ReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   const objData = getInsightsPostContent(slug);
   let siteUrl = "https://coedifydemo.netlify.app";
-  const url = `${siteUrl}/blogs/insights/${slug}`;
+  const url = `${siteUrl}/case-studies/insights/${slug}`;
 
   return (
     <>

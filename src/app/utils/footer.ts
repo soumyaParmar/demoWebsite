@@ -3,38 +3,34 @@ import { companyType, pagesType, solutionType } from "../Interfaces/footer";
 export const pages:pagesType[] = [
     {
         page:"Home",
-        link:""
+        link:"/"
     },
     {
         page:"Expertise",
-        link:""
+        link:"/expertise/cloud-cost-optimization"
     },
     {
         page:"Case Studies",
-        link:""
+        link:"/case-studies"
     },
     {
         page:"About Us",
-        link:""
+        link:"/aboutus"
     },
-    {
-        page:"Testimonial",
-        link:""
-    }
 ]
 
 export const solution:solutionType[] = [
     {
         solution:"Cloud Cost Optimisation",
-        link:""
+        link:"/whatwedo/cloud-computing"
     },
     {
         solution:"AI/ML",
-        link:""
+        link:"/whatwedo/ai-ml"
     },
     {
         solution:"Hire Professionals",
-        link:""
+        link:"/whatwedo/hire_professional"
     }
 ]
 

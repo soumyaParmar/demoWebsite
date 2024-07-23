@@ -1,10 +1,5 @@
-import Footer from "../_common/Footer/Footer";
-import Navbar from "../_common/Navbar/Navbar";
-import Subscribers from "./_components/Subscribers/Subscribers";
 import "./global.css";
-// import Head from "next/head";
-// import { Html } from 'next/document';
-// import { Html } from "next/document";
+
 
 export const metadata = {
   title: "CoEdify Technology LLP",

@@ -46,11 +46,12 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     }
   });
 
+  // what we do
   const items: MenuProps["items"] = [
     {
       key: "1",
       label: (
-        <Link href="/whatwedo/Cloud_Computing">
+        <Link href="/whatwedo/cloud-computing">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img1} alt="" />
@@ -68,7 +69,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "2",
       label: (
-        <Link href="/whatwedo/AI_ML">
+        <Link href="/whatwedo/ai-ml">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img2} alt="" />
@@ -86,7 +87,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "3",
       label: (
-        <Link href="/whatwedo/Hire_Professional">
+        <Link href="/whatwedo/hire_professional">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img3} alt="" />
@@ -103,11 +104,12 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     },
   ];
 
+  // expertise
   const item2: MenuProps["items"] = [
     {
       key: "1",
       label: (
-        <Link href="/expertise/cloud_cost_optimization">
+        <Link href="/expertise/cloud-cost-optimization">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img4} alt="" />
@@ -125,7 +127,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "2",
       label: (
-        <Link href="/expertise/dedicated_experienced_developers">
+        <Link href="/expertise/dedicated-experienced-developers">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img5} alt="" />
@@ -143,7 +145,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "3",
       label: (
-        <Link href="/expertise/system_design_and_development">
+        <Link href="/expertise/system-design-and-development">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img6} alt="" />
@@ -161,7 +163,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "4",
       label: (
-        <Link href="/expertise/AI_intergration">
+        <Link href="/expertise/ai-intergration">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img7} alt="" />
@@ -179,7 +181,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "5",
       label: (
-        <Link href="/expertise/redesign_and_performance_enhancement">
+        <Link href="/expertise/redesign-and-performance-enhancement">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img8} alt="" />
@@ -197,7 +199,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
     {
       key: "6",
       label: (
-        <Link href="/expertise/comprehensive_system_audit">
+        <Link href="/expertise/comprehensive-system-audit">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Image src={img9} alt="" />
@@ -230,7 +232,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
   };
 
   const handleRoute = () => {
-    router.push("/AboutUs#form");
+    router.push("/aboutus#form");
   };
 
   return (
@@ -267,11 +269,11 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
               <CaretDownOutlined />
             </Space>
           </Dropdown>
-          <p><Link href = "/blogs">Case Studies</Link></p>
+          <p><Link href = "/case-studies">Case Studies</Link></p>
 
           <p>
             {" "}
-            <Link href="/AboutUs">About Us</Link>
+            <Link href="/aboutus">About Us</Link>
           </p>
         </div>
         <div className={stylex.nav_innerTwo} ref={devref2}>

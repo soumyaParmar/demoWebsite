@@ -127,10 +127,10 @@
   @apply font-normal text-xs;
 }
 .enterprise h2 {
-  @apply font-semibold text-[32px] w-[400px];
+  @apply font-semibold text-[32px] w-[550px];
 }
 .enterprise h3 {
-  @apply w-[650px] font-light text-[16px];
+  @apply w-[900px] font-light text-[16px];
 }
 .innerEnter {
   @apply h-[80%] w-[70%];
@@ -138,6 +138,8 @@
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+  /* border: 1px solid white; */
+  /* margin */
 }
 .enterprise button {
   width: 200px;

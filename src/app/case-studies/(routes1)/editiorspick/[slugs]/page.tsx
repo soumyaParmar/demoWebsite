@@ -5,16 +5,15 @@ import { inter400, inter500, inter700 } from "../../../_customFonts/inter";
 import styles from "../../readingPage.module.css";
 
 // components
-import { getEditiorsPick, getEditiorsPostContent } from "@/app/blogs/_utils";
-import LatestPostSection from "@/app/blogs/_components/latestPost/LatestPostSection";
-import CodeBlock from "@/app/blogs/_components/CopyToClipboardButton";
-import ShareButton from "@/app/blogs/_components/ShareBtn/ShareButton";
+import { getEditiorsPick, getEditiorsPostContent } from "@/app/case-studies/_utils";
+import CodeBlock from "@/app/case-studies/_components/CopyToClipboardButton";
+import ShareButton from "@/app/case-studies/_components/ShareBtn/ShareButton";
 
 const EditiorPickReadingPage: React.FC = (props: any) => {
   const slug = props.params.slugs;
   let objData = getEditiorsPostContent(slug);
   let siteUrl = "https://coedifydemo.netlify.app";
-  const url = `${siteUrl}/blogs/editiorPickBlogs/${slug}`;
+  const url = `${siteUrl}/case-studies/editiorspick/${slug}`;
 
   return (
     <>

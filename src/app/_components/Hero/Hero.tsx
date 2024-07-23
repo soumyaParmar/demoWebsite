@@ -27,7 +27,7 @@ const Hero = () => {
   };
 
   const handleClick = () => {
-    router.push("/AboutUs#form");
+    router.push("/aboutus#form");
   };
 
   return (

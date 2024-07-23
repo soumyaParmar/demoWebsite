@@ -1,16 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRouter } from "next/navigation";
+import Buttons from "@/app/_common/Button/Buttons";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import style from "./how.module.css";
 import Image from "next/image";
 import img1 from "../../_assets/How/Group 1321314572-min.png";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Buttons from "@/app/_common/Button/Buttons";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const How: React.FC = () => {
+  const router = useRouter();
+
+// for animation
   useGSAP(() => {
     gsap.from("#cloud", {
       y: -200,
@@ -33,6 +40,10 @@ const How: React.FC = () => {
       },
     });
   });
+
+  const handleRoute = () => {
+    router.push("/whatwedo/cloud-computing");
+  };
   return (
     <div className={style.how} id="how">
       <div>
@@ -43,7 +54,7 @@ const How: React.FC = () => {
             We promise you'll save money, utilize resources effectively, and boost performance. Let's talk – you pay only when we meet our commitments. Our cloud specialists have profound expertise in cloud technologies and shine in optimization. We've proven our success.
             </p>
 
-            <Buttons label="Learn more" varient="fill" />
+            <Buttons label="Learn more" varient="fill" onClick={handleRoute}/>
           </div>
           <Image src={img1} alt="" id="image" />
         </div>
