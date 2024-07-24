@@ -172,8 +172,13 @@
   color: #818498;
 }
 
+.span1 svg{
+  fill: #0a66c2;
+}
+.span2 svg{
+  fill:#ea4335;
+}
 .rightCeoIntroBotttomSection svg{
-  fill: gray;
   font-size: 20px;
   cursor: pointer;
   margin-left: 5px;

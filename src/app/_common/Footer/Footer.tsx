@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               <h1>Company</h1>
               <ul>
                 {companies.map((item: companyType, index: number) => (
-                  <li key={index}><span>{item.company}</span></li>
+                  <Link href={item.link} key={index}><li key={index}><span>{item.company}</span></li></Link>
                 ))}
               </ul>
             </div>
