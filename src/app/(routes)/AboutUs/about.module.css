@@ -226,14 +226,14 @@
   color: white;
   line-height: 2.8rem;
   font-size: 2.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .visitBlogs .leftSectionVisitBlogs p {
   color: #d8d8d8;
   line-height: 1.7rem;
   font-size: 1.16rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   word-spacing: 0.15rem;
 }
 
@@ -325,24 +325,28 @@
 
 .button,
 .button1 {
+  width: 30%;
+  font-size: 1.2rem;
   padding: 0.7em 1.4em;
   border: none;
   border-radius: 5px;
   background-color: #2aba88;
   color: white;
   cursor: pointer;
-}
 
-.button1 {
-  width: 65%;
-  height: auto;
-  font-size: 1.3rem;
   position: relative;
   z-index: 1;
   transition: all ease 0.3s;
   overflow: hidden;
 }
 
+.button1 {
+  width: 65%;
+  height: auto;
+  font-size: 1.3rem;
+}
+
+.button::before,
 .button1::before {
   content: "";
   position: absolute;
@@ -354,6 +358,7 @@
   transform: translate(-100%);
   transition: all ease 0.3s;
 }
+.button:hover:before,
 .button1:hover:before {
   transform: translate(0);
   z-index: -1;
@@ -433,7 +438,7 @@
   .CeoIntro .rightCeoIntro {
     width: 70%;
   }
-  .button1{
+  .button1 {
     width: 100%;
   }
 }

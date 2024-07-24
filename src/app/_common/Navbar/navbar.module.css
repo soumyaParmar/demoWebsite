@@ -41,7 +41,9 @@
   @apply flex justify-center;
   height: 50px;
   width: 80px;
-  background-color: #151c24;
+  /* text-align: center; */
+  align-items: center;
+  /* background-color: #151c24; */
   margin-top: 5px;
 }
 .customDropdown {

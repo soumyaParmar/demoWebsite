@@ -10,23 +10,30 @@ import logo from "../../_assets/background/logo.png";
 import Image from "next/image";
 import Buttons from "../Button/Buttons";
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import img1 from "../../_assets/what/Cloud.svg";
-import img2 from "../../_assets/what/AI.svg";
-import img3 from "../../_assets/what/Hire.svg";
-import img4 from "../../_assets/expertise/1.svg";
+// import img1 from "../../_assets/what/Cloud.svg";
+// import img2 from "../../_assets/what/AI.svg";
+// import img3 from "../../_assets/what/Hire.svg";
+// import img4 from "../../_assets/expertise/1.svg";
 import img5 from "../../_assets/expertise/2.svg";
 import img6 from "../../_assets/expertise/3.svg";
 import img7 from "../../_assets/expertise/4.svg";
 import img8 from "../../_assets/expertise/5.svg";
 import img9 from "../../_assets/expertise/6.svg";
+import AI from "../../_assets/what/AI";
+import Cloud from "../../_assets/what/Cloud";
+import Hire from "../../_assets/what/Hire";
 import { useRouter } from "next/navigation";
+import Developers from "../../_assets/expertise/Developers";
+import System from "@/app/_assets/expertise/System";
+import Redesign from "@/app/_assets/expertise/Redesign";
+import Audit from "@/app/_assets/expertise/Audit";
 
 interface Navbar {
-  flag: boolean,
-  motionValue: boolean
+  flag: boolean;
+  motionValue: boolean;
 }
 
-const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
+const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
   const devref = useRef<HTMLDivElement>(null);
   const devref1 = useRef<HTMLDivElement>(null);
   const devref2 = useRef<HTMLDivElement>(null);
@@ -35,8 +42,6 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
   const router = useRouter();
 
   const { scrollY } = useScroll();
-
-  
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
@@ -54,7 +59,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/whatwedo/cloud-computing">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img1} alt="" />
+<Cloud />
+              {/* <Image src={img1} alt="" /> */}
             </div>
             <div>
               <h1>Cloud Computing</h1>
@@ -72,7 +78,7 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/whatwedo/ai-ml">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img2} alt="" />
+              <AI />
             </div>
             <div>
               <h1>AI/ML</h1>
@@ -90,7 +96,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/whatwedo/hire_professional">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img3} alt="" />
+              <Hire />
+              {/* <Image src={img3} alt="" /> */}
             </div>
             <div>
               <h1>Hire Professional</h1>
@@ -112,7 +119,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/expertise/cloud-cost-optimization">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img4} alt="" />
+              <Cloud />
+              {/* <Image src={img4} alt="" /> */}
             </div>
             <div>
               <h1>Cloud Cost Optimization</h1>
@@ -130,7 +138,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/expertise/dedicated-experienced-developers">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img5} alt="" />
+              <Developers />
+              {/* <Image src={img5} alt="" /> */}
             </div>
             <div>
               <h1>Dedicated Experienced Developers</h1>
@@ -148,7 +157,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/expertise/system-design-and-development">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img6} alt="" />
+              <System />
+              {/* <Image src={img6} alt="" /> */}
             </div>
             <div>
               <h1>System Design and Development</h1>
@@ -166,7 +176,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/expertise/ai-intergration">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img7} alt="" />
+              <AI />
+              {/* <Image src={img7} alt="" /> */}
             </div>
             <div>
               <h1>AI Intergration</h1>
@@ -184,7 +195,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/expertise/redesign-and-performance-enhancement">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img8} alt="" />
+              <Redesign />
+              {/* <Image src={img8} alt="" /> */}
             </div>
             <div>
               <h1>Redesign & Performance Enhancement</h1>
@@ -202,7 +214,8 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
         <Link href="/expertise/comprehensive-system-audit">
           <div className={stylex.what}>
             <div className={stylex.box}>
-              <Image src={img9} alt="" />
+              <Audit />
+              {/* <Image src={img9} alt="" /> */}
             </div>
             <div>
               <h1>Comprehensive System Audit</h1>
@@ -269,7 +282,9 @@ const Navbar: React.FC<Navbar> = ({flag, motionValue}) => {
               <CaretDownOutlined />
             </Space>
           </Dropdown>
-          <p><Link href = "/case-studies">Case Studies</Link></p>
+          <p>
+            <Link href="/case-studies">Case Studies</Link>
+          </p>
 
           <p>
             {" "}

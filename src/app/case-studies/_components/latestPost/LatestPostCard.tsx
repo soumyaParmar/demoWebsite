@@ -4,7 +4,6 @@ import styles from "./LatestPostCars.module.css";
 
 import { inter400, inter700 } from "../../_customFonts/inter";
 
-import CardImg from "../../../../../public/cardImg.png";
 import { insightsCardData } from "../../Interfaces/interfaceData";
 
 const LatestPostCard: React.FC<insightsCardData> = (props) => {

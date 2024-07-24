@@ -12,6 +12,7 @@ import {
   TrendingBlogs,
   TrendingDataProps,
 } from "../../Interfaces/trendingData";
+import Buttons from "@/app/_common/Button/Buttons";
 
 const HeroSection: React.FC<TrendingDataProps> = ({ trendingData }) => {
   return (
@@ -36,11 +37,12 @@ const HeroSection: React.FC<TrendingDataProps> = ({ trendingData }) => {
                   {post.description}
                 </p>
                 <Link href={`/case-studies/trending/${post.slug}`}>
-                  <button
+                  {/* <button
                     className={` ${inter400.className} ${styles.innerButton}`}
                   >
                     Read more
-                  </button>
+                  </button> */}
+                  <Buttons label="Read More" varient={"fill"} />
                 </Link>
               </div>
             </div>
