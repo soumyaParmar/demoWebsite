@@ -14,12 +14,26 @@ import { useRouter } from "next/navigation";
 const Hero = () => {
   const [showVideo, setShowVideo] = useState<boolean>(false);
   const [isloading, setIsLoading] = useState<boolean>(false);
+  const [src, setSrc] = useState(
+    'https://www.youtube.com/embed/tIJQkR-ofFo?autohide=1&loop=1&playlist=tIJQkR-ofFo'
+  );
   const divRef = useRef(null);
   const router = useRouter();
 
   const handleMouseEnter = () => {
     setShowVideo(true);
     setIsLoading(true);
+    setSrc(
+      'https://www.youtube.com/embed/tIJQkR-ofFo?autohide=1&autoplay=1&loop=1&playlist=tIJQkR-ofFo'
+    );
+  };
+
+  const handleMouseExit = () => {
+    setShowVideo(false);
+    setIsLoading(false);
+    setSrc(
+      'https://www.youtube.com/embed/tIJQkR-ofFo?autohide=1&loop=1&playlist=tIJQkR-ofFo'
+    );
   };
 
   const handleIframeLoad = () => {
@@ -72,7 +86,7 @@ const Hero = () => {
           </div>
         </div>
         {!showVideo ? (
-          <div onClick={handleMouseEnter} className={style.tempImage}>
+          <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseExit} className={style.tempImage}>
             <PlayCircleIcon />
           </div>
         ) : (
@@ -85,11 +99,13 @@ const Hero = () => {
             <iframe
               id="landingHeading"
               className={style.image}
-              src="https://www.youtube.com/embed/tIJQkR-ofFo?autohide=1&autoplay=1&loop=1&playlist=tIJQkR-ofFo"
+              src={src}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               title="Embedded YouTube Video"
               onLoad={handleIframeLoad}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseExit}
             ></iframe>
           </>
         )}

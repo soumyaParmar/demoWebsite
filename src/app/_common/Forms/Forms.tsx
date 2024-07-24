@@ -117,6 +117,7 @@ const Forms: React.FC<propsComponent> = ({ setOpenPopuform }) => {
         title: "Successfully submitted",
         content: "Thank you",
       });
+      setOpenPopuform(false);
     } else {
       Modal.error({
         title: "oops an error occurred",

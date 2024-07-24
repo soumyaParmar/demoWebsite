@@ -29,6 +29,14 @@ const Coedify: React.FC = () => {
     })();
   });
 
+  useEffect(()=>{
+    document.addEventListener('keydown',handlePopupClosed);
+
+    return () =>{
+      document.removeEventListener('keydown',handlePopupClosed)
+    }
+  },[openPopupform])
+
   useGSAP(() => {
     gsap.from("#enterprise", {
       y: -100,
@@ -40,21 +48,17 @@ const Coedify: React.FC = () => {
         start: "top 30%",
       },
     });
-    // gsap.from("#greenpart", {
-    //   y: -200,
-    //   opacity: -5,
-    //   duration: 1,
-    //   scrollTrigger: {
-    //     trigger: "#greenpart",
-    //     scroller: "body",
-    //     start: "top 50%",
-    //   },
-    // });
   });
 
   const handleClick = () => {
     setOpenPopuform(true);
   };
+
+  const handlePopupClosed = (event:KeyboardEvent) =>{
+    if(event.key == 'Escape' || event.keyCode == 27){
+      setOpenPopuform(false);
+    }
+  }
 
   return (
     <>
