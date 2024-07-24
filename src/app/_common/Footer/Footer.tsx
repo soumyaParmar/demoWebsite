@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               <ul>
                 {pages.map((item: pagesType, index: number) => (
                   <Link href={item.link} key={index}>
-                    <li>{item.page}</li>
+                    <li><span>{item.page}</span></li>
                   </Link>
                 ))}
               </ul>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               <h1>Hire Professionals</h1>
               <ul>
                 {solution.map((item: solutionType, index: number) => (
-                  <Link href={item.link} key={index}><li>{item.solution}</li></Link>
+                  <Link href={item.link} key={index}><li><span>{item.solution}</span></li></Link>
                 ))}
               </ul>
             </div>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               <h1>Company</h1>
               <ul>
                 {companies.map((item: companyType, index: number) => (
-                  <li key={index}>{item.company}</li>
+                  <li key={index}><span>{item.company}</span></li>
                 ))}
               </ul>
             </div>

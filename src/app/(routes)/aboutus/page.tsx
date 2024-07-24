@@ -52,8 +52,7 @@ const Page: React.FC = () => {
   useGSAP();
 
   const handleClick = () => {
-    // router.push("/aboutus#form");
-    router.push('/aboutus?redirect=form');
+    router.push("/aboutus#form");
   };
 
   return (

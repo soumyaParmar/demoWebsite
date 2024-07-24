@@ -5,7 +5,7 @@
 .innerLayer {
   @apply w-[70%] h-full flex flex-col justify-between;
   /* border: 1px solid black; */
-  gap: 5rem;   
+  gap: 5rem;
 }
 .navigation {
   @apply flex gap-8;
@@ -19,6 +19,25 @@
 .navigation li {
   @apply text-sm font-normal text-[#768190] text-[1rem];
 }
+
+.navigation span {
+  position: relative;
+}
+
+.navigation span::after {
+  content: "";
+  position: absolute;
+  background-color: #a2a8b1;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+
+.navigation span:hover:after {
+  width: 100%;
+}
 .navigation p {
   @apply text-sm font-normal pt-2 text-[#768190] text-[1rem];
 }
@@ -27,9 +46,14 @@
   height: 50px;
   border-top: 0.1px solid #94a3b8;
 }
+
+.copywrite img:hover{
+  margin-top: -3px;
+}
 .copywrite img {
   height: 20px;
   width: 20px;
+  transition: 0.3s;
 }
 .image {
   height: 50px !important;
