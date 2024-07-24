@@ -31,6 +31,8 @@ import { developer } from "@/app/utils/aboutus";
 import { aboutusType } from "@/app/Interfaces/aboutus";
 import img from "../../_assets/aboutusa/Globe.png";
 import { useRouter } from "next/navigation";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MarkunreadIcon from '@mui/icons-material/Markunread';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,7 +177,10 @@ const Page: React.FC = () => {
             </div>
 
             <div className={styles.rightCeoIntroBotttomSection}>
-              <p className={inter500.className}>MD Nadeem</p>
+              <p className={inter500.className}>MD Nadeem 
+                <a href="https://www.linkedin.com/in/mdnadeem/" target="_blank"><span><LinkedInIcon/></span></a>
+                <a href="mailto:md.nadeem@coediy.com" target="_blank"><span><MarkunreadIcon/></span></a>
+              </p>
               <p className={inter400.className}>Founder & CEO, CoEdify</p>
             </div>
           </div>
