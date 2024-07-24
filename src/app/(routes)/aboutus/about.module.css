@@ -172,6 +172,13 @@
   color: #818498;
 }
 
+.rightCeoIntroBotttomSection svg{
+  fill: gray;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
 /* Our Team Section */
 .ourTeam {
   width: 100%;
