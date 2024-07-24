@@ -30,7 +30,7 @@ import useGSAP from "@/app/utils/useGSAP";
 import { developer } from "@/app/utils/aboutus";
 import { aboutusType } from "@/app/Interfaces/aboutus";
 import img from "../../_assets/aboutusa/Globe.png";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MarkunreadIcon from '@mui/icons-material/Markunread';
 
@@ -38,7 +38,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Page: React.FC = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
 
   // for smooth scrolling
@@ -51,15 +50,6 @@ const Page: React.FC = () => {
 
   // for animations
   useGSAP();
-  useEffect(() => {
-    const scrollTo = searchParams.get('redirect');
-    if (scrollTo === 'form') {
-      const contactForm = document.getElementById('form');
-      if (contactForm) {
-        contactForm.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [searchParams]);
 
   const handleClick = () => {
     // router.push("/aboutus#form");
