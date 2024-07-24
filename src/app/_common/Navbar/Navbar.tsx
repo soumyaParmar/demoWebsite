@@ -59,8 +59,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
         <Link href="/whatwedo/cloud-computing">
           <div className={stylex.what}>
             <div className={stylex.box}>
-<Cloud />
-              {/* <Image src={img1} alt="" /> */}
+              <Cloud />
             </div>
             <div>
               <h1>Cloud Computing</h1>
@@ -97,7 +96,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Hire />
-              {/* <Image src={img3} alt="" /> */}
             </div>
             <div>
               <h1>Hire Professional</h1>
@@ -120,7 +118,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Cloud />
-              {/* <Image src={img4} alt="" /> */}
             </div>
             <div>
               <h1>Cloud Cost Optimization</h1>
@@ -139,7 +136,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Developers />
-              {/* <Image src={img5} alt="" /> */}
             </div>
             <div>
               <h1>Dedicated Experienced Developers</h1>
@@ -158,7 +154,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <System />
-              {/* <Image src={img6} alt="" /> */}
             </div>
             <div>
               <h1>System Design and Development</h1>
@@ -177,7 +172,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <AI />
-              {/* <Image src={img7} alt="" /> */}
             </div>
             <div>
               <h1>AI Intergration</h1>
@@ -196,7 +190,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Redesign />
-              {/* <Image src={img8} alt="" /> */}
             </div>
             <div>
               <h1>Redesign & Performance Enhancement</h1>
@@ -215,7 +208,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Audit />
-              {/* <Image src={img9} alt="" /> */}
             </div>
             <div>
               <h1>Comprehensive System Audit</h1>
@@ -246,6 +238,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
 
   const handleRoute = () => {
     router.push("/aboutus#form");
+    // router.push('/aboutus?scrollTo=form');
   };
 
   return (

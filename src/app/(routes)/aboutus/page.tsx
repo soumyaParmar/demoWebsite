@@ -30,13 +30,14 @@ import useGSAP from "@/app/utils/useGSAP";
 import { developer } from "@/app/utils/aboutus";
 import { aboutusType } from "@/app/Interfaces/aboutus";
 import img from "../../_assets/aboutusa/Globe.png";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams} from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Page: React.FC = () => {
-
   const router = useRouter();
+  const searchParams = useSearchParams();
+
 
   // for smooth scrolling
   useEffect(() => {
@@ -48,9 +49,19 @@ const Page: React.FC = () => {
 
   // for animations
   useGSAP();
+  useEffect(() => {
+    const scrollTo = searchParams.get('redirect');
+    if (scrollTo === 'form') {
+      const contactForm = document.getElementById('form');
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [searchParams]);
 
   const handleClick = () => {
-    router.push("/aboutus#form");
+    // router.push("/aboutus#form");
+    router.push('/aboutus?redirect=form');
   };
 
   return (
@@ -76,7 +87,11 @@ const Page: React.FC = () => {
               </p>
             </div>
             <div className={style.btns} id="landingHeading3">
-              <Buttons label="Schedule Meeting" varient="fill" onClick={handleClick}/>
+              <Buttons
+                label="Schedule Meeting"
+                varient="fill"
+                onClick={handleClick}
+              />
             </div>
           </div>
         </div>

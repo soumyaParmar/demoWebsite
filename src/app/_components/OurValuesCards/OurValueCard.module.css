@@ -6,6 +6,12 @@
   /* margin-left: 3rem; */
   /* margin-bottom: 1.7rem; */
   padding: 1.7rem;
+  transition: 0.5s;
+  /* box-shadow: 1px 1px 10px 10px #f6f6f8; */
+}
+
+.cardContainer:hover {
+  margin-top: -10px;
 }
 
 .cardContainer .topSection {

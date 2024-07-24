@@ -5,7 +5,7 @@
 .innerLayer {
   @apply w-[70%] h-full flex flex-col justify-between;
   /* border: 1px solid black; */
-  gap: 5rem;
+  gap: 5rem;   
 }
 .navigation {
   @apply flex gap-8;
@@ -56,9 +56,5 @@
   .copywrite img {
     height: 15px;
     width: 15px;
-  }
-  .innerLayer{
-    gap:1rem;
-    width: 80%;
   }
 }

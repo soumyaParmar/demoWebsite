@@ -38,9 +38,27 @@
   font-size: 15px !important;
   border: 0 !important;
   transition: 0.2s !important;
+
+  position: relative;
+  z-index: 1;
+  transition: all ease 0.3s;
+  overflow: hidden;
 }
-.btn1:hover {
-  background-color: #1e7456 !important;
+
+.btn1::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #128d62;
+  width: 100%;
+  height: 100%;
+  transform: translate(-100%);
+  transition: all ease 0.3s;
+}
+.btn1:hover:before {
+  transform: translate(0);
+  z-index: -1;
 }
 .btn2 {
   background-color: transparent !important;

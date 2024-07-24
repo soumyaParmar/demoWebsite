@@ -5,7 +5,7 @@ import styles from "../../(routes)/aboutus/about.module.css";
 import { inter500 } from "@/app/case-studies/_customFonts/inter";
 import * as api from "../../_lib/api";
 import { FormData } from "@/app/Interfaces/ContactUSFormData";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Modal } from "antd";
 import Buttons from "@/app/_common/Button/Buttons";
 
@@ -41,6 +41,7 @@ const ContactUs: React.FC = () => {
       document.body.removeChild(script);
     };
   }, []);
+
 
   const openCalendlyPopup = () => {
     if (window.Calendly) {
