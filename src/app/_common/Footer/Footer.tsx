@@ -62,16 +62,16 @@ const Footer: React.FC = () => {
           <div className="pt-2 flex justify-between max-[700px]:text-[12px]">
             <p>&copy;Design by CoEdify 2024.</p>
             <div className="flex gap-4">
-              <Link href="https://www.facebook.com/coedifytechnology">
+              <Link href="https://www.facebook.com/coedifytechnology" target="_blank">
                 <Image src={img1} alt="fb" />
               </Link>
-              <Link href="https://www.instagram.com/coedifytechnology/">
+              <Link href="https://www.instagram.com/coedifytechnology/" target="_blank">
                 <Image src={img2} alt="insta" />
               </Link>
-              <Link href="https://www.linkedin.com/company/coedify/mycompany/">
+              <Link href="https://www.linkedin.com/company/coedify/mycompany/" target="_blank">
                 <Image src={img3} alt="linkedin" />
               </Link>
-              <Link href="https://x.com/CoEdifyTech">
+              <Link href="https://x.com/CoEdifyTech" target="_blank">
                 <Image src={img4} alt="x" />
               </Link>
             </div>
