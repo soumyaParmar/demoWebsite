@@ -30,7 +30,7 @@ export const solution:solutionType[] = [
     },
     {
         solution:"Hire Professionals",
-        link:"/whatwedo/hire_professional"
+        link:"/#enterprise"
     }
 ]
 
