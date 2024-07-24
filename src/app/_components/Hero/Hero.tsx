@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,CSSProperties  } from "react";
 import Cookies from "../Cookies/Cookies";
 import style from "../coedify-official/landing.module.css";
 import Buttons from "@/app/_common/Button/Buttons";
@@ -44,10 +44,54 @@ const Hero = () => {
     router.push("/aboutus#form");
   };
 
+
+  const videoStyles: CSSProperties  = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    transform: 'translate(-50%, -50%)',
+    zIndex: '-1',
+  };
+
+  const containerStyles: CSSProperties  = {
+    position: 'relative',
+    width: '100%',
+    height: '100vh',
+  };
+
+  const contentStyles: CSSProperties  = {
+    position: 'relative',
+    zIndex: '1',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    color: 'white',
+    textAlign: 'center',
+    padding: '20px',
+  };
+
+  const overlayStyles: CSSProperties = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    zIndex: -1,
+  };
+
   return (
-    <div>
-      <RetroGrid />
-      <div className={style.landing}>
+    <div style={containerStyles}>
+       <video style={videoStyles} autoPlay muted loop>
+        <source src="/b.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div style={overlayStyles}></div>
+      <div  style={contentStyles}>
         <Cookies />
         <div className={style.content}>
           <div className={style.ai_link}>

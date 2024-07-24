@@ -1,9 +1,5 @@
 .landing {
   @apply h-screen flex justify-center pt-[100px] bg-black;
-  /* background: url("../../_assets/background/bgs.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 .content {
   @apply h-2/3 w-[80%];
