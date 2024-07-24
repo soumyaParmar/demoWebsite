@@ -259,7 +259,10 @@
     @apply p-3;
   }
   .tempImage {
-    top: 65%;
+    top: 75%;
+  }
+  .image{
+    top: 75%;
   }
   .enterprise h2{
     @apply w-[100%];
