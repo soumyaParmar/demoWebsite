@@ -9,7 +9,6 @@ import { Button } from "antd";
 import Reviews from "@/app/_components/Reviews/Reviews";
 import Buttons from "@/app/_common/Button/Buttons";
 import DotPattern from "@/app/_common/Dotpattern/Dotpattern";
-import { cn } from "@/app/_lib/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -143,14 +142,10 @@ const What = ({ params }: { params: { slug: string } }) => {
             </div>
           </div>
           <div></div>
-        </div>
+        </div> 
       </div>
       <div className={styles.it_works}>
-        <DotPattern
-        // className={cn(
-        //   "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
-        // )}
-        />
+        <DotPattern/>
         <div className={styles.innerWorks}>
           <div className={styles.leftInner}>
             <h1>HOW IT WORKS</h1>
