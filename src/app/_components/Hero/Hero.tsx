@@ -44,7 +44,6 @@ const Hero = () => {
     router.push("/aboutus#form");
   };
 
-
   const videoStyles: CSSProperties  = {
     position: 'absolute',
     top: '50%',
@@ -60,18 +59,6 @@ const Hero = () => {
     position: 'relative',
     width: '100%',
     height: '100vh',
-  };
-
-  const contentStyles: CSSProperties  = {
-    position: 'relative',
-    zIndex: '1',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%',
-    color: 'white',
-    textAlign: 'center',
-    padding: '20px',
   };
 
   const overlayStyles: CSSProperties = {
@@ -91,7 +78,7 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
       <div style={overlayStyles}></div>
-      <div  style={contentStyles}>
+      <div className={style.landing}>
         <Cookies />
         <div className={style.content}>
           <div className={style.ai_link}>
