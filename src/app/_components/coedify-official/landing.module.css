@@ -112,8 +112,8 @@
     center/cover;
 }
 .innerGreen h1 {
-  @apply text-5xl font-semibold text-center;
-  padding: 20px 200px;
+  @apply text-4xl font-semibold text-center;
+  padding: 20px 150px;
 }
 .innerGreen p {
   @apply text-center font-extralight;

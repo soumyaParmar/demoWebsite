@@ -34,12 +34,7 @@ const Domain: React.FC = () => {
           <h1>DOMAINS</h1>
           <h2>Our Working Domains</h2>
           <h3>
-            We are specialized in crafting robust solutions for a wide spectrum
-            of industries, including stock and crypto trading, banking and
-            finance, healthcare, and insurance. Our expertise lies in delivering
-            high-performance, secure, and scalable software applications that
-            empower clients to navigate their respective sectors with
-            cutting-edge technology
+          We specialize in crafting robust solutions for a wide spectrum of industries, including stock and crypto trading, banking and finance, healthcare, and insurance. Our expertise lies in delivering high-performance, secure, and scalable software applications that empower clients to navigate their respective sectors with cutting-edge technology.
           </h3>
         </div>
         <div className={style.allDomains} id="allDomain">

@@ -99,7 +99,7 @@ const Coedify: React.FC = () => {
       <div className={style.greenPart} id="greenpart">
         <div className={style.innerGreen}>
           <div>
-            <h1>Let's Build Together!</h1>
+            <h1> Your innovation, our expertise. Let's build together!</h1>
           </div>
           <div>
             <span>

@@ -9,37 +9,37 @@ import box6 from "../_assets/domains/Stock.svg";
 export const domain: domainType[] = [
   {
     title: "Banking and Finance",
-    para: "Advanced code solutions added directly inside of Webflow at the click of a button.",
+    para: "Transform your financial services with our secure and efficient software solutions. We help banks and financial institutions streamline operations, enhance customer experiences, and maintain compliance with industry regulations.",
     image: box1,
     link: "Read More",
   },
   {
     title: "Healthcare",
-    para: "Advanced code solutions added directly inside of Webflow at the click of a button.",
+    para: "Innovate your healthcare services with our advanced technology solutions. We develop applications that improve patient care, streamline administrative processes, and ensure secure handling of medical data.",
     image: box3,
     link: "Read More",
   },
   {
     title: "Insurance",
-    para: "Advanced code solutions added directly inside of Webflow at the click of a button.",
+    para: "Empower your insurance business with our scalable and secure software solutions. We provide tools that enhance risk assessment, automate claims processing, and improve customer engagement.",
     image: box4,
     link: "Read More",
   },
   {
     title: "Stock and Crypto Trading",
-    para: "Advanced code solutions added directly inside of Webflow at the click of a button.",
+    para: "Stay ahead in the trading world with our high-performance applications. We deliver solutions that offer real-time data analytics, secure transactions, and robust risk management for stock and crypto trading platforms.",
     image: box6,
     link: "Read More",
   },
   {
     title: "DevOps",
-    para: "Advanced code solutions added directly inside of Webflow at the click of a button.",
+    para: "Optimize your development and operations with our comprehensive DevOps services. We implement best practices that improve collaboration, enhance productivity, and ensure faster delivery of software products.",
     image: box2,
     link: "Read More",
   },
   {
     title: "SQL Trading Engineer",
-    para: "Advanced code solutions added directly inside of Webflow at the click of a button.",
+    para: "Leverage our expertise in SQL for efficient and effective trading solutions. We develop applications that handle complex trading algorithms, provide real-time analytics, and ensure high levels of security and performance.",
     image: box5,
     link: "Read More",
   },

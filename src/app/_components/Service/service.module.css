@@ -55,7 +55,7 @@
   width: 90%;
 }
 .leftDetail {
-  @apply w-[400px];
+  
 }
 .leftDetail h1 {
   @apply font-semibold text-sm pb-3;
@@ -199,6 +199,12 @@
     @apply w-full;
   }
   .leftDetail p {
-    @apply text-2xl w-[70%];
+    @apply text-2xl;
+  }
+  .rightDetail{
+    @apply w-full pt-2;
+  }
+  .item1 h1{
+    @apply text-2xl;
   }
 }
