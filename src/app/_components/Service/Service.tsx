@@ -11,26 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Service: React.FC = () => {
   useGSAP(() => {
-    // gsap.from("#heading_service", {
-    //   x: -1000,
-    //   duration: 1,
-    //   opacity: -5,
-    //   scrollTrigger: {
-    //     trigger: "#heading_service",
-    //     scroller: "body",
-    //     start: "top 70%",
-    //   },
-    // });
-    // gsap.from("#topics", {
-    //   x: -1000,
-    //   duration: 1,
-    //   opacity: -5,
-    //   scrollTrigger: {
-    //     trigger: "#topics",
-    //     scroller: "body",
-    //     start: "top 70%",
-    //   },
-    // });
     gsap.from("#smallDetail", {
       x: 100,
       duration: 1,
@@ -70,7 +50,7 @@ const Service: React.FC = () => {
         <div className={style.topics} id="topics">
           <div className={style.left}>
             <div className={style.fast}>
-              <h1>Generative AI</h1>
+              <h1>Gen AI</h1>
               <p>
                 Revolutionizing Business Processes with Next-Gen Intelligence.
                 Leverage GenAI to streamline operations and enhance
@@ -85,14 +65,14 @@ const Service: React.FC = () => {
               </p>
             </div>
             <div className={style.fast}>
-              <h1>ML Model Development</h1>
+              <h1>ML Models</h1>
               <p>
                 Custom Solutions for Complex Challenges. Develop tailored ML
                 models to address your unique business needs.
               </p>
             </div>
             <div className={style.fast}>
-              <h1>Data Engineering</h1>
+              <h1>Data Science</h1>
               <p>
                 Unlock Insights and Drive Data-Driven Decisions. Utilize data
                 science to uncover valuable insights and inform strategic

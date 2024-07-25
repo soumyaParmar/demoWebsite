@@ -70,6 +70,9 @@
 }
 
 @media (max-width: 700px) {
+  .innerLayer{
+    gap: 1rem;
+  }
   .navigation {
     @apply flex-col;
   }

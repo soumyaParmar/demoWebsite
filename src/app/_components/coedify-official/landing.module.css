@@ -235,6 +235,7 @@
   }
   .enterprise {
     height: 75vh;
+    height: auto;
   }
   .enterprise h3 {
     @apply w-[300px];
