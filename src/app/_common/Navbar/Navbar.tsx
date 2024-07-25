@@ -266,11 +266,11 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
               <CaretDownOutlined />
             </Space>
           </Dropdown>
-          <p>
+          <p className={stylex.para}>
             <Link href="/case-studies">Case Studies</Link>
           </p>
 
-          <p>
+          <p className={stylex.para}>
             {" "}
             <Link href="/aboutus">About Us</Link>
           </p>
