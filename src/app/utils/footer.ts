@@ -30,33 +30,25 @@ export const solution:solutionType[] = [
     },
     {
         solution:"Hire Professionals",
-        link:"/whatwedo/hire_professional"
+        link:"/#enterprise"
     }
 ]
 
 export const companies:companyType[] = [
     {
-        company:"Cloud Cost Optimization",
-        link:"/expertise/cloud-cost-optimization"
+        company:"About",
+        link:""
     },
     {
-        company:"Dedicated Experienced Developers",
-        link:"/expertise/dedicated-experienced-developers"
+        company:"Careers",
+        link:""
     },
     {
-        company:"System Design & Development",
-        link:"/expertise/system-design-and-development"
+        company:"Blog",
+        link:""
     },
     {
-        company:"AI Intergration",
-        link:"/expertise/ai-intergration"
-    },
-    {
-        company:"Redesign & Performance Enhancement",
-        link:"/expertise/redesign-and-performance-enhancement"
-    },
-    {
-        company:"Comprehensive System Audit",
-        link:"/expertise/comprehensive-system-audit"
+        company:"contact@coedify.com",
+        link:""
     }
 ]

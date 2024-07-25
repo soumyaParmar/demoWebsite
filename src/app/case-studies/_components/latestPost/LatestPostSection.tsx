@@ -64,7 +64,7 @@ const LatestPostSection: React.FC<paginationPropsData> = () => {
         </div>
         <div className={stylex.customSticky}>
           <Link
-            href={`/case-studies/insights/${lastPost.slug}`}
+            href={`/blogs/insights/${lastPost.slug}`}
             className={`${styles.link}`}
           >
             <LatestPostCard
@@ -80,7 +80,7 @@ const LatestPostSection: React.FC<paginationPropsData> = () => {
           </Link>
           <br />
           <Link
-            href={`/case-studies/insights/${lastPost1.slug}`}
+            href={`/blogs/insights/${lastPost1.slug}`}
             className={`${styles.link}`}
           >
             <LatestPostCard

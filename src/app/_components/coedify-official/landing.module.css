@@ -1,9 +1,6 @@
 .landing {
-  @apply h-screen flex justify-center pt-[100px] bg-black;
-  /* background: url("../../_assets/background/bgs.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
+  @apply h-screen flex justify-center pt-[100px] relative z-[1];
+  padding: 100px 20px 20px 20px;
 }
 .content {
   @apply h-2/3 w-[80%];
@@ -92,7 +89,6 @@
 }
 .tempImage svg {
   font-size: 80px;
-  filter: invert(1);
   transition: 0.2s;
 }
 .tempImage svg:hover {
@@ -185,6 +181,13 @@
   box-shadow: 1px 0px 10px 0px white;
 }
 
+@media (min-width:1400px) {
+  .landing{
+    padding: 0;
+    align-items: center;
+  }
+}
+
 @media (max-width: 826px) {
   .landing {
     @apply flex items-start pt-[100px] h-[90vh];
@@ -192,8 +195,9 @@
     background-size: 120vh;
   }
   .content {
-    @apply flex flex-col w-4/5 gap-3;
+    @apply flex flex-col w-full gap-3;
   }
+
   .ai_link p {
     @apply flex justify-center items-center text-[10px];
   }
@@ -230,7 +234,7 @@
   .innerGreen span {
   }
   .enterprise {
-    height: auto;
+    height: 75vh;
   }
   .enterprise h3 {
     @apply w-[300px];
@@ -263,7 +267,10 @@
     @apply p-3;
   }
   .tempImage {
-    top: 65%;
+    top: 75%;
+  }
+  .image{
+    top: 75%;
   }
   .enterprise h2{
     @apply w-[100%];
