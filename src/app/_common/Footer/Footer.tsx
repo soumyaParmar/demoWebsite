@@ -32,7 +32,6 @@ const Footer: React.FC = () => {
                 {pages.map((item: pagesType, index: number) => (
                   <Link href={item.link} key={index}>
                     <li>
-                      {" "}
                       <span>{item.page}</span>
                     </li>
                   </Link>
@@ -54,13 +53,13 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div className="w-[200px] flex flex-col items-end pb-3 max-[700px]:items-start text-[10rem]">
+          <div className="w-[200px] flex flex-col items-end pb-3 max-[700px]:items-start">
             <div>
               <h1>Our Expertise</h1>
               <ul>
                 {companies.map((item: companyType, index: number) => (
                   <Link href={item.link} key={index}>
-                    <li>
+                    <li key={index}>
                       <span>{item.company}</span>
                     </li>
                   </Link>
@@ -73,16 +72,25 @@ const Footer: React.FC = () => {
           <div className="pt-2 flex justify-between max-[700px]:text-[12px]">
             <p>&copy;Design by CoEdify 2024.</p>
             <div className="flex gap-4">
-              <Link href="https://www.facebook.com/coedifytechnology">
+              <Link
+                href="https://www.facebook.com/coedifytechnology"
+                target="_blank"
+              >
                 <Image src={img1} alt="fb" />
               </Link>
-              <Link href="https://www.instagram.com/coedifytechnology/">
+              <Link
+                href="https://www.instagram.com/coedifytechnology/"
+                target="_blank"
+              >
                 <Image src={img2} alt="insta" />
               </Link>
-              <Link href="https://www.linkedin.com/company/coedify/mycompany/">
+              <Link
+                href="https://www.linkedin.com/company/coedify/mycompany/"
+                target="_blank"
+              >
                 <Image src={img3} alt="linkedin" />
               </Link>
-              <Link href="https://x.com/CoEdifyTech">
+              <Link href="https://x.com/CoEdifyTech" target="_blank">
                 <Image src={img4} alt="x" />
               </Link>
             </div>
