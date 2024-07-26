@@ -41,7 +41,7 @@
 }
 
 .navigation p {
-  @apply text-sm font-normal pt-2 text-[#768190] text-[1rem];
+  @apply text-sm font-normal text-[#768190] text-[1rem];
 }
 .copywrite {
   @apply text-[#94a3b8];
@@ -65,6 +65,9 @@
 .pages {
   @apply w-2/5 flex justify-between;
 }
+.pages a{
+  @apply text-sm font-normal text-[#768190];
+}
 .company {
   @apply w-1/5 flex flex-col items-end;
 }
@@ -72,6 +75,7 @@
 @media (max-width: 700px) {
   .innerLayer{
     gap: 1rem;
+    width: 85%;
   }
   .navigation {
     @apply flex-col;

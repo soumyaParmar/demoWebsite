@@ -246,34 +246,41 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
           </div>
         </div>
         <div className={stylex.nav_innerOne} ref={devref1}>
-          <Dropdown
-            menu={{ items }}
-            className={stylex.drop}
-            overlayClassName={stylex.customDropdown}
-          >
-            <Space className="text-nowrap">
-              What we do
-              <CaretDownOutlined />
-            </Space>
-          </Dropdown>
-          <Dropdown
-            menu={{ items: item2 }}
-            className={stylex.drop}
-            overlayClassName={stylex.customDropdown2}
-          >
-            <Space>
-              Expertise
-              <CaretDownOutlined />
-            </Space>
-          </Dropdown>
-          <p className={stylex.para}>
-            <Link href="/case-studies">Case Studies</Link>
-          </p>
-
-          <p className={stylex.para}>
-            {" "}
-            <Link href="/aboutus">About Us</Link>
-          </p>
+          <span>
+            <Dropdown
+              menu={{ items }}
+              className={stylex.drop}
+              overlayClassName={stylex.customDropdown}
+            >
+              <Space className="text-nowrap">
+                What we do
+                <CaretDownOutlined />
+              </Space>
+            </Dropdown>
+          </span>
+          <span>
+            <Dropdown
+              menu={{ items: item2 }}
+              className={stylex.drop}
+              overlayClassName={stylex.customDropdown2}
+            >
+              <Space>
+                Expertise
+                <CaretDownOutlined />
+              </Space>
+            </Dropdown>
+          </span>
+          <span className="flex items-center">
+            <p>
+              <Link href="/case-studies">Case Studies</Link>
+            </p>
+          </span>
+          <span className="flex items-center">
+            <p>
+              {" "}
+              <Link href="/aboutus">About Us</Link>
+            </p>
+          </span>
         </div>
         <div className={stylex.nav_innerTwo} ref={devref2}>
           <Buttons

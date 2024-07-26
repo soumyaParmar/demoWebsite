@@ -116,6 +116,25 @@
 .logo img {
   filter: invert(1);
 }
+
+.nav_innerOne span{
+  position: relative;
+}
+.nav_innerOne span::after {
+  content: "";
+  position: absolute;
+  background-color: #a2a8b1;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+
+.nav_innerOne span:hover:after {
+  width: 100%;
+}
+
 @media (max-width: 826px) {
   .nav_outer {
     @apply w-screen bg-black block p-4 fixed;

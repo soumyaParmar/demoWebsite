@@ -9,6 +9,10 @@ import img4 from "../../_assets/image/x.svg";
 import Image from "next/image";
 import logo from "../../_assets/background/logo.png";
 import Link from "next/link";
+import HomeWorkIcon from "@mui/icons-material/HomeWork";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import EmailIcon from "@mui/icons-material/Email";
+import image from "../../_assets/image/phone.png";
 
 const Footer: React.FC = () => {
   return (
@@ -18,13 +22,41 @@ const Footer: React.FC = () => {
           <div className={style.pages}>
             <div className="w-[230px] mt-[-20px] max-[700px]:w-full pb-4">
               <Image src={logo} alt="logo" className={style.image} />
-              <p>
-                At CoEdify, we take immense pride in being your trusted partner
-                in achieving your goals and exceeding your expectations. Our
-                unwavering commitment to excellence is reflected in every facet
-                of our services. With a track record of successfully resolving
-                complex engineering challenges and optimizing software systems.
-              </p>
+              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+                <p>
+                  <HomeWorkIcon style={{ fill: "gray" }} />
+                </p>
+                <Link href="https://www.google.com/maps/dir/28.5839865,77.3149678/2nd+Floor,+C-89,+Sector+2,+Noida,+Uttar+Pradesh+201301/@28.5836284,77.3149346,19.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce56776056375:0xcd5588316a03ab74!2m2!1d77.3149697!2d28.5839899?entry=ttu">
+                  C-89, Second Floor Sector-2, Noida, 201301 Uttar Pradesh,
+                  India
+                </Link>
+              </span>
+              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+                <p>
+                  <AddIcCallIcon style={{ fill: "gray" }} />
+                </p>
+                <Link href="https://wa.me/+917834906274">+91 7834906274</Link>
+              </span>
+              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+                <p>
+                  <Image
+                    src={image}
+                    height={24}
+                    width={24}
+                    style={{ filter: "opacity(0.5)" }}
+                    alt=""
+                  />
+                </p>
+                <Link href="tel:+911204130067">+91 120 4130067</Link>
+              </span>
+              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+                <span>
+                  <EmailIcon style={{ fill: "gray" }} />
+                </span>
+                <Link href="mailto:contact@coedify.com">
+                  contact@coedify.com
+                </Link>
+              </span>
             </div>
             <div>
               <h1>Quick Links</h1>
@@ -53,7 +85,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           </div>
-          <div className="w-[200px] flex flex-col items-end pb-3 max-[700px]:items-start">
+          <div className="flex flex-col items-end pb-3 max-[700px]:items-start">
             <div>
               <h1>Our Expertise</h1>
               <ul>
