@@ -22,22 +22,27 @@ const Footer: React.FC = () => {
           <div className={style.pages}>
             <div className="w-[230px] mt-[-20px] max-[700px]:w-full pb-4">
               <Image src={logo} alt="logo" className={style.image} />
-              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+              <div className="flex items-center gap-2 mb-3 cursor-pointer">
                 <p>
                   <HomeWorkIcon style={{ fill: "gray" }} />
                 </p>
                 <Link href="https://www.google.com/maps/dir/28.5839865,77.3149678/2nd+Floor,+C-89,+Sector+2,+Noida,+Uttar+Pradesh+201301/@28.5836284,77.3149346,19.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390ce56776056375:0xcd5588316a03ab74!2m2!1d77.3149697!2d28.5839899?entry=ttu">
-                  C-89, Second Floor Sector-2, Noida, 201301 Uttar Pradesh,
-                  India
+                  <span>
+                    {" "}
+                    C-89, Second Floor Sector-2, Noida, 201301 Uttar Pradesh,
+                    India{" "}
+                  </span>
                 </Link>
-              </span>
-              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+              </div>
+              <div className="flex items-center gap-2 mb-3 cursor-pointer">
                 <p>
                   <AddIcCallIcon style={{ fill: "gray" }} />
                 </p>
-                <Link href="https://wa.me/+917834906274">+91 7834906274</Link>
-              </span>
-              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+                <Link href="https://wa.me/+917834906274">
+                  <span>+91 7834906274</span>
+                </Link>
+              </div>
+              <div className="flex items-center gap-2 mb-3 cursor-pointer">
                 <p>
                   <Image
                     src={image}
@@ -47,16 +52,18 @@ const Footer: React.FC = () => {
                     alt=""
                   />
                 </p>
-                <Link href="tel:+911204130067">+91 120 4130067</Link>
-              </span>
-              <span className="flex items-center gap-2 mb-3 cursor-pointer">
+                <Link href="tel:+911204130067">
+                  <span>+91 120 4130067</span>
+                </Link>
+              </div>
+              <div className="flex items-center gap-2 mb-3 cursor-pointer">
                 <span>
                   <EmailIcon style={{ fill: "gray" }} />
                 </span>
                 <Link href="mailto:contact@coedify.com">
-                  contact@coedify.com
+                  <span>contact@coedify.com</span>
                 </Link>
-              </span>
+              </div>
             </div>
             <div>
               <h1>Quick Links</h1>
