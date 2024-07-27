@@ -7,12 +7,28 @@ import { inter400, inter700 } from "../../_customFonts/inter";
 import { insightsCardData } from "../../Interfaces/interfaceData";
 
 const LatestPostCard: React.FC<insightsCardData> = (props) => {
+  let length : number = props.title.split(" ").length;
+  let lengthDes : number = props.description.split(" ").length;
+  let title: string = props.title.split(" ").slice(0, 7).join(" ");
+  if(length > 7)
+     title = title + ".....";
+
+  let description: string = props.description.split(" ").slice(0, 15).join(" ");
+  if(lengthDes > 15)
+    description = description + ".....";
+
   return (
     <>
       <div className={`${styles.cardContainer} `}>
         <div className={`${styles.leftContainer}`}>
           <div className={styles.image}>
-            <Image src={props.img} alt={props.title} className={styles.image}  width={300} height={300}/>
+            <Image
+              src={props.img}
+              alt={props.title}
+              className={styles.image}
+              width={300}
+              height={300}
+            />
           </div>
         </div>
 
@@ -30,11 +46,11 @@ const LatestPostCard: React.FC<insightsCardData> = (props) => {
               </span>
             </div>
             <h3 className={`${inter700.className} ${styles.title}`}>
-              {props.title}{" "}
+              {title}{" "}
             </h3>
 
             <p className={`${styles.para} ${inter400.className}`}>
-              {props.description}
+              {description}
             </p>
           </div>
 

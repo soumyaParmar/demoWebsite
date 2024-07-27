@@ -963,6 +963,9 @@
     line-height: 1.3rem;
     font-size: 0.9rem;
   }
+  .button{
+    width: 100%;
+  }
 }
 
 @media (max-width: 380px) {

@@ -3,6 +3,7 @@
   height: 33vh;
   display: flex;
   background-color: white;
+  border: 1px solid rgb(212, 217, 212);
   cursor: pointer;
   transition: all ease 0.1s;
 }

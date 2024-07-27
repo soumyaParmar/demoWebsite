@@ -152,10 +152,7 @@
 
   .inputfield {
     height: 15vh;
-    /* border: 1px solid; */
-
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
   }
 
@@ -163,6 +160,7 @@
     height: auto;
     height: 2.5rem;
     font-size: 1rem;
+    margin-top: 0.8rem;
   }
 }
 

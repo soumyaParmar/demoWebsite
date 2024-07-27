@@ -3,7 +3,7 @@
   height: 55vh;
   height: auto;
   position: relative;
-  padding: 0 4rem;
+  padding: 0 10rem;
 }
 .heading {
   font-weight: 700;
@@ -23,6 +23,9 @@
 
 /* Media Queries */
 @media (max-width: 1050px) {
+  .editiorPick {
+    padding: 0 4rem;
+  }
   .editiorPickCardBox {
     gap: 1rem;
   }

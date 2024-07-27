@@ -1,6 +1,7 @@
 .container {
   width: 41.5rem;
   width: 44vw;
+  width: 37vw;
   height: 20rem;
   border-radius: 1.2rem;
   display: flex;
@@ -78,7 +79,7 @@
 /* Media queries */
 @media (max-width: 1050px) {
   .container {
-    width: 42vw;
+    width: 27rem;
   }
 
   .heading {
@@ -130,6 +131,5 @@
     line-height: 1rem;
     margin-bottom: 1rem;
     text-align: justify;
-
   }
 }

@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.container h1 {
+  text-align: left;
+}
+
 .left {
   width: 70%;
   margin-top: 4rem;

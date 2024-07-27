@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   height: auto;
-  padding: 0 4rem;
+  padding: 0 10rem;
   margin-top: 4rem;
 }
 
@@ -51,7 +51,7 @@
   padding-bottom: 0.5rem;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   grid-template-columns: repeat(auto-fill, minmax(1fr));
   grid-template-rows: repeat(auto-fill, minmax(1fr));
@@ -92,6 +92,9 @@
 
 /* Media Queries */
 @media (max-width: 1200px) {
+  .container {
+    padding: 0 4rem;
+  }
   .cardContainer {
     grid-template-columns: repeat(3, 1fr);
   }

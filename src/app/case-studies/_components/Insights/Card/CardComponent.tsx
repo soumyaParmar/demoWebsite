@@ -10,6 +10,13 @@ import { insightsCardData } from "@/app/case-studies/Interfaces/interfaceData";
 const { Meta } = Card;
 
 const CardComponent: React.FC<insightsCardData> = (props) => {
+  let length: number = props.title.split(" ").length;
+  let lengthDes: number = props.description.split(" ").length;
+  let title: string = props.title.split(" ").slice(0, 10).join(" ");
+  if (length > 10) title = title + ".....";
+
+  let description: string = props.description.split(" ").slice(0, 27).join(" ");
+  if (lengthDes > 23) description = description + ".....";
   return (
     <>
       <div className={`${styles.cardContainer} ${inter700.className}`}>
@@ -24,15 +31,20 @@ const CardComponent: React.FC<insightsCardData> = (props) => {
         <div className={styles.content}>
           <div className={styles.top}>
             <div className={styles.authorDateContainer}>
-              <span className={`${inter400.className} ${styles.author}`}>
+              <span className={`${inter700.className} ${styles.author}`}>
                 {props.author}
               </span>
-              <span className={`${inter400.className} ${styles.date}`}>
+              <span className={`${inter700.className} ${styles.date}`}>
                 {props.date}
               </span>
             </div>
-            <h3 className={`${inter700.className} ${styles.title}`}>
-              {props.title}{" "}
+            <h3
+              className={`${inter700.className} ${styles.title} ${
+                length > 10 ? styles.tooltip : ""
+              }`}
+              data-title={props.title}
+            >
+              {title}{" "}
             </h3>
 
             <div className={`${inter400.className} ${styles.category}`}>
@@ -42,7 +54,7 @@ const CardComponent: React.FC<insightsCardData> = (props) => {
             </div>
 
             <Meta
-              description={props.description}
+              description={description}
               className={`${styles.para}`}
             />
           </div>
