@@ -54,9 +54,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             </div>
             <div>
               <h1>Digital Engineering</h1>
-              <p>
-                Pioneering Digital Transformation with our Expert Engineering.
-              </p>
+              <p>Accelerate Software Development and ensure scalability.</p>
             </div>
           </div>
         </Link>
@@ -72,9 +70,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             </div>
             <div>
               <h1>AI/ML</h1>
-              <p>
-                Powerful options to security authenticate and manage your users
-              </p>
+              <p>Focus on creation and implementation of AI/ML models.</p>
             </div>
           </div>
         </Link>
@@ -90,9 +86,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             </div>
             <div>
               <h1>Hire Professionals</h1>
-              <p>
-                Powerful options to security authenticate and manage your users
-              </p>
+              <p>Get top-tier professional according to your requirement</p>
             </div>
           </div>
         </Link>
@@ -112,9 +106,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             </div>
             <div>
               <h1>Cloud Cost Optimization</h1>
-              <p>
-                Powerful options to security authenticate and manage your users
-              </p>
+              <p>Eliminates wasteful spending and increases efficiency.</p>
             </div>
           </div>
         </Link>
@@ -123,7 +115,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
     {
       key: "2",
       label: (
-        <Link href="/expertise/dedicated-experienced-developers">
+        <Link href="/whatwedo/hire-professionals">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Developers />
@@ -131,7 +123,8 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             <div>
               <h1>Dedicated Experienced Developers</h1>
               <p>
-                Powerful options to security authenticate and manage your users
+                Leverage our ready-to-deploy professional resources on your
+                requirements
               </p>
             </div>
           </div>
@@ -149,7 +142,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             <div>
               <h1>System Design and Development</h1>
               <p>
-                Powerful options to security authenticate and manage your users
+                Develop a robust system architecture which can be scaled up.
               </p>
             </div>
           </div>
@@ -159,7 +152,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
     {
       key: "4",
       label: (
-        <Link href="/expertise/ai-intergration">
+        <Link href="/whatwedo/ai-ml">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <AI />
@@ -167,7 +160,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             <div>
               <h1>AI Intergration</h1>
               <p>
-                Powerful options to security authenticate and manage your users
+                Integrate AI in your system, according to your business needs
               </p>
             </div>
           </div>
@@ -184,9 +177,7 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             </div>
             <div>
               <h1>Redesign & Performance Enhancement</h1>
-              <p>
-                Powerful options to security authenticate and manage your users
-              </p>
+              <p>Upgrade outdated systems and integrate new technologies.</p>
             </div>
           </div>
         </Link>
@@ -203,7 +194,8 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
             <div>
               <h1>Comprehensive System Audit</h1>
               <p>
-                Powerful options to security authenticate and manage your users
+                Audit your system to identify vulnerabilities, and performance
+                bottlenecks.
               </p>
             </div>
           </div>
@@ -229,7 +221,6 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
 
   const handleRoute = () => {
     router.push("/aboutus#form");
-    // router.push('/aboutus?scrollTo=form');
   };
 
   return (
