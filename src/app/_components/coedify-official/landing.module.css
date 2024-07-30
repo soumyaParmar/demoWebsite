@@ -152,8 +152,6 @@
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  /* border: 1px solid white; */
-  /* margin */
 }
 .enterprise button {
   width: 200px;

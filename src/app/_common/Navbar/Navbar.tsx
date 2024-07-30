@@ -47,15 +47,15 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
     {
       key: "1",
       label: (
-        <Link href="/whatwedo/cloud-computing">
+        <Link href="/whatwedo/digital-engineering">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Cloud />
             </div>
             <div>
-              <h1>Cloud Computing</h1>
+              <h1>Digital Engineering</h1>
               <p>
-                Powerful options to security authenticate and manage your users
+                Pioneering Digital Transformation with our Expert Engineering.
               </p>
             </div>
           </div>
@@ -83,13 +83,13 @@ const Navbar: React.FC<Navbar> = ({ flag, motionValue }) => {
     {
       key: "3",
       label: (
-        <Link href="/whatwedo/hire_professional">
+        <Link href="/whatwedo/hire-professionals">
           <div className={stylex.what}>
             <div className={stylex.box}>
               <Hire />
             </div>
             <div>
-              <h1>Hire Professional</h1>
+              <h1>Hire Professionals</h1>
               <p>
                 Powerful options to security authenticate and manage your users
               </p>
