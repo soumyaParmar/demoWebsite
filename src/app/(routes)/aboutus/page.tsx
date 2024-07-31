@@ -60,7 +60,7 @@ const Page: React.FC = () => {
       <div className={styles.container}>
         <Navbar flag={false} motionValue={false} />
         {/* Hero Section */}
-        <div className={style1.landing}>
+        <div className={`${styles.landing}`}>
           <div className={style1.content} id="landingPage">
             <div className={style.ai_link}></div>
             <div className={style.heading} id="landingHeading1">
