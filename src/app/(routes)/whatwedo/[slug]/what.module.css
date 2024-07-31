@@ -67,13 +67,16 @@
   background-repeat: no-repeat;
   height: 300px;
   width: 500px;
+  /* border: 1px solid; */
 }
 .left {
   @apply flex flex-col justify-center;
   width: 50%;
+  height: 300px;
+  /* border: 1px solid green; */
 }
 .left h1 {
-  @apply text-2xl font-semibold;
+  @apply text-3xl font-semibold mt-5;
 }
 .left p {
   @apply w-[80%];

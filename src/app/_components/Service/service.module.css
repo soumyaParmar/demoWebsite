@@ -113,7 +113,7 @@
 .box {
   height: 70px;
   width: 70px;
-  background: #f6f6f8;
+  /* background: #f6f6f8; */
   border-radius: 10px;
 }
 .otherItem {

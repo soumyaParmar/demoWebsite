@@ -54,13 +54,13 @@
 }
 .right p {
   @apply text-sm text-[#5b617a] w-[90%];
-
   line-height: 25px;
 }
 .box {
-  @apply h-auto w-1/2 bg-black rounded-md;
+  @apply h-[40vh] w-1/2 bg-black rounded-md;
   background: url("../../../_assets/How/Group\ 1321314572-min.png") no-repeat;
   background-size: contain;
+  /* border: 1px solid green; */
 }
 .service1 > .box {
   background-position: left;

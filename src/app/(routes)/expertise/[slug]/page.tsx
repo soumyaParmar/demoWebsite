@@ -95,7 +95,7 @@ const Expertise = ({ params }: { params: { slug: string } }) => {
               <h2>{content[0].serviceHeading1}</h2>
               <p>{content[0].serviceDesc1}</p>
               <div>
-                <Buttons label="Learn More" varient="fill" />
+                {/* <Buttons label="Learn More" varient="fill" /> */}
               </div>
             </div>
             <div className={styles.box}></div>

@@ -21,7 +21,7 @@ const What = ({ params }: { params: { slug: string } }) => {
       if (c.slugName === params.slug) return c;
     }
   );
-  
+
   const [tab, setTab] = useState<number>(1);
   const ref1 = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
@@ -96,9 +96,6 @@ const What = ({ params }: { params: { slug: string } }) => {
                   <div className={styles.left}>
                     <h1>{content[0].serviceTab1Heading}</h1>
                     <p>{content[0].serviceTab1Desc}</p>
-                    <div>
-                      <Buttons label="Learn more" varient="fill" />
-                    </div>
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -108,9 +105,6 @@ const What = ({ params }: { params: { slug: string } }) => {
                   <div className={styles.left}>
                     <h1>{content[0].serviceTab2Heading}</h1>
                     <p>{content[0].serviceTab2Desc}</p>
-                    <div>
-                      <Buttons label="Learn more" varient="fill" />
-                    </div>
                   </div>
                   <div className={styles.box}></div>
                 </div>
@@ -120,9 +114,6 @@ const What = ({ params }: { params: { slug: string } }) => {
                   <div className={styles.left}>
                     <h1>{content[0].serviceTab3Heading}</h1>
                     <p>{content[0].serviceTab3Desc}</p>
-                    <div>
-                      <Buttons label="Learn more" varient="fill" />
-                    </div>
                   </div>
                   <div className={styles.box}></div>
                 </div>

@@ -8,6 +8,12 @@ import gsap from "gsap";
 import { Button } from "antd";
 import Buttons from "@/app/_common/Button/Buttons";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import collaboration from "../../_assets/service/collaboration.png";
+import success from "../../_assets/service/sucess.png";
+import solution from "../../_assets/service/solution.png";
+import understanding from "../../_assets/service/qualitative-research.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,7 +122,9 @@ const Service: React.FC = () => {
           </div>
           <div className={style.otherItem}>
             <div className={style.innerItem}>
-              <div className={style.box}></div>
+              <div className={style.box}>
+                <Image src = {understanding} alt="Understanding Your Unique Needs"/>
+              </div>
               <h1>Understanding Your Unique Needs</h1>
               <p>
               At CoEdify, we start by thoroughly understanding your specific requirements and objectives. Through in-depth discussions, we gain insights into your needs, allowing us to tailor precise solutions that meet your demands.
@@ -125,7 +133,9 @@ const Service: React.FC = () => {
           </div>
           <div className={style.otherItem}>
             <div className={style.innerItem}>
-              <div className={style.box}></div>
+              <div className={style.box}>
+              <Image src = {solution} alt="The Proposed Solution"/>
+              </div>
               <h1>The Proposed Solution</h1>
               <p>
               Based on our insights, we provide customized, cost-effective solutions. From software redesign to greenfield development, we present a clear timeline and comprehensive plan, giving you full visibility into scope and cost.
@@ -134,7 +144,9 @@ const Service: React.FC = () => {
           </div>
           <div className={style.otherItem}>
             <div className={style.innerItem}>
-              <div className={style.box}></div>
+              <div className={style.box}>
+              <Image src = {collaboration} alt="Integration and Collaboration"/>
+              </div>
               <h1>Integration and Collaboration</h1>
               <p>
               Collaboration is at the heart of our approach. We work closely with clients, ensuring you are an integral part of the process. With full insight at every stage, we deliver value through technical expertise and seamless project execution.
@@ -143,7 +155,9 @@ const Service: React.FC = () => {
           </div>
           <div className={style.otherItem}>
             <div className={style.innerItem}>
-              <div className={style.box}></div>
+              <div className={style.box}>
+              <Image src = {success} alt="Ensuring Success through Iteration and Feedback"/>
+              </div>
               <h1>Ensuring Success through Iteration and Feedback</h1>
               <p>
               We believe in continuous improvement. By regularly iterating and gathering feedback, we refine our solutions to ensure they perfectly align with your evolving business goals.
