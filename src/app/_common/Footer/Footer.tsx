@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
       <div className={style.innerLayer}>
         <div className={style.navigation}>
           <div className={style.pages}>
-            <div className="w-[230px] mt-[-20px] max-[700px]:w-full pb-4">
+            <div className="w-[290px] mt-[-20px] max-[700px]:w-full pb-4">
               <Image src={logo} alt="logo" className={style.image} />
               <div className="flex items-center gap-2 mb-3 cursor-pointer">
                 <p>

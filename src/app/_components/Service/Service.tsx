@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import React from "react";
 import style from "./service.module.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,10 +7,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Button } from "antd";
 import Buttons from "@/app/_common/Button/Buttons";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Service: React.FC = () => {
+  const router = useRouter();
+
   useGSAP(() => {
     gsap.from("#smallDetail", {
       x: 100,
@@ -32,6 +36,10 @@ const Service: React.FC = () => {
       },
     });
   });
+
+  const handleRoute = () => {
+    router.push("/whatwedo/ai-ml");
+  };
 
   return (
     <div className={style.service}>
@@ -103,7 +111,7 @@ const Service: React.FC = () => {
               <p>
               Leverage our specialized skills in AI/ML, optimize cloud costs, and hire top-tier developers. We provide innovative solutions tailored to your business needs, ensuring efficiency and excellence in every project.
               </p>
-              <Buttons label="Learn more" varient="fill" />
+              <Buttons label="Learn more" varient="fill" onClick={handleRoute} />
             </div>
           </div>
           <div className={style.otherItem}>

@@ -42,7 +42,7 @@ const How: React.FC = () => {
   });
 
   const handleRoute = () => {
-    router.push("/whatwedo/cloud-computing");
+    router.push("/expertise/cloud-cost-optimization");
   };
   return (
     <div className={style.how} id="how">

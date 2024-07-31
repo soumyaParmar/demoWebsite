@@ -1,8 +1,9 @@
 .footer {
   @apply flex justify-center items-center pt-14 overflow-hidden;
+  /* border: 1px solid #94a3b8; */
 }
 .innerLayer {
-  @apply w-[70%] h-full flex flex-col justify-between;
+  @apply w-[80%] h-full flex flex-col justify-between;
   gap: 5rem;
 }
 .navigation {
@@ -62,6 +63,7 @@
 }
 .pages {
   @apply w-2/5 flex justify-between;
+  /* border: 1px solid green; */
 }
 .pages a{
   @apply text-sm font-normal text-[#768190];
